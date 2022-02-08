@@ -6,7 +6,7 @@ import bcrypt from "bcrypt-nodejs";
 import dotenv from "dotenv";
 dotenv.config();
 
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/Hotel";
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/hotel";
 mongoose.connect(mongoUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

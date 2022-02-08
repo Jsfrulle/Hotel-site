@@ -3,6 +3,7 @@ import { ui } from "reducers/ui";
 import hotelDetails from "./hotelDetails";
 import user from "./user";
 import {  batch } from "react-redux";
+import { BASE } from "Urls/constants";
 
 
 const reservationList = createSlice({
@@ -84,7 +85,7 @@ export const PostReservations = () => {
       })
     };
 
-    await fetch("http://localhost:8080/reservation", options)
+    await fetch(BASE("/reservation"), options)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
@@ -113,7 +114,7 @@ export const GetReservations = () => {
       }
     };
 
-    fetch(`http://localhost:8080/reservation`, options)
+    fetch(BASE(`/reservation`), options)
       .then((res) => res.json())
       .then((data) => {
        
@@ -139,7 +140,7 @@ export const SearchReservations = () => {
     };
     
     
-    fetch(`http://localhost:8080/find/${getState().reservationList.reservationId}` , options)
+    fetch(BASE(`/find/${getState().reservationList.reservationId}`) , options)
       .then((res) => res.json())
       .then((data) =>{
         if (data.success) {
@@ -181,7 +182,7 @@ export const DeleteReservations = () => {
     
     
     
-    fetch(`http://localhost:8080/reservation/${getState().reservationList.deleteId}` , options)
+    fetch(BASE(`reservation/${getState().reservationList.deleteId}`) , options)
       .then((res) => res.json())
       .then((data) =>{
         if (data.success) {
