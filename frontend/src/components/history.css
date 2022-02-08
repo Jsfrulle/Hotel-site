@@ -1,0 +1,8 @@
+.historyBtn{
+
+  height: clamp(20px, 10vh, 30px);
+width: 20vw;
+max-width: 150px;
+margin: 10px;
+
+}

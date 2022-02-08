@@ -1,0 +1,113 @@
+
+.containerSignIn{
+height: 100vh;
+width: 100vw;
+background-color: burlywood;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.contentSignIn{
+
+text-align: center;
+height: 50vh;
+
+}
+
+
+
+
+form{
+
+  
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.inputContainer{
+ 
+
+background-color: burlywood;
+display:grid;
+grid-template-columns: repeat(2, 1fr);
+grid-column-gap: 2vw;
+grid-row-gap: 1vw;
+margin-bottom: 10px;
+}
+
+
+.inputContainer input {
+  width: clamp(150px, 45vw, 500px);
+  font-size: clamp(16px, 1vw, 20px);
+  height: clamp(35px, 2.5vw, 150px);
+}
+.inputContainer button{
+
+  width: clamp(100px, 20vw, 200px);
+  font-size: clamp(12px, 1vw, 20px);
+  height: clamp(35px, 1vw, 100px);
+
+}
+
+.visible{
+
+  display:contents;
+
+}
+.hidden{
+
+ 
+  display: none;
+}
+
+.radioBtnContainer{
+
+grid-column: 2;
+display: flex;
+justify-content: flex-end;
+
+}
+
+
+
+.btnContainerSignIn {
+  
+ 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+}
+.btnContainerSignIn button {
+  height: clamp(30px, 2vw, 100px);
+  width:clamp(130px, 25vh, 500px);
+  font-size: clamp(16px, 1vw, 20px);
+}
+
+.btnContainerSignIn a {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+
+
+
+  .inputContainer{
+    
+    grid-template-columns: repeat(1, 1fr);
+    height: 20vh;
+
+    
+    }
+
+
+}

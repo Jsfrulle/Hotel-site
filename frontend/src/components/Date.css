@@ -1,0 +1,23 @@
+.containerDate{
+
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
+.contentDate{
+width: 40vw;
+max-width: 300px;
+  display: flex;
+  flex-direction: column;
+
+margin: 0 10px;
+
+
+}
+
+.dateInput{
+max-width: 500px;
+font-size:clamp(5px, 3vw, 16px);
+
+}

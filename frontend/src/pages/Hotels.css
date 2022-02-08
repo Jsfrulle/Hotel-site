@@ -1,0 +1,216 @@
+.pageTwoConatiner {
+  height: 100vh;
+  width: 100vw;
+ 
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(25, 1fr);
+  
+}
+
+
+.topInfoContainer{ 
+  text-align: center;
+  grid-column: 1/13;
+  grid-row: 2;
+
+}
+
+
+/*  History btn and weather */
+
+.historyAndWeather {
+  grid-column: 1/13;
+  grid-row: 3;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-end;
+  height: 90px;
+ 
+  padding: 0px 10px;
+}
+
+
+
+
+
+/* search chooice */
+
+.searChooiceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+/* date container and btn */
+
+.dateContainerPageTwo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-bottom: 15px;
+}
+
+
+/* room display */
+
+.RoomChooicePageTwo {
+  grid-column: 1/13;
+  grid-row: 4/26;
+ 
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  
+padding: 0;
+}
+
+
+
+.RoomChooicePageTwo {
+ 
+  overflow-y: scroll;
+}
+
+.RoomChooicePageTwo::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+
+.dropDownContainer{
+  grid-column: 1/13;
+  grid-row: 3/4;
+
+display: flex;
+align-items: flex-end;
+}
+
+
+.dropDown_hotels{
+
+height: clamp(20px, 8vh, 30px);
+width: 50vw;
+max-width: 70px;
+font-size: clamp(9px, 5vw, 15px);
+
+}
+.historyContainer{
+
+  grid-column: 1/13;
+  grid-row: 25;
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+z-index: 10;
+}
+
+.hotelContainer{
+  grid-column: 1/13;
+  grid-row: 4/25;
+margin-top: 10px;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 0;
+
+}
+
+
+.hotelContent{
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 35px;
+  height: 100vh;
+
+  place-items: center;
+
+
+}
+
+
+
+@media (min-width: 768px) {
+ 
+
+
+ 
+
+
+     .RoomChooicePageTwo {
+      grid-row: 4/26;
+   
+    }
+    .hotelContent{
+
+      
+      width: 98%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      
+      
+      }
+      
+.dropDown_hotels{
+
+
+
+max-width: 150px;
+
+
+}
+
+
+}
+@media (min-width: 1024px) {
+
+
+
+  .topInfoContainer{ 
+    text-align: center;
+    grid-column: 1/13;
+    grid-row: 1;
+  
+  }
+
+
+
+  .historyAndWeather {
+    grid-column: 1/13;
+    grid-row: 2/4;
+   justify-content: center;
+  }
+
+
+ 
+
+
+     .RoomChooicePageTwo {
+      
+      grid-row: 4/26;
+      grid-column: 1/13;
+    }
+    .hotelContent{
+
+      width: 100vw;
+      
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+      
+      }
+
+  
+
+
+
+
+
+ }

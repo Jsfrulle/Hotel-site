@@ -1,0 +1,27 @@
+{
+  "name": "project-auth-parent",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "npm install --prefix backend"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "dotenv": "^14.1.0",
+    "mongoose": "^6.1.5",
+    "reactrangeslider": "^3.0.6",
+    "shortid": "^2.2.16"
+  },
+  "description": "Frontend: \r Backend API:",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jsfrulle/Hotel-booking-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jsfrulle/Hotel-booking-site/issues"
+  },
+  "homepage": "https://github.com/Jsfrulle/Hotel-booking-site#readme"
+}

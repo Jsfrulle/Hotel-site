@@ -1,0 +1,60 @@
+.ReservationContainer {
+  background-color: burlywood;
+  height: 100vh
+}
+
+.ReservationForm {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(16px, 1vw, 20px);
+}
+
+/* all inputs */
+
+.ReservationForm input {
+  height: clamp(35px, 3vw, 40px);
+  font-size: clamp(16px, 1vw, 20px);
+  width: clamp(250px, 45vw, 500px);
+}
+
+/* search input */
+
+.BookingNrInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+ 
+}
+.BookingNrInputContainer label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* Button */
+
+.ReservationBtnContainer {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+  font-size: clamp(9px, 0.7em, 15px);
+  font-weight: 600;
+}
+.ReservationBtnContainer button {
+  width: 100%;
+  font-size: clamp(16px, 1vw, 20px);
+}
+
+.ReservationBtnContainer a {
+  width: 50%;
+}
