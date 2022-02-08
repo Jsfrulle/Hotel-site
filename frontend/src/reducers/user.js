@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { API_URL } from "Urls/constants";
-import { useSelector, batch } from "react-redux";
+import { batch } from "react-redux";
 import { ui } from "reducers/ui";
 const user = createSlice({
   name: "user",

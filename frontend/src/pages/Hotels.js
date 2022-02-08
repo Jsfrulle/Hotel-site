@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ui } from "reducers/ui";
 import { History } from "../components/History";
 import { Weather } from "../components/Weather";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +7,7 @@ import "./Hotels.css";
 import hotelDetails, {FetchHotelLocationId} from "reducers/hotelDetails";
 import dotenv from "dotenv";
 import Loading from "components/Loading";
-import Stars from "components/Stars";
+
 
 
 import { HotelComponent } from "components/HotelComponent";
@@ -21,10 +20,9 @@ export const Hotels = () => {
   const checkIn = useSelector((store) => store.hotelDetails.dateFrom);
   const checkOut = useSelector((store) => store.hotelDetails.dateTo);
   const hotel = useSelector((store) => store.hotelDetails.hotelList);
-  const hotelId = useSelector((store) => store.hotelDetails.hotelId);
   const isLoading = useSelector((store) => store.ui.loading);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+
 
   const rooms = useSelector((store) => store.roomDetail.roomList);
   console.log(rooms)
@@ -72,7 +70,7 @@ export const Hotels = () => {
             <div className="hotelContent">
               {hotel &&
                 hotel.map((item) => {
-                  const value = item.id;
+                  
                   
                   return (
                    <HotelComponent item={item}  /> 

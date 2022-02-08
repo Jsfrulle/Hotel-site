@@ -1,11 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ui } from "reducers/ui";
-import { API_URL } from "Urls/constants";
 import hotelDetails from "./hotelDetails";
-import roomDetail from "./roomDetail";
 import user from "./user";
 import {  batch } from "react-redux";
-import { useEffect } from "react";
+
 
 const reservationList = createSlice({
   name: "reservationList",

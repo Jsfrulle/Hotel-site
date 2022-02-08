@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch, batch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { FetchUser, UpdatehUser } from "reducers/user";
 import { GetReservations, DeleteReservations } from "reducers/reservationList";
@@ -18,7 +18,6 @@ export const Profil = () => {
   const [changePhone, setChangePhone] = useState();
   
   const accessToken = useSelector((store) => store.user.accessToken);
-  const username = useSelector((store) => store.user.username);
   const names = useSelector((store) => store.user.name);
   const coins = useSelector((store) => store.user.coins);
   const adress = useSelector((store) => store.user.adress);
@@ -44,16 +43,16 @@ export const Profil = () => {
     dispatch(FetchUser());
     dispatch(GetReservations());
     setReservation(list);
-  }, []);
+  }, [dispatch, list]);
 
   useEffect(() => {
-    
+    if(deleteIt === true){
       dispatch(GetReservations());
       dispatch(DeleteReservations());
       setReservation(list);
-      setDeleteIt(false)
+      setDeleteIt(false)}
     
-  },[ deleteIt === true]);
+  },[deleteIt, dispatch, list]);
 
   const onClickDelete = ({ target }) => {
     dispatch(reservationList.actions.setDeleteId(target.value));
@@ -150,7 +149,7 @@ if(item.checkIn >= today ){
 
             return (
             <DeleteReservationComponent item={item} onClickDelete={onClickDelete} />
-            )}
+            )}else{}
 
           })}
           </section>
@@ -166,7 +165,7 @@ if(item.checkIn < today ){
 
             return (
               <ShowReservationComponent item={item } />
-            )}
+            )}else{}
 
           })}
           </section>

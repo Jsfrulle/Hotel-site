@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import {  useDispatch, useSelector } from "react-redux";
 import hotelDetails from "../reducers/hotelDetails";
 import "./Date.css"
-import moment from "moment";
+
 
 export const Pickdate = () => {
 

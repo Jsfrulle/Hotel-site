@@ -6,17 +6,9 @@ import insparationReducer, {
   FetchInspoCountry
 } from "reducers/insparationReducer";
 import moment from "moment";
-import Stars from "components/Stars";
-import { useNavigate } from "react-router-dom";
 import Loading from "components/Loading";
-import reservationList from "reducers/reservationList";
-import { FetchHotelRooms } from "reducers/roomDetail";
 import "./Inspiration.css";
 import dotenv from "dotenv";
-import useFetch from "hook/useFetch";
-
-
-import test from "../images/backgroundDay.jpg"
 import { HotelComponent } from "components/HotelComponent";
 
 dotenv.config();
@@ -26,9 +18,9 @@ export const Inspiration = () => {
   const flag = useSelector((store) => store.insparationReducer.flag);
   const [country, setcountry] = useState();
   const hotel = useSelector((store) => store.hotelDetails.hotelList);
-  const rooms = useSelector((store) => store.roomDetail.roomList);
+  
   const isLoading = useSelector((store) => store.ui.loading);
-  const navigate = useNavigate();
+
   const dispatch = useDispatch();
   
 
@@ -55,7 +47,7 @@ export const Inspiration = () => {
 
     dispatch(FetchInsparation());
     dispatch(FetchInspoCountry());
-  }, []);
+  }, [dispatch]);
 
 
 
@@ -80,7 +72,7 @@ export const Inspiration = () => {
           <div className="hotelInspoContent">
             {hotel &&
               hotel.map((item) => {
-                const value = item.id;
+                
 
                 return (
                  <HotelComponent item={item} />

@@ -35,7 +35,7 @@ export const Home = () => {
     useEffect(() => {
       dispatch(hotelDetails.actions.setDateFrom(today));
       dispatch(hotelDetails.actions.setDateTo(future));
-    }, [dispatch]);
+    }, [dispatch, today, future]);
 
 
   /* setting the place here for the useffect to have a good statment to render */
@@ -47,7 +47,7 @@ export const Home = () => {
 
   useEffect(() => {
     getLocation();
-  }, [place]);
+  }, [place, ]);
 
   const getLocation = () => {
     if (location === "") {

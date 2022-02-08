@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../pages/HotelRooms.css";
 import { useSelector, useDispatch } from "react-redux";
-import roomDetail from "reducers/roomDetail";
 import hotelDetails from "reducers/hotelDetails";
 const RoomItem = ({room}) => {
   
   const individualsCount = useSelector((store) => store.roomDetail.individuals);
 
   const dispatch = useDispatch();
-
-
-
-
-
 
 
   return (

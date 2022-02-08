@@ -4,14 +4,9 @@ import "./HotelRooms.css";
 import hotelDetails from "reducers/hotelDetails";
 import roomDetail from "reducers/roomDetail";
 import { History } from "components/History";
-import { ui } from "reducers/ui";
 import Loading from "components/Loading";
-import { Reservations } from "./Reservations";
-
-import { ReservationCart } from "components/ReservationCart";
 import RoomTypDropDown from "components/RoomTypDropDown";
 import IndividualsDropDown from "components/IndividualsDropDown";
-
 import RoomItem from "components/RoomItem";
 export const HotelRooms = () => {
   const rooms = useSelector((store) => store.roomDetail.roomList);
@@ -24,9 +19,6 @@ export const HotelRooms = () => {
   const priceRange = useSelector((store) => store.roomDetail.priceRange);
   const [lowest, setLowest] = useState();
   const [highest, setHighest] = useState();
-  const [result, setResult] = useState();
-  const checkIn = useSelector((store) => store.hotelDetails.dateFrom);
-  const checkOut = useSelector((store) => store.hotelDetails.dateTo);
   const [state, setState] = useState({
     price: 10000
   });
@@ -63,7 +55,7 @@ export const HotelRooms = () => {
       );
       return setRoom(result);
     }
-  }, [priceRange, individualsCount, roomTypes]);
+  }, [priceRange, individualsCount, roomTypes, dispatch, roomDet]);
 
   const onChange = () => {
     /* drop-down to set the price range */
@@ -77,7 +69,7 @@ export const HotelRooms = () => {
     setState({
       price: roomDet.slice(-1)[0].ratePlans[0].price.unformattedCurrent
     });
-  }, []);
+  }, [dispatch, roomDet, highest]);
 
   const handleChange = (e) => {
     setState({
@@ -88,7 +80,7 @@ export const HotelRooms = () => {
 
   useEffect(() => {
     dispatch(roomDetail.actions.setPriceRange(state));
-  }, [state]);
+  }, [state, dispatch]);
 
   return (
     <article className="roomPageConatiner">

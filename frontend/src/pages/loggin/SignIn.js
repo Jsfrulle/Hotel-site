@@ -10,7 +10,7 @@ export const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [coins, setcoins] = useState(null);
+ 
   const [mode, setMode] = useState("signin");
 
   const accessToken = useSelector((store) => store.user.accessToken);
@@ -22,7 +22,7 @@ export const SignIn = () => {
   useEffect(() => {
     dispatch(user.actions.setError(false));
 
-  },[])
+  },[dispatch])
 
   useEffect(() => {
     if (accessToken) {

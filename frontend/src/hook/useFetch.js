@@ -1,12 +1,12 @@
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {  useDispatch} from "react-redux";
 
 
 import { ui } from "reducers/ui";
 const useFetch = (url, options) => {
   const [response, setResponse] = React.useState(null);
-  const [error, setError] = React.useState(null);
+ 
   
 
 
@@ -23,18 +23,18 @@ const dispatch = useDispatch();
         const json = await res.json();
         setResponse(json);
         dispatch(ui.actions.setLoading(false));
-        setError(null)
+       
       } 
       
       catch (error) {
-        setError(error);
+       
         dispatch(ui.actions.setLoading(false));
       }
     };
 
     fetchData();
   
-  }, [url]);
+  }, [url, dispatch, options]);
 
   return { response };
 };

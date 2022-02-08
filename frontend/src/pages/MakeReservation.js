@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch, batch } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { PostReservations, GetReservations } from "reducers/reservationList";
 import  user from "../reducers/user";
-import { FetchUser, UpdatehUser } from "reducers/user";
-import { API_URL } from "Urls/constants";
-import reservationList from "reducers/reservationList";
+import {  UpdatehUser } from "reducers/user";
 import hotelDetails from "reducers/hotelDetails";
 
 export const MakeReservation = () => {
@@ -30,7 +28,7 @@ console.log( parseInt(coins) - parseInt(total) )
       dispatch(user.actions.setCoins(  parseInt(coins) - parseInt(total) ))
       dispatch(UpdatehUser()) 
     }
-  }, [accessToken, navigate]);
+  }, [accessToken, navigate,dispatch, coins, total]);
 
   return (
     <div>

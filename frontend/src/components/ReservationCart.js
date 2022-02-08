@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {  useDispatch, useSelector } from "react-redux";
 import hotelDetails from "reducers/hotelDetails"
-import roomDetail from 'reducers/roomDetail';
 import { useNavigate } from "react-router-dom";
 import "./ReservationCart.css"
 export const ReservationCart = () => {
@@ -10,7 +9,6 @@ export const ReservationCart = () => {
   const checkOut = useSelector((store) => store.hotelDetails.dateTo);
   const roomName = useSelector((store) => store.hotelDetails.roomName);
   const individual = useSelector((store) => store.hotelDetails.individuals);
-  const price = useSelector((store) => store.hotelDetails.priceOfRoom);
   const roomss = useSelector((store) => store.roomDetail.roomList);
   const accessToken = useSelector((store) => store.user.accessToken);
  const roomDetail = roomss.rooms.filter(item =>item.name === roomName);
@@ -29,25 +27,10 @@ useEffect(()=>{
   dispatch(hotelDetails.actions.setPriceOfRoom(pri[0]))
 
   
-},[pri] )
-
-const onClickReservation = () =>{
-
-  dispatch(hotelDetails.actions.addreservations)
-
-}
-
-const onClickLogin = () =>{
-
-  navigate("/signin");
-
-}
-
-const onClickRemove = () => {
+},[pri, dispatch] )
 
 
 
-}
 
 return (
   
