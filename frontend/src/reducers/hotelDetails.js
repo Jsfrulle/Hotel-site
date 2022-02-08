@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { ui } from "reducers/ui";
 import dotenv from "dotenv";
 import reservationList from "reducers/reservationList";
+import { BASE } from "Urls/constants";
 dotenv.config();
 
 
@@ -160,7 +161,7 @@ else{
 
     };
 
-    await fetch('http://localhost:8080/reservation', options)
+    await fetch(BASE('/reservation'), options)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
