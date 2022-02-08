@@ -5,6 +5,12 @@ import { FetchUser, UpdatehUser } from "reducers/user";
 import { GetReservations, DeleteReservations } from "reducers/reservationList";
 import user from "../../reducers/user";
 import reservationList from "../../reducers/reservationList";
+import "./Profil.css"
+import moment from "moment";
+import { FcRating } from "react-icons/fc";
+import { ShowReservationComponent } from "components/ShowReservationComponent";
+import { DeleteReservationComponent } from "components/DeleteReservationComponent";
+
 export const Profil = () => {
   const [changeName, setChangeName] = useState();
   const [changeCoins, setChangeCoins] = useState();
@@ -21,7 +27,7 @@ export const Profil = () => {
   const list = useSelector((store) => store.reservationList.getReservation);
  /*  const listAfter = useSelector((store) => store.reservationList.listAfterDelete); */
   const [reservation, setReservation] = useState();
-
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -30,7 +36,7 @@ export const Profil = () => {
       navigate("/signin");
     } else {
       navigate("/profil");
-      setReservation(list);
+     
     }
   }, [accessToken, navigate]);
 
@@ -63,11 +69,14 @@ export const Profil = () => {
     dispatch(UpdatehUser());
   };
 
+  let today = moment().format("YYYY-MM-DD");
+
   return (
-    <article className="mainContainer">
-      <section className="mainContent">
-        <h1>Welcome {names}! </h1>
-        <p> {coins} </p>
+    <article className="userContainer">
+      <section className="userContent">
+        <h1 className="welcomTex">Welcome {names}! </h1>
+        <section className="coinsContainer" > 
+        <label><FcRating /> {coins} </label>
 
         <input
           id="coins"
@@ -90,14 +99,15 @@ export const Profil = () => {
         >
           Add coins
         </button>
-
-        <label> {username} </label>
+        </section>
+<section className="userInfoContainer" > 
+     
 
         <label> Name </label>
         <input
           id="name"
           type="text"
-          required
+          
           minLength={3}
           value={changeName}
           onChange={(e) => setChangeName(e.target.value)}
@@ -108,7 +118,7 @@ export const Profil = () => {
         <input
           id="adress"
           type="text"
-          required
+          
           minLength={3}
           value={changeAdress}
           onChange={(e) => setChangeAdress(e.target.value)}
@@ -119,40 +129,49 @@ export const Profil = () => {
         <input
           id="phone"
           type="number"
-          required
-          minLength={3}
           value={changePhone}
           onChange={(e) => setChangePhone(e.target.value)}
           placeholder={phone}
         />
+    
+      <button onClick={changeName && changeAdress && changePhone?  handelUpdate : ''}>{changeName && changeAdress && changePhone?  'Update user' : 'fill out info'}</button>
       </section>
-      <button onClick={handelUpdate}>Update user</button>
-
-      <section>
+      </section>
+      <section className="reservatinContainer">
+        
+      <section className="reservationItems"> 
+        <h1 className="textRes">Reservations</h1>
+        <section className="reservatinContent"> 
+      
         {reservation &&
           reservation.map((item) => {
+
+if(item.checkIn >= today ){
+
             return (
-              <div value={item._id} key={item._id}>
-                <p> {item.coins} </p>
-                <p> {item.hotelName} </p>
-                <p> {item.checkIn} </p>
-                <p> {item.checkOut} </p>
-                <p> {item.roomName} </p>
-                <p> {item.individuals} </p>
-                <p> {item.priceOfRoom} </p>
-                <p>{item.totalPrice} </p>
-                <p> {item.reservationId} </p>
-                <p> {item.user} </p>
-                <button
-                  onClick={onClickDelete}
-                  value={item._id}
-                >
-                  {" "}
-                  Delete{" "}
-                </button>
-              </div>
-            );
+            <DeleteReservationComponent item={item} onClickDelete={onClickDelete} />
+            )}
+
           })}
+          </section>
+          </section>
+          <section className="reservationItems">  
+<h1 className="textRes">Old reservations</h1> 
+<section className="reservatinContent"> 
+
+{reservation &&
+          reservation.map((item) => {
+
+if(item.checkIn < today ){
+
+            return (
+              <ShowReservationComponent item={item } />
+            )}
+
+          })}
+          </section>
+          </section>
+          
       </section>
     </article>
   );

@@ -3,6 +3,8 @@ import { ui } from "reducers/ui";
 import dotenv from "dotenv";
 import reservationList from "reducers/reservationList";
 dotenv.config();
+
+
 const hotelDetails = createSlice({
   name: "hotelDetails",
   initialState: {
@@ -126,7 +128,6 @@ export const FetchHotelLocationId = () => {
         });
     } else {
       console.error("error");
-      dispatch(ui.actions.setLoading(false));
     }
   };
 };

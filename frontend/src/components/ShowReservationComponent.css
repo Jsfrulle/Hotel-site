@@ -1,0 +1,68 @@
+
+
+
+.reservarionContainer{
+  width: 90%;
+  height: fit-content;
+  max-width: 450px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+align-items: center;
+text-align: center;
+background-color: rgb(255, 255, 255);
+font-size: clamp(8px, 1vw, 12px);
+border-radius: 5px;
+padding: 10px 10px;
+border: 1px darkgray solid;
+box-shadow: 4px 2px 6px 2px rgb(70, 66, 66);
+margin: 5px 0;
+}
+.reservationItems p{
+height:  clamp(8px, 1vw, 12px);
+margin: 0 auto;
+padding: 0 auto;
+}
+.reservationItems h2{
+  height:  10px;
+  margin: 3px 0 0 0;
+  padding: 0 auto;
+  }
+
+.bold{
+
+font-weight: 800;
+
+}
+
+.reservarionItem{
+  width: 100%;
+background-color: rgba(34, 35, 36, 0.548);
+margin-top: 5px;
+ padding: 0px 5px 5px 5px; 
+ max-width: 500px;
+}
+.reservarionItem h2{
+  margin: 3px 0 0 0;
+  padding: 0 auto;
+}
+
+
+
+.ReservationInfo{
+  width: 100%;
+  display: flex;
+white-space: nowrap;
+align-items: flex-start;
+justify-content: space-around;
+
+}
+
+.containerBtn{
+width: 100%;
+display: flex;
+justify-content: flex-end;
+
+}
+

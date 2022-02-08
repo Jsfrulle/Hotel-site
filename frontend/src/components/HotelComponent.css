@@ -16,9 +16,15 @@
   border-radius: 3px;
 font-weight: 500;
   font-size: clamp(8px, 12px, 25px);
-
+transition: 0.2s ease-in;
 }
 
+.hotelItemContainer:hover{
+transform: scale(95%);
+background-color: rgba(0, 0, 0, 0.5);
+
+
+}
 
 
 
@@ -137,8 +143,8 @@ padding: 0 auto;
 }
 @media (min-width: 1024px) {
   .hotelItemContainer{
-    width: 30vw;
-    height: 20vw;
+    width: 27vw;
+    height: 15vw;
     
   }
 

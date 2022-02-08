@@ -30,18 +30,9 @@ export const Inspiration = () => {
   const isLoading = useSelector((store) => store.ui.loading);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-   const API_KEY_BACKGROUND = process.env.REACT_APP_BACKGROUND;
-  const { response } = useFetch(
-    `http://api.unsplash.com/search/photos/?per_page=30&query=${city}&client_id=${API_KEY_BACKGROUND}`,
-    []
-  );
+  
 
 
-
-  const [hello, sethello] = useState();
-
-
-console.log(response)
   useEffect(() => {
     const array = ["US", "TH", "MV"];
     const Country = array.sort(() => 0.5 - Math.random());
@@ -66,21 +57,9 @@ console.log(response)
     dispatch(FetchInspoCountry());
   }, []);
 
-  useEffect(() => {}, []);
 
 
-
-  const ToRoomList = ({ target }) => {
-
-    console.log(target.value)
-    dispatch(hotelDetails.actions.setHotelId(target.value));
-    dispatch(FetchHotelRooms());
-
-    if (rooms.length === 0) {
-    } else {
-      navigate("/rooms");
-    }
-  };
+ 
  
 
 
@@ -99,21 +78,13 @@ console.log(response)
           <Loading />
         ) : (
           <div className="hotelInspoContent">
-
-
             {hotel &&
               hotel.map((item) => {
-                
-                
+                const value = item.id;
 
                 return (
-                
-                 <HotelComponent item={item} ToRoomList={ToRoomList}  />
-
-
-                )
-
-
+                 <HotelComponent item={item} />
+                );
               })}
           </div>
         )}

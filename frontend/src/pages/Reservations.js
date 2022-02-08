@@ -7,6 +7,7 @@ import user from "reducers/user";
 import reservationList, {
   SearchReservations
 } from "../reducers/reservationList";
+import { ShowReservationComponent } from "components/ShowReservationComponent";
 export const Reservations = () => {
   const [ids, setIds] = useState();
   let error = useSelector((store) => store.reservationList.error);
@@ -56,18 +57,10 @@ export const Reservations = () => {
       ) : (
         <article className="ReservationContainer">
           
-          <div>
-            <p> {afterSearch.hotelName} </p>
-            <p> {afterSearch.checkIn} </p>
-            <p> {afterSearch.checkOut} </p>
-            <p> {afterSearch.roomName} </p>
-            <p> {afterSearch.individuals} </p>
-            <p> {afterSearch.priceOfRoom} </p>
-            <p>{afterSearch.totalPrice} </p>
-            <p> {afterSearch.user} </p>
-            <p> {afterSearch.reservationId} </p>
-          </div> 
-          <button onClick={onClickBack}>back</button>
+      
+
+          <ShowReservationComponent item={afterSearch} />
+         
         </article>
       )}
     </>

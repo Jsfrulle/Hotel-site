@@ -164,7 +164,7 @@ app.patch("/update/:id", async (req, res) => {
     const updates = req.body;
     const options = { new: true };
 
-    const user = await User.findByIdAndUpdate(id, updates, options);
+    const user = await User.findByIdAndUpdate(id, updates, options).save();
    
     if (user) {
       res.status(200).json({

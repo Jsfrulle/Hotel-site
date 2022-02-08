@@ -15,6 +15,7 @@ import moment from "moment";
 import overlay from "../images/overlay.png"
 import background from "../images/backgroundDay.jpg"
 
+
 dotenv.config();
 
 export const Home = () => {
@@ -62,10 +63,11 @@ export const Home = () => {
 
   return (
     <article>
-     
-      <section className="homeContainer">
+      
+       <section className="homeContainer">
       <img className="background" src={background} alt="overlay" />
         
+       
 
         <section className="formContainerHome">
         
@@ -111,7 +113,7 @@ export const Home = () => {
           </button>
         </section>
         </section>
-      </section>
+      </section> 
     </article>
   );
 };

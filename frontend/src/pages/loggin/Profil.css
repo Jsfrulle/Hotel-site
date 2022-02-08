@@ -1,0 +1,178 @@
+
+.userContainer{
+display: flex;
+flex-direction: column;
+height: 100vh;
+width: 100vw;
+
+justify-content: flex-start;
+align-items: center;
+
+}
+.userContent{
+  height: 36vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+grid-template-rows: repeat(12, 1fr);
+margin-top: 5vh;
+}
+.userContainer input{
+
+width: 95%;
+max-width: 300px;
+
+}
+.userContainer button{
+
+  
+  margin-top: 5px;
+  }
+
+.welcomTex{
+  width: 100%;
+  grid-row: 2;
+  grid-column: 1/13;
+ white-space: nowrap;
+ display: flex;
+
+justify-content: center;
+align-items: center;
+
+}
+.coinsContainer{
+
+  grid-row: 3;
+  grid-column: 7/13;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+ 
+
+}
+.coinsContainer input{
+
+  max-width: 100px;
+ 
+
+}
+.userInfoContainer{
+
+  grid-row: 3;
+  grid-column: 1/7;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.reservatinContainer{
+width: 100vw;
+height: 55vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.reservationItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+height: 40vh;
+width: 100vw;
+}
+
+.textRes{
+  height:  clamp(8px, 1vw, 12px);
+  margin: 10px auto;
+  padding: 0 auto;
+}
+
+
+.reservatinContent{
+  width: 98vw;
+  height: 25vh;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 1;
+place-items: center;
+
+
+ }
+
+.reservatinContent::-webkit-scrollbar {
+display: none; /* for Chrome, Safari, and Opera */
+-ms-overflow-style: none;  /* for Internet Explorer, Edge 
+scrollbar-width: none;   for Firefox */
+ }
+ 
+
+
+
+
+@media (min-width:768px) {
+
+  .userContent{
+    height: 26vh;
+  
+  }
+
+  .reservatinContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    }
+    
+    .reservationItems{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    height: 100%;
+    width: 80vw;
+    }
+    
+   
+
+
+    
+    .reservatinContent{
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+    justify-content: flex-start;
+      align-items: center;
+    overflow-y: scroll;
+    height: 63vh;
+    
+    
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none;  /* for Firefox */
+    
+     }
+    
+    .reservatinContent::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+    -ms-overflow-style: none;  /* for Internet Explorer, Edge 
+    scrollbar-width: none;   for Firefox */
+     }
+     
+    
+
+
+}
+
+
+@media (min-width:1024px) {
+  
+}

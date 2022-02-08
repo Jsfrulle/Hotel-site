@@ -9,7 +9,8 @@ import hotelDetails, {FetchHotelLocationId} from "reducers/hotelDetails";
 import dotenv from "dotenv";
 import Loading from "components/Loading";
 import Stars from "components/Stars";
-import { FetchHotelRooms } from "reducers/roomDetail";
+
+
 import { HotelComponent } from "components/HotelComponent";
 dotenv.config();
 
@@ -20,7 +21,7 @@ export const Hotels = () => {
   const checkIn = useSelector((store) => store.hotelDetails.dateFrom);
   const checkOut = useSelector((store) => store.hotelDetails.dateTo);
   const hotel = useSelector((store) => store.hotelDetails.hotelList);
-  const hotelIds = useSelector((store) => store.hotelDetails.hotelId);
+  const hotelId = useSelector((store) => store.hotelDetails.hotelId);
   const isLoading = useSelector((store) => store.ui.loading);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -42,14 +43,7 @@ export const Hotels = () => {
 
 
 
-  
-  const ToRoomList = ({ target }) => {
-    dispatch(hotelDetails.actions.setHotelId(target.value));
-    dispatch(FetchHotelRooms())
- 
-    if(rooms.length === 0){}else{
-    navigate("/rooms");}
-  };
+
 
   return (
     <article className="pageTwoConatiner">
@@ -81,7 +75,7 @@ export const Hotels = () => {
                   const value = item.id;
                   
                   return (
-                   <HotelComponent item={item} ToRoomList={ToRoomList} value={value} /> 
+                   <HotelComponent item={item}  /> 
                   );
                 })}
             </div>
