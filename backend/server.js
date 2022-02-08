@@ -3,6 +3,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 import crypto from "crypto";
 import bcrypt from "bcrypt-nodejs";
+import dotenv from "dotenv";
+dotenv.config();
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/Hotel";
 mongoose.connect(mongoUrl, {
