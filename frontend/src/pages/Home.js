@@ -45,9 +45,9 @@ export const Home = () => {
    
   };
 
-  useEffect(() => {
+ /*  useEffect(() => {
     getLocation();
-  }, [place, ]);
+  }, [place, ]); */
 
   const getLocation = () => {
     if (location === "") {

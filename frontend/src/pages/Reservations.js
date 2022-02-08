@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, } from "react";
 import "./Reservation.css";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch, batch } from "react-redux";
-import reservations from "../reducers/hotelDetails";
-import user from "reducers/user";
+import { useSelector, useDispatch,  } from "react-redux";
 import reservationList, {
   SearchReservations
 } from "../reducers/reservationList";
@@ -14,7 +12,7 @@ export const Reservations = () => {
   let notShow = useSelector((store) => store.reservationList.notShow);
   const afterSearch  = useSelector((store) => store.reservationList.searchReservation);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+
 
   const onClick = () => {
     dispatch(reservationList.actions.setReservationId(ids));
@@ -60,7 +58,7 @@ export const Reservations = () => {
       
 
           <ShowReservationComponent item={afterSearch} />
-         
+         <button onClick={onClickBack}>Back</button>
         </article>
       )}
     </>

@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import crypto from "crypto";
 import bcrypt from "bcrypt-nodejs";
 
-const mongoUrl = process.env.MONGO_URL || "https://hotel-backend-1.herokuapp.com/";
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/8080";
 mongoose.connect(mongoUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

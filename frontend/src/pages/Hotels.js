@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { History } from "../components/History";
 import { Weather } from "../components/Weather";
-import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "./Hotels.css";
 import hotelDetails, {FetchHotelLocationId} from "reducers/hotelDetails";
