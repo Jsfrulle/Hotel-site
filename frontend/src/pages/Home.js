@@ -25,7 +25,7 @@ export const Home = () => {
   const checkIn = useSelector((store) => store.hotelDetails.dateFrom);
   const checkOut = useSelector((store) => store.hotelDetails.dateTo);
   const loading = useSelector((store) => store.ui.loading);
-  const place = useSelector((store) => store.hotelLocation.place);
+/*   const place = useSelector((store) => store.hotelLocation.place); */
 
  
     let today = moment().format("YYYY-MM-DD");

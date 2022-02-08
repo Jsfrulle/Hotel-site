@@ -40,7 +40,7 @@ const RoomItem = ({room}) => {
               </section>
 
               {item.images.map((image) => {
-                return <img src={image.thumbnailUrl} alt="room image"/>;
+                return <img src={image.thumbnailUrl} alt="room"/>;
               })}
             </section>
             <section className="addBtn">

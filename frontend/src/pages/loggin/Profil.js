@@ -149,7 +149,7 @@ if(item.checkIn >= today ){
 
             return (
             <DeleteReservationComponent item={item} onClickDelete={onClickDelete} />
-            )}else{ return (<p></p> )}
+            )}else{ return(<> <p>no data</p> </>) }
 
           })}
           </section>
@@ -165,7 +165,7 @@ if(item.checkIn < today ){
 
             return (
               <ShowReservationComponent item={item } />
-            )}{ return (<p></p> )}
+            )}else{ return(<> <p>no data</p> </>) }
 
           })}
           </section>
