@@ -47,8 +47,8 @@ export const SignIn = () => {
             dispatch(user.actions.setUsername(data.response.username));
             dispatch(user.actions.setName(data.response.name));
             dispatch(user.actions.setCoins(data.response.coins));
-            dispatch(user.actions.setCoins(data.response.adress));
-            dispatch(user.actions.setCoins(data.response.phone));
+            dispatch(user.actions.setAdress(data.response.adress));
+            dispatch(user.actions.setPhone(data.response.phone));
             dispatch(user.actions.setAccessToken(data.response.accessToken));
             dispatch(user.actions.setError(false));
           });

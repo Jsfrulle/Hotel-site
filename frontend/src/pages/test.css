@@ -1,20 +1,12 @@
 
 
+.roomsItemContainer{
 
 
 
 
-
-.tests{
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  padding: 2vh;
-grid-gap: 15px;
-
+  
 }
-
 
 
 .roomsItemContent {
