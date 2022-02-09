@@ -38,7 +38,7 @@ export const SignIn = () => {
       },
       body: JSON.stringify({ username, password, name })
     };
-    fetch(API_URL("mode"), options)
+    fetch(API_URL({mode}), options)
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
