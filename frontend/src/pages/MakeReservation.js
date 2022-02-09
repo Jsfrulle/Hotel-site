@@ -21,14 +21,19 @@ console.log( parseInt(coins) - parseInt(total) )
   useEffect(() => {
     if (!accessToken) {
       navigate("/signin");
-    } else if (accessToken) {
-      dispatch(PostReservations());
-      dispatch(hotelDetails.actions.setRoomName(""));
-      dispatch(GetReservations());
-      dispatch(user.actions.setCoins(  parseInt(coins) - parseInt(total) ))
-      dispatch(UpdatehUser()) 
+    } else {
+      
     }
-  }, [accessToken, navigate,dispatch, coins, total]);
+  }, [accessToken]);
+
+useEffect(() => {
+  dispatch(user.actions.setCoins(  parseInt(coins) - parseInt(total) ))
+  dispatch(hotelDetails.actions.setRoomName(""));
+  dispatch(GetReservations());
+  dispatch(PostReservations());
+  dispatch(UpdatehUser()) 
+},[])
+
 
   return (
     <div>
