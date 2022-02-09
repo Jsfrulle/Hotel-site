@@ -26,13 +26,18 @@ console.log( parseInt(coins) - parseInt(total) )
     }
   }, [accessToken]);
 
-useEffect(() => {
+
+const onClick = () => {
+
   dispatch(user.actions.setCoins(  parseInt(coins) - parseInt(total) ))
   dispatch(hotelDetails.actions.setRoomName(""));
   dispatch(GetReservations());
   dispatch(PostReservations());
   dispatch(UpdatehUser()) 
-},[])
+
+}
+
+
 
 
   return (
@@ -50,6 +55,7 @@ useEffect(() => {
           <p>{reservation.totalPrice} </p>
           <p> {reservation.user} </p>
         </div>
+        <button onClick={onClick}> confirm</button>
       </section>
     </div>
   );

@@ -11,6 +11,14 @@ const RoomItem = ({room}) => {
   const dispatch = useDispatch();
 
 
+
+
+
+
+
+  
+
+
   return (
     <section className="roomsItemContainer" >
    
