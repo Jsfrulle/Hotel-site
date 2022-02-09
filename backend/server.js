@@ -25,11 +25,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     minlenght: 2,
     maxlenght: 20,
-    required: true
+   
   },
   phone: {
     type: Number,
-    required: true
+    
   },
 
   username: {
