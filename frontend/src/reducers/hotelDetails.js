@@ -161,7 +161,7 @@ else{
 
     };
 
-    await fetch(BASE('/reservation'), options)
+    await fetch('https://hotel-backend-1.herokuapp.com/reservation', options)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {

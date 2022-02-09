@@ -85,7 +85,7 @@ export const PostReservations = () => {
       })
     };
 
-    await fetch(BASE("/reservation"), options)
+    await fetch(`https://hotel-backend-1.herokuapp.com/reservation`, options)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
@@ -114,7 +114,7 @@ export const GetReservations = () => {
       }
     };
 
-    fetch(BASE(`/reservation`), options)
+    fetch(`https://hotel-backend-1.herokuapp.com/reservation`, options)
       .then((res) => res.json())
       .then((data) => {
        
@@ -140,7 +140,7 @@ export const SearchReservations = () => {
     };
     
     
-    fetch(BASE(`/find/${getState().reservationList.reservationId}`) , options)
+    fetch(`https://hotel-backend-1.herokuapp.com/find/${getState().reservationList.reservationId}` , options)
       .then((res) => res.json())
       .then((data) =>{
         if (data.success) {
@@ -182,7 +182,7 @@ export const DeleteReservations = () => {
     
     
     
-    fetch(BASE(`reservation/${getState().reservationList.deleteId}`) , options)
+    fetch(`https://hotel-backend-1.herokuapp.com/reservation/${getState().reservationList.deleteId}` , options)
       .then((res) => res.json())
       .then((data) =>{
         if (data.success) {

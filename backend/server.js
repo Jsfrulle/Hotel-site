@@ -171,9 +171,8 @@ app.patch("/update/:id", async (req, res) => {
         response: {
       
           name: user.name,
-          coins: user.coins,
           adress:user.adress,
-          phone: user.phone,
+         
         },
         success: true
       });
@@ -185,6 +184,44 @@ app.patch("/update/:id", async (req, res) => {
     res.status(400).json({ response: error, success: false });
   }
 });
+
+
+app.patch("/coins/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const updates = req.body;
+    const options = { new: true };
+
+    const user = await User.findByIdAndUpdate(id, updates, options).save();
+   
+    if (user) {
+      res.status(200).json({
+        response: {
+      
+         
+          coins: user.coins,
+       
+        },
+        success: true
+      });
+
+    } else {
+      res.status(404).json({ message: "Not found" });
+    }
+  } catch (error) {
+    res.status(400).json({ response: error, success: false });
+  }
+});
+
+
+
+
+
+
+
+
+
+
 
 
 

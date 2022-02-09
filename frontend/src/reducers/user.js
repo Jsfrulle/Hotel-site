@@ -88,7 +88,7 @@ export const UpdatehUser = () => {
       })
     };
 
-    fetch(API_URL(`update/${getState().user.userId}`), options)
+    fetch(`https://hotel-backend-1.herokuapp.comupdate/${getState().user.userId}`, options)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
