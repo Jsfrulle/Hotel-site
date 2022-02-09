@@ -24,7 +24,7 @@ console.log( parseInt(coins) - parseInt(total) )
     } else {
       
     }
-  }, [accessToken]);
+  }, [accessToken, navigate]);
 
 
 const onClick = () => {
