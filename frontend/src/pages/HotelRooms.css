@@ -69,10 +69,6 @@
   align-items: center;
   justify-content: center;
   place-items: center;
-}
-
-.RoomItemsList {
- 
   grid-row: 3/13;
   height: 90%;
   width: 98%;
@@ -88,39 +84,12 @@
 }
 
 
-
-
 .RoomItemsList::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
-.roomsItemContainer {
-  background-color: rgb(48, 85, 87);
-  height: 70vh;
-  z-index: 1;
-  width: 100%;
-  
-  
-}
-.roomsItemContent {
- 
 
-  padding: 15px;
-}
-.addBtn{
 
-  padding: 15px;
-
-}
-.textContent {
-  text-align: center;
-}
-
-.textAdultChildContainer {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
 
 .historyContainerRooms {
   grid-column: 1/13;

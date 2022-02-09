@@ -1,91 +1,68 @@
 import React from "react";
 import "../pages/test.css";
-import Slider from 'react-perfect-slider';
+import Slider from "react-perfect-slider";
 
-
-
-
-import image1 from "../images/stockholm.jpg"
-
-
-
+import image1 from "../images/stockholm.jpg";
 
 const Test = () => {
-  
-  
-
-
-
-  
-
-
-
-
   return (
-    
-    <section className="RoomItemsList">
    
-          <section className="roomsItemContainer" >
-            <section className="roomsItemContent">
-              <section className="textContent">
-                <h1 className="textinRoom"> NAMN </h1>
-                <div className="textAdultChildContainer">
-                  <p>
-                    Max individuals:{" "}
-                   4
-                  </p>
-                </div>
-                <p> Info 138 </p>
-                <p>
-                  {" "}
-                  Price: 333
-                  $/person{" "}
-                </p>
-                <p>
-                 Fel meddelande
-                </p>
-              </section>
+<div className="tests"> 
+   
+{/* 
+
+<section className="roomsItemContent" key={item.name}>
+          <section className="textContent">
+            <h1 className="textinRoom"> {item.name} </h1>
+            <section className="textsmall"> 
+          
+              <p>Max individuals:  {item.ratePlans[0].occupancy.maxAdults} </p>
            
-
-             
-        
-             
-
-<div className="ImgSliderContainer"> 
-
-             <Slider autoplay={false} renderControls={(next, previous) => [
-               <div className="sliderBtn"> 
-    <button onClick={previous}>Previous</button>,
-    <button onClick={next}>Next</button>
-    </div>
-]}>
-        <img className="roomImg"  src={image1} alt="room"/>
-             <img className="roomImg" src={image1} alt="room"/>
-</Slider>
-<button
-            
-            >
-              {" "}
-              add{" "}
-            </button>
-</div>
-
+            <p> Info: {item.ratePlans[0].features[0].info}  </p>
+            <p>Price: {item.ratePlans[0].price.unformattedCurrent} $/person</p>
             </section>
-            <section className="addBtn">
+            <p>
+          {" "}
+          {individualsCount === 0
+            ? "individuals is missing"
+            : ""}{" "}
+        </p>
             
-            </section>
-
           </section>
 
-
-
-
+          <div className="ImgSliderContainer">
+            <Slider
+              autoplay={false}
+              renderControls={(next, previous) => [
+                <div className="sliderBtn">
+                  <button onClick={previous}>Previous</button>,
+                  <button onClick={next}>Next</button>
+                </div>
+              ]}
+            >
+           {item.images.map((image) => {
+        return <img className="roomImg" src={image.thumbnailUrl} alt="room"/>;
+      })}
+            </Slider>
+            <div className="reservationBtnContainer"> 
+            <button className="reservationBtn"    onClick={
+        individualsCount === 0
+          ? ""
+          : () =>
+              dispatch(
+                hotelDetails.actions.setRoomName(item.name)
+              )}> add </button>
+            </div>
+          </div>
           
-       
- </section>
+        </section>
 
-)
-  
+
+ */}
+        </div>
+
+    
+  );
 };
 
 export default Test;

@@ -104,7 +104,6 @@ export const SignIn = () => {
               <label class="custom-input login-card__label">
                 <input
                   class="custom-input__input login-card__input"
-                  id="password"
                   id="name"
                   type="text"
                   value={name}

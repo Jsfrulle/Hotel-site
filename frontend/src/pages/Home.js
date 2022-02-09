@@ -64,7 +64,21 @@ export const Home = () => {
   };
 
   return (
-   /*  <article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <article>
       
        <section className="homeContainer">
       <img className="background" src={background} alt="overlay" />
@@ -116,7 +130,7 @@ export const Home = () => {
         </section>
         </section>
       </section> 
-    </article> */
+    </article> 
 
 
 
@@ -124,13 +138,6 @@ export const Home = () => {
 
 
 
-<article className="test">
-
-
-<Test />
-
-
-</article>
 
 
 
