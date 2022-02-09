@@ -11,16 +11,15 @@ align-items: center;
 }
 
 
-
 .roomsItemContent {
-
+  background: var(  --backgrundComponents);
 width: 98%;
 height: 100%;
 
 display: flex;
 flex-direction: column;
 font-size: clamp(8px, 10px, 12px);
-
+grid-template-columns: repeat(1, 1fr);
 border-radius: 10px;
 box-shadow: 4px 2px 6px 2px rgb(70, 66, 66);
 
@@ -98,7 +97,7 @@ width: 100%;
 
 height: 12%;
   position: absolute;
-
+  background: var(  --backgrundComponents);
 border-radius: 0 0 10px 10px;
 }
 
@@ -106,7 +105,7 @@ border-radius: 0 0 10px 10px;
 height: 100%;
 width: 100%;
 border-radius: 0 0 10px 10px;
-
+  background: var(  --backgrundComponents);
 }
 
 @media (min-width: 768px) {
@@ -117,15 +116,30 @@ border-radius: 0 0 10px 10px;
 
   
 .roomsItemContainer {
-  
+  grid-template-columns: repeat(2, 1fr);
   width: 98%;
   height: 100%;
-  max-width: 550px;
-  max-height: 400px;
+
   margin-top: 5vh;
   }
 }
 
 @media (min-width: 1024px) {
   
+
+  .roomsItemContainer {
+ 
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    align-content: start;
+    overflow-y: scroll;
+    place-items: center;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+  }
+
 }
