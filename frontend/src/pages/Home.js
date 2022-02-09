@@ -14,6 +14,8 @@ import paris from "images/paris.jpg";
 import moment from "moment";
 import overlay from "../images/overlay.png"
 import background from "../images/backgroundDay.jpg"
+import test from "components/Test";
+import Test from "components/Test";
 
 
 dotenv.config();
@@ -62,7 +64,7 @@ export const Home = () => {
   };
 
   return (
-    <article>
+   /*  <article>
       
        <section className="homeContainer">
       <img className="background" src={background} alt="overlay" />
@@ -114,6 +116,27 @@ export const Home = () => {
         </section>
         </section>
       </section> 
-    </article>
+    </article> */
+
+
+
+
+
+
+
+<article className="test">
+
+
+<Test />
+
+
+</article>
+
+
+
+
+
+
+
   );
 };

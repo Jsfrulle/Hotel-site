@@ -1,14 +1,33 @@
 
+:root {
+  --background: #ffffff;
+  --backgrundComponents:#aab9ad;
+  --primary: #899785;
+  --secondary: #ffffff;
+  --treedary: #d2face;
+  --text-dark:#272c28;
+  --text:#768579;
+  --text-mid:#7a8d7e; 
+  --text-light:#cedad0;
+
+  --shadow:#626e5c;
+  --light-shadow:#ccdac5;
+}
+
+
+
+
 .appContainer{
   margin: 0 auto;
   padding: 0 auto;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-
 display: flex;
-
 flex-direction: column;
+
+
+color: var(--text-dark);
 
 }
 

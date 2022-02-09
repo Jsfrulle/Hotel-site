@@ -31,26 +31,39 @@ export const Reservations = () => {
   return (
     <>
       {notShow ? (
-        <article className="ReservationContainer">
-          <div className="ReservationForm">
-            <section className="BookingNrInputContainer">
-              <label>Bokningsnummer</label>
-              <input
+        <form novalidate="novalidate" >
+        <section class="login-in">
+          <main class="login-card">
+            <div class="login-card__title">
+            <label>Reservation id</label>
+            
+            </div>
+            <label class="custom-input login-card__label">
+            <input
                 id="ids"
                 maxLength={20}
                 type="text"
                 value={ids}
                 onChange={(e) => setIds(e.target.value)}
-              ></input>
-            </section>
+                class="custom-input__input login-card__input"
+                autocomplete="off"
+                required="required"
+                
+              />
 
-            <section className="ReservationBtnContainer">
-              <button onClick={ids ? onClick : ""}>Submit</button>
+              <div class="custom-input__border"></div>
+            </label>
+          
 
-              {error ? `Oh no cant find reservation` : ``}
-            </section>
-          </div>
-        </article>
+            <button type="submit" class="login-card__button"onClick={ids ? onClick : ""}>Check</button>
+
+{error ? `Oh no cant find reservation` : ``}
+            
+
+            
+          </main>
+        </section>
+      </form>
       ) : (
         <article className="ReservationContainer">
           
@@ -63,3 +76,6 @@ export const Reservations = () => {
     </>
   );
 };
+
+
+
