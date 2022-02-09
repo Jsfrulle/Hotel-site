@@ -39,12 +39,7 @@ const RoomItem = ({room}) => {
             <p> Info: {item.ratePlans[0].features[0].info}  </p>
             <p>Price: {item.ratePlans[0].price.unformattedCurrent} $/person</p>
             </section>
-            <p>
-          {" "}
-          {individualsCount === 0
-            ? "individuals is missing"
-            : ""}{" "}
-        </p>
+           
             
           </section>
 
@@ -69,7 +64,9 @@ const RoomItem = ({room}) => {
           : () =>
               dispatch(
                 hotelDetails.actions.setRoomName(item.name)
-              )}> add </button>
+              )}> {individualsCount === 0
+                ? "individuals is missing"
+                : "Reservate"} </button>
             </div>
           </div>
           

@@ -1,134 +1,116 @@
+.roomsItemContainer {
+  width: 100%;
+  height: 100%;
 
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 15px;
+  align-content: start;
+  overflow-y: scroll;
+  place-items: center;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
 
-.roomsItemContainer{
-width: 100%;
-height: 100%;
-
-display: flex;
-justify-content: center;
-align-items: center;
-  
+  place-items: center;
 }
-
 
 .roomsItemContent {
-  background: var(  --backgrundComponents);
-width: 98%;
-height: 100%;
+  background: var(--backgrundComponents);
+  width: 98%;
+  height: 100%;
 
-display: flex;
-flex-direction: column;
-font-size: clamp(8px, 10px, 12px);
-grid-template-columns: repeat(1, 1fr);
-border-radius: 10px;
-box-shadow: 4px 2px 6px 2px rgb(70, 66, 66);
-
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(8px, 10px, 12px);
+  grid-template-columns: repeat(1, 1fr);
+  border-radius: 10px;
+  box-shadow: 4px 2px 6px 2px rgb(70, 66, 66);
 }
 
-.textinRoom{
+.textinRoom {
   padding: 0px 6px;
   font-size: clamp(8px, 14px, 20px);
 
-  margin: 0 ;
-padding: 0 ;
+  margin: 0;
+  padding: 0;
 }
 
-
-
-
-
 .textContent {
-
   text-align: center;
   grid-row: 1/1;
   height: 100%;
-  background: var(  --backgrundComponents);
+  background: var(--backgrundComponents);
   border-radius: 10px 10px 0 0;
   padding: 0px 6px;
   font-size: clamp(8px, 12px, 20px);
-  
 }
 
 .textAdultChildContainer {
   display: flex;
 
   justify-content: space-around;
-  
 }
-.textsmall{
-display: flex;
-width: 100%;
-justify-content: space-between;
-align-items: center;
-
-
+.textsmall {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-.ImgSliderContainer{
-position: relative;
+.ImgSliderContainer {
+  position: relative;
   grid-row: 2/5;
   z-index: 10;
-height: 100%;
-display: flex;
+  height: 100%;
+  display: flex;
 }
 
-.sliderBtn{
-position: absolute;
-top: 50%;
-width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-
+.sliderBtn {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.roomImg{
+.roomImg {
   position: relative;
   z-index: -10;
   width: 100%;
   min-height: 200px;
   height: 100%;
   border-radius: 0 0 10px 10px;
-
 }
-.reservationBtnContainer{
-top: 90%;
-width: 100%;
+.reservationBtnContainer {
+  top: 90%;
+  width: 100%;
 
-height: 12%;
+  height: 12%;
   position: absolute;
-  background: var(  --backgrundComponents);
-border-radius: 0 0 10px 10px;
+  background: var(--backgrundComponents);
+  border-radius: 0 0 10px 10px;
 }
 
-.reservationBtn{
-height: 100%;
-width: 100%;
-border-radius: 0 0 10px 10px;
-  background: var(  --backgrundComponents);
+.reservationBtn {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: var(--backgrundComponents);
 }
 
 @media (min-width: 768px) {
-  .RoomItemsList {
+  .roomsItemContainer {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 95px;
-  }
-
-  
-.roomsItemContainer {
-  grid-template-columns: repeat(2, 1fr);
-  width: 98%;
-  height: 100%;
-
-  margin-top: 5vh;
+    grid-gap: 15px;
   }
 }
 
 @media (min-width: 1024px) {
-  
-
   .roomsItemContainer {
- 
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -141,5 +123,4 @@ border-radius: 0 0 10px 10px;
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
   }
-
 }
