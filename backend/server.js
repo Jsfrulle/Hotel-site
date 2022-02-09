@@ -88,7 +88,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/signup", async (req, res) => {
-  const { username, password, name,adress, phone } = req.body;
+  const { username, password, name,} = req.body;
   try {
     const salt = bcrypt.genSaltSync();
 
@@ -99,8 +99,7 @@ app.post("/signup", async (req, res) => {
         username,
         name,
         password: bcrypt.hashSync(password, salt),
-        adress,
-        phone
+        
       }).save();
 
       res.status(201).json({
@@ -110,8 +109,7 @@ app.post("/signup", async (req, res) => {
           name: newUser.name,
           accessToken: newUser.accessToken,
           coins: newUser.coins,
-          adress:newUser.adress,
-          phone: newUser.phone,
+        
         },
         success: true
       });
