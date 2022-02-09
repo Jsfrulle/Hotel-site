@@ -38,7 +38,7 @@ export const SignIn = () => {
       },
       body: JSON.stringify({ username, password, name })
     };
-    fetch(API_URL("mode"), options)
+    fetch(API_URL("/mode"), options)
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
@@ -58,6 +58,8 @@ export const SignIn = () => {
             dispatch(user.actions.setUsername(null));
             dispatch(user.actions.setName(null));
             dispatch(user.actions.setCoins(null));
+            dispatch(user.actions.setPhone(null));
+            dispatch(user.actions.setAccessToken(null));
             dispatch(user.actions.setAccessToken(null));
             dispatch(user.actions.setError(true));
           });
