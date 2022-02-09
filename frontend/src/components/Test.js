@@ -1,8 +1,8 @@
 import React from "react";
 import "../pages/test.css";
-import Slider from "react-perfect-slider";
+/* import Slider from "react-perfect-slider";
 
-import image1 from "../images/stockholm.jpg";
+import image1 from "../images/stockholm.jpg"; */
 
 const Test = () => {
   return (

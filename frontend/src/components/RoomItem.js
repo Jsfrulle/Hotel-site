@@ -3,7 +3,7 @@ import "../pages/HotelRooms.css";
 import { useSelector, useDispatch } from "react-redux";
 import hotelDetails from "reducers/hotelDetails";
 import Slider from 'react-perfect-slider';
-import Test from "./Test";
+
 const RoomItem = ({room}) => {
   
   const individualsCount = useSelector((store) => store.roomDetail.individuals);
