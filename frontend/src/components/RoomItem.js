@@ -72,69 +72,6 @@ const RoomItem = ({room}) => {
           
         </section>
 
-          
-         /*  <section className="roomsItemContainer" key={item.name}>
-            <section className="roomsItemContent">
-              <section className="textContent">
-                <h1 className="textinRoom"> {item.name} </h1>
-                <div className="textAdultChildContainer">
-                  <p>
-                    Max individuals:{" "}
-                    {item.ratePlans[0].occupancy.maxAdults}{" "}
-                  </p>
-                </div>
-                <p> Info {item.ratePlans[0].features[0].info} </p>
-                <p>
-                  {" "}
-                  Price: {item.ratePlans[0].price.unformattedCurrent}
-                  $/person{" "}
-                </p>
-                <p>
-                  {" "}
-                  {individualsCount === 0
-                    ? "individuals is missing"
-                    : ""}{" "}
-                </p>
-              </section>
-              <div className="ImgSliderContainer"> 
-
-             <Slider autoplay={false} renderControls={(next, previous) => [
-               <div className="sliderBtn"> 
-    <button onClick={previous}>Previous</button>,
-    <button onClick={next}>Next</button>
-    </div>
-]}> 
-
-              {item.images.map((image) => {
-                return <img className="roomImg" src={image.thumbnailUrl} alt="room"/>;
-              })}
-
-</Slider>
-
-
-
-<button className="reservationBtn"
-            
-              onClick={
-                individualsCount === 0
-                  ? ""
-                  : () =>
-                      dispatch(
-                        hotelDetails.actions.setRoomName(item.name)
-                      )
-                      
-              }
-            >
-              {" "}
-              add{" "}
-            </button>
-
-
-            </div>
-
-            </section>
-           
-          </section> */
         );
       })}
 

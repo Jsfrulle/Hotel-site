@@ -5,6 +5,7 @@ import { PostReservations, GetReservations } from "reducers/reservationList";
 import  user from "../reducers/user";
 import {  UpdatehUser } from "reducers/user";
 import hotelDetails from "reducers/hotelDetails";
+import { ShowReservationComponent } from "components/ShowReservationComponent";
 
 export const MakeReservation = () => {
   const accessToken = useSelector((store) => store.user.accessToken);
@@ -23,18 +24,18 @@ console.log( parseInt(coins) - parseInt(total) )
       navigate("/signin");
     } else {
       
+  
+  dispatch(GetReservations());
+  dispatch(PostReservations());
+  dispatch(UpdatehUser()) 
     }
   }, [accessToken, navigate]);
 
 
 const onClick = () => {
-
   dispatch(user.actions.setCoins(  parseInt(coins) - parseInt(total) ))
   dispatch(hotelDetails.actions.setRoomName(""));
-  dispatch(GetReservations());
-  dispatch(PostReservations());
-  dispatch(UpdatehUser()) 
-
+  navigate("/profil");
 }
 
 
@@ -42,21 +43,18 @@ const onClick = () => {
 
   return (
     <div>
-      hello page 3
-      <section className="btnContainer">
-        <div>
-          <p> {reservation.reservationId} </p>
-          <p> {reservation.hotelName} </p>
-          <p> {reservation.checkIn} </p>
-          <p> {reservation.checkOut} </p>
-          <p> {reservation.roomName} </p>
-          <p> {reservation.individuals} </p>
-          <p> {reservation.priceOfRoom} </p>
-          <p>{reservation.totalPrice} </p>
-          <p> {reservation.user} </p>
-        </div>
+      
+      <section className="ContainerComfirm">
+       
+
+      <ShowReservationComponent item={reservation} />
+
         <button onClick={onClick}> confirm</button>
       </section>
+
+      
+
+
     </div>
   );
 };

@@ -82,21 +82,58 @@ export const UpdatehUser = () => {
 
       body: JSON.stringify({
         name: getState().user.name,
-        coins: getState().user.coins,
+     
         adress: getState().user.adress,
-        phone: getState().user.phone
+   
       })
     };
 
-    fetch(`https://hotel-backend-1.herokuapp.comupdate/${getState().user.userId}`, options)
+    fetch(`https://hotel-backend-1.herokuapp.com/update/${getState().user.userId}`, options)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
           batch(() => {
             dispatch(user.actions.setName(data.response.name));
-            dispatch(user.actions.setCoins(data.response.coins));
+         
             dispatch(user.actions.setAdress(data.response.adress));
-            dispatch(user.actions.setPhone(data.response.phone));
+           
+            console.log("OK");
+            dispatch(user.actions.setError(false));
+          });
+        } else {
+          batch(() => {
+            dispatch(user.actions.setError(true));
+          });
+        }
+      });
+  };
+};
+
+
+export const UpdatehCoins = () => {
+  return (dispatch, getState) => {
+    dispatch(ui.actions.setLoading(true));
+    const options = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      body: JSON.stringify({
+        
+        coins: getState().user.coins,
+        
+      })
+    };
+
+    fetch(`https://hotel-backend-1.herokuapp.com/coins/${getState().user.userId}`, options)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          batch(() => {
+         
+            dispatch(user.actions.setCoins(data.response.coins));
+         
             console.log("OK");
             dispatch(user.actions.setError(false));
           });

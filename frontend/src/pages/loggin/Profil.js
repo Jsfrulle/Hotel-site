@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { FetchUser, UpdatehUser } from "reducers/user";
+import { FetchUser, UpdatehCoins, UpdatehUser } from "reducers/user";
 import { GetReservations, DeleteReservations } from "reducers/reservationList";
 import user from "../../reducers/user";
 import reservationList from "../../reducers/reservationList";
@@ -43,7 +43,7 @@ export const Profil = () => {
     dispatch(FetchUser());
     dispatch(GetReservations());
     setReservation(list);
-  }, [dispatch, list]);
+  }, []);
 
   useEffect(() => {
     if(deleteIt === true){
@@ -63,10 +63,22 @@ export const Profil = () => {
     dispatch(user.actions.setName(changeName));
     setChangeCoins("");
     dispatch(user.actions.setAdress(changeAdress));
-    dispatch(user.actions.setPhone(changePhone));
+ 
 
     dispatch(UpdatehUser());
   };
+
+  const handelUpdateCoins = () => {
+
+
+    setChangeCoins(
+      dispatch(
+        user.actions.setCoins(parseInt(changeCoins) + parseInt(coins))))
+        dispatch(UpdatehCoins());
+        
+        
+        
+  }
 
   let today = moment().format("YYYY-MM-DD");
 
@@ -87,13 +99,8 @@ export const Profil = () => {
         />
         <button
           onClick={
-            (handelUpdate,
-            () =>
-              setChangeCoins(
-                dispatch(
-                  user.actions.setCoins(parseInt(changeCoins) + parseInt(coins))
-                )
-              ))
+            handelUpdateCoins
+            
           }
         >
           Add coins
@@ -124,16 +131,9 @@ export const Profil = () => {
           placeholder={adress}
         />
 
-        <label> Phone </label>
-        <input
-          id="phone"
-          type="number"
-          value={changePhone}
-          onChange={(e) => setChangePhone(e.target.value)}
-          placeholder={phone}
-        />
+       
     
-      <button onClick={changeName && changeAdress && changePhone?  handelUpdate : ''}>{changeName && changeAdress && changePhone?  'Update user' : 'fill out info'}</button>
+      <button onClick={changeName && changeAdress ?  handelUpdate : ''}>{changeName && changeAdress?  'Update user' : 'fill out info'}</button>
       </section>
       </section>
       <section className="reservatinContainer">
@@ -149,7 +149,7 @@ if(item.checkIn >= today ){
 
             return (
             <DeleteReservationComponent item={item} onClickDelete={onClickDelete} />
-            )}else{ return(<> <p>no data</p> </>) }
+            )}else{ return(<> <p></p> </>) }
 
           })}
           </section>
@@ -165,7 +165,7 @@ if(item.checkIn < today ){
 
             return (
               <ShowReservationComponent item={item } />
-            )}else{ return(<> <p>no data</p> </>) }
+            )}else{ return(<> <p></p> </>) }
 
           })}
           </section>

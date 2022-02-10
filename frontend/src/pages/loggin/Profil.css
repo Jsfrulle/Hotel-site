@@ -83,7 +83,7 @@ align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 height: 40vh;
 width: 100vw;
 }
@@ -102,6 +102,7 @@ width: 100vw;
   display: grid;
   grid-template-columns: 1;
 place-items: center;
+
 
 
  }

@@ -31,7 +31,7 @@ export const Reservations = () => {
   return (
     <>
       {notShow ? (
-        <form novalidate="novalidate" >
+        <section novalidate="novalidate" >
         <section class="login-in">
           <main class="login-card">
             <div class="login-card__title">
@@ -55,7 +55,7 @@ export const Reservations = () => {
             </label>
           
 
-            <button type="submit" class="login-card__button"onClick={ids ? onClick : ""}>Check</button>
+            <button type="submit" class="login-card__button"onClick={ids ? onClick : ""}>{ids ? 'Check' : ""}</button>
 
 {error ? `Oh no cant find reservation` : ``}
             
@@ -63,14 +63,22 @@ export const Reservations = () => {
             
           </main>
         </section>
-      </form>
+      </section>
       ) : (
         <article className="ReservationContainer">
           
       
-
+<div> 
           <ShowReservationComponent item={afterSearch} />
+          <button type="submit" class="login-card__button"onClick={ids ? onClick : ""}>{ids ? 'Check' : ""}</button>
+          <div className="backBtn"> 
+
+
+          <button type="submit" class="login-card__button"onClick={ids ? onClick : ""}>{ids ? 'Check' : ""}</button>
+
          <button onClick={onClickBack}>Back</button>
+         </div>
+         </div>
         </article>
       )}
     </>
