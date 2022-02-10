@@ -29,7 +29,7 @@ console.log( parseInt(coins) - parseInt(total) )
   dispatch(PostReservations());
   dispatch(UpdatehUser()) 
     }
-  }, [accessToken, navigate]);
+  }, [accessToken, navigate, dispatch]);
 
 
 const onClick = () => {
