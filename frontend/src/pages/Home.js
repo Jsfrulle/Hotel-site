@@ -82,27 +82,53 @@ export const Home = () => {
        <section className="homeContainer">
       <img className="background" src={background} alt="overlay" />
         
-       
-
-        <section className="formContainerHome">
+     
         
+          <main class="login-card_Home">
           <label className="heroText">Where do you want to go?</label>
-          <input
-            id="location"
+           
+            <label class="custom-input_Home login-card__label_Home">
+              <input
+                class="custom-input__input_Home login-card__input_Home"
+                autocomplete="off"
+                id="location"
             type="text"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            className="textAndDateHome"
             required
             minLength={3}
             maxLength={30}
-          />
-          <Pickdate className="DateHome" />
+              />
+          
+              <div class="custom-input__border_Home"></div>
+            </label>
+           
+            <Pickdate className="DateHome" />
+            <button type="submit" class="login-card__button_Home"onClick={ checkIn >= today && checkOut > checkIn ? getLocation : ''}> { checkIn >= today && checkOut > checkIn ? 'search' : 'not valid date'} 
+              
+            </button>
+          </main>
         
+    
 
-        <section className="btnContainer">
-          <button onClick={ checkIn >= today && checkOut > checkIn ? getLocation : ''}> { checkIn >= today && checkOut > checkIn ? 'search' : 'not valid date'} </button>
-        </section></section>
+
+
+
+
+
+
+
+
+
+
+
+
+        <section className="formContainerHome">
+        
+          
+          
+        
+        </section>
         <section className="overlayContainer"> 
         <img className="overlay" src={overlay} alt="overlay" />
         <section className="inspoText">
