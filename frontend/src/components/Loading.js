@@ -1,11 +1,11 @@
 import React from "react";
-
+import './Loading.css'
 const Loading = () => {
   return (
-    <div className="pageNotFoundContainer">
+    <div className="loadingContainer">
    
 
-      <div className="textPageNotFound">
+      <div className="loadingContent">
         <h2>Loading....</h2>
       </div>
     </div>

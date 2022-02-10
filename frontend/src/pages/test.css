@@ -61,7 +61,7 @@ transform: scale(95%);
   text-align: center;
   grid-row: 1/1;
   height: 100%;
-  background: var(--backgrundComponents);
+  background: var(--light-shadow);
   border-radius: 10px 10px 0 0;
   padding: 0px 6px;
   font-size: clamp(8px, 12px, 20px);
@@ -133,7 +133,7 @@ transform: scale(95%);
   background: #ffffff;
   font-weight: 700;
   transition: ease-in 0.2s;
-  color: #79756e;
+  color: var(--text);
   border: 1px dotted var(--text);
 
   font-size: clamp(10px, 15px, 20px);

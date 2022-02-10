@@ -1,0 +1,19 @@
+.loadingContainer{
+height: 60vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.loadingContent{
+
+  height: 40vh;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+
+}
