@@ -22,7 +22,7 @@ export const Reservations = () => {
   const onClickBack = () => {
     setIds("");
     dispatch(reservationList.actions.setSearchReservation());
-    dispatch(reservationList.actions.setError(true))
+    dispatch(reservationList.actions.setError(false))
     dispatch(reservationList.actions.setNotShow(true))
   };
 
