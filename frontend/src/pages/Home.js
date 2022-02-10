@@ -5,14 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { Pickdate } from "../components/Date";
 import hotelLocation, { FetchHotelLocation } from "../reducers/hotelLocation";
 import hotelDetails from "reducers/hotelDetails";
-import Loading from "components/Loading";
 import { ui } from "reducers/ui";
 import dotenv from "dotenv";
 import stockholm from "images/stockholm.jpg";
 import tokyo from "images/tokyo.jpg";
 import paris from "images/paris.jpg";
 import moment from "moment";
-import background from "../images/backgroundDay.jpg";
 import video from "../images/video.mp4";
 
 dotenv.config();
@@ -23,7 +21,7 @@ export const Home = () => {
   const navigate = useNavigate();
   const checkIn = useSelector((store) => store.hotelDetails.dateFrom);
   const checkOut = useSelector((store) => store.hotelDetails.dateTo);
-  const loading = useSelector((store) => store.ui.loading);
+  
   /*   const place = useSelector((store) => store.hotelLocation.place); */
 
   let today = moment().format("YYYY-MM-DD");
