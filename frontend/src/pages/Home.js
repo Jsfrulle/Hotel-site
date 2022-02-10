@@ -81,9 +81,9 @@ export const Home = () => {
       
        <section className="homeContainer">
       <img className="background" src={background} alt="overlay" />
-      {/* <video className="background"  width="550" height="500" controls autoPlay muted loop type="video/mp4">
+       <video className="background"  width="550" height="500" controls autoPlay muted loop type="video/mp4">
       <source src={video} type="video/mp4"/>
-     </video> */}
+     </video> 
      
         
           <main class="login-card_Home">

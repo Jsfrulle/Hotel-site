@@ -77,11 +77,14 @@ z-index: -15;
 }
 
  .heroText {
-  margin-bottom: 35px;
+  margin-bottom: 5px;
+  padding: 0;
+
   font-size: clamp(23px, 4vw, 180px);
-  z-index: 10;
+  z-index: 0;
   color: var(--text-light);
-  text-shadow: 1px 1px 3px var(--shadow);
+ 
+  text-shadow: 4px 2px 4px rgb(22, 34, 22);
 }
 
 
@@ -126,7 +129,7 @@ z-index: -15;
 }
 .custom-input__input_Home:focus ~ .custom-input__border_Home::after {
   transform: scaleX(1);
-  z-index: 10;
+  z-index: 15;
   
 }
 .custom-input_Home .custom-input__border_Home {
@@ -145,7 +148,7 @@ z-index: -15;
   color: var(--text-light);
   text-shadow: 1px 1px 1px var(--shadow);
   font-size: 1em;
-  z-index: 10;
+  z-index: 15;
 }
 
 .custom-input_Home .custom-input__border_Home::before, .custom-input_Home .custom-input__border_Home::after {
@@ -174,13 +177,13 @@ z-index: -15;
   height: 50vh;
   width: 100vw;
   box-shadow: 7px 2px 15px var(--shadow);
-  padding: 1%; 
+  padding: 10%; 
   border-radius: 1rem;
   position: absolute;
   top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #b9c7b5ec;
+  background: #949b91ec;
   box-sizing: border-box;
   transition: width 0.2s ease-in-out;
   transform-origin: center center;
@@ -198,31 +201,33 @@ z-index: -15;
     display: block;
     margin: 1rem 0;
     position: relative;
-    z-index: 10;
+    z-index: 15;
    
   }
   
   .login-card__text_Home {
     display: block;
-    font-size: 0.6em;
+    font-size: 1em;
     z-index: 15;
     
   }
   .login-card__input_Home {
     display: block;
-    height: 1%;
+    height: 50%;
+    width: 100%;
     padding-right: 1rem;
     padding-bottom: 5px;
-    box-sizing: border-box;
+    font-size: 2rem;
     color: var(--text-light);
-    z-index: 10;
+    text-shadow: 2px 2px 2px var(--shadow);
+    z-index: 20;
     text-align: center;
 
   }
   .login-card__input_Home:focus  {
     color: var(--text-mid);
-    z-index: 15;
   
+    z-index: 20;
   }
   .login-card__button_Home {
     position: absolute;
@@ -321,12 +326,12 @@ z-index: -0;
 .overlay{
 
   width: 100vw;
-  height: 28vh;
+  height: 23vh;
   position:absolute;
   z-index: -10;
- top: 95vh;
+ top: 100vh;
  left: -0%;
- background-color: #e1ebdeec;
+ background-color: #848d7f8f;
   }
 
 
@@ -343,14 +348,14 @@ flex-direction: row;
 justify-content: space-around;
 z-index: 1;
 position: relative;
-top:90vh;
+top:91vh;
 
 }
 
 .inspoText{
   position: relative;
-top:90vh;
- 
+top:94vh;
+ color:white;
   display: flex;
 justify-content: center;
 align-items: center;
