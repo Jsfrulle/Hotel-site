@@ -97,7 +97,7 @@ export const HotelRooms = () => {
 
 
           <section className="FormDropDownContent">
-          <label className="FormdropDownLabel">Individuals</label>
+          <label className="FormdropDownLabel">Low/High price</label>
           <select className="FormdropDownItem" onChange={onChange}>
             <option>Lowest price</option>
             <option>Highest price</option>
