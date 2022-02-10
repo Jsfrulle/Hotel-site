@@ -21,7 +21,7 @@ export const Hotels = () => {
   const hotel = useSelector((store) => store.hotelDetails.hotelList);
   const isLoading = useSelector((store) => store.ui.loading);
   const dispatch = useDispatch();
-
+  
 
   const rooms = useSelector((store) => store.roomDetail.roomList);
   console.log(rooms)
@@ -62,10 +62,12 @@ export const Hotels = () => {
         </select>
       </section>
       <section className="RoomChooicePageTwo">
-        {isLoading ? (
+        {isLoading ? 
           <Loading />
-        ) : (
+         : (
           <section className="hotelContainer">
+             {isLoading ? 
+          <Loading /> : '' }
             <div className="hotelContent">
               {hotel &&
                 hotel.map((item) => {

@@ -45,7 +45,7 @@ export const FetchHotelLocation = () => {
       }&locale=en_US`,
       options
     );
-
+    dispatch(ui.actions.setLoading(true));
     if (response.status === 200) {
       const res = await response.json();
 

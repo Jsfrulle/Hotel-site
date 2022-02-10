@@ -45,6 +45,7 @@ export const Home = () => {
   }, [place, ]); */
 
   const getLocation = () => {
+    dispatch(ui.actions.setLoading(true));
     if (location === "") {
       console.log("argument is missing");
     } else if (location) {
@@ -59,11 +60,10 @@ export const Home = () => {
   return (
     <article>
       <section className="homeContainer">
-        <img className="background" src={background} alt="overlay" />
+      <div class="video-container">
         <video
-          className="background"
-          width="550"
-          height="500"
+          
+          
           controls
           autoPlay
           muted
@@ -72,7 +72,7 @@ export const Home = () => {
         >
           <source src={video} type="video/mp4" />
         </video>
-
+</div>
         <main class="login-card_Home">
           <label className="heroText">Where do you want to go?</label>
 
@@ -110,7 +110,7 @@ export const Home = () => {
           <div className="overlay" />
 
           <section className="inspoText">
-            {loading ? <Loading /> : <h1>Go Somewhere New</h1>}
+             <h1>Go Somewhere New</h1>
           </section>
           <section className="inspoBubbleContainer">
             <button

@@ -5,11 +5,9 @@ import reservationList from "reducers/reservationList";
 
 dotenv.config();
 
-
 const hotelDetails = createSlice({
   name: "hotelDetails",
   initialState: {
-   
     place: "",
     locationId: null,
     error: false,
@@ -18,13 +16,12 @@ const hotelDetails = createSlice({
     hotelName: "",
     dateFrom: null,
     dateTo: null,
-    roomName:'',
+    roomName: "",
     individuals: null,
     priceOfRoom: null,
     totalPrice: null,
-    addreservations:null,
-    dropDown: "BEST_SELLER",
-  
+    addreservations: null,
+    dropDown: "BEST_SELLER"
   },
 
   reducers: {
@@ -50,50 +47,40 @@ const hotelDetails = createSlice({
       store.hotelId = action.payload;
     },
 
-    
     setError: (store, action) => {
       store.error = action.payload;
     },
     setDropDown: (store, action) => {
       store.dropDown = action.payload;
     },
-setHotelName: (store, action) => {
-  store.hotelName = action.payload;
-  },
+    setHotelName: (store, action) => {
+      store.hotelName = action.payload;
+    },
 
-  setRoomName:(store, action) => {
-    store.roomName = action.payload;
+    setRoomName: (store, action) => {
+      store.roomName = action.payload;
     },
     setIndividuals: (store, action) => {
       store.individuals = action.payload;
-      },
+    },
     setPriceOfRoom: (store, action) => {
       store.priceOfRoom = action.payload;
-      },
+    },
     setTotalPrice: (store, action) => {
       store.totalPrice = action.payload;
-      },
-    setAddreservations:(store, action) => {
+    },
+    setAddreservations: (store, action) => {
       store.addreservations = action.payload;
-      }
-
-
-
-
-
-} });
+    }
+  }
+});
 
 export default hotelDetails;
 
-
-
-
 export const FetchHotelLocationId = () => {
-
-
   return async (dispatch, getState) => {
     dispatch(ui.actions.setLoading(true));
-   
+
     if (getState().hotelDetails.locationId === "") {
     } else if (getState().hotelDetails.locationId) {
       dispatch(ui.actions.setLoading(true));
@@ -133,51 +120,34 @@ export const FetchHotelLocationId = () => {
   };
 };
 
-
-
-
-
-
 export const PostReservations = () => {
-
   return async (dispatch, getState) => {
     dispatch(ui.actions.setLoading(true));
 
-console.log( getState().hotelDetails.roomName)
+    console.log(getState().hotelDetails.roomName);
 
-
-if( getState().hotelDetails.roomName === ''){ }
-
-else{
-
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ 
-        roomName:  getState().hotelDetails.roomName
+    if (getState().hotelDetails.roomName === "") {
+    } else {
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          roomName: getState().hotelDetails.roomName
         })
+      };
 
-    };
-
-    await fetch('https://hotel-backend-1.herokuapp.com/reservation', options)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          dispatch(reservationList.actions.setReservation(data));
-          console.log(data, 'funkar')
-        } else {
-          console.log('no data fetched')
-        }
-      });
-  
-} 
-
-
+      await fetch("https://hotel-backend-1.herokuapp.com/reservation", options)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) {
+            dispatch(reservationList.actions.setReservation(data));
+            console.log(data, "funkar");
+          } else {
+            console.log("no data fetched");
+          }
+        });
+    }
+  };
 };
- }
-
-
-
-

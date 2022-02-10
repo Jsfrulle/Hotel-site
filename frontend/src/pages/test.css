@@ -112,7 +112,7 @@ transform: scale(95%);
   
 border: none;
 font-size: 30px;
-color: var(--shadow);
+color: #ffffff;
 text-shadow: 1px 1px 3px var(--text-light);
 font-weight: 700;
 }
