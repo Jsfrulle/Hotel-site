@@ -33,6 +33,7 @@ height: fit-content;
   transition: ease-out 0.2s;
   color: var(--text-light);
   text-shadow: 1px 1px 1px var(--shadow);
+
 }
 
 
@@ -50,7 +51,7 @@ transform: scale(95%);
 
 .textinRoom {
   padding: 0px 6px;
-  font-size: clamp(8px, 14px, 20px);
+  font-size: clamp(8px, 18px, 20px);
 
   margin: 0;
   padding: 0;
@@ -132,9 +133,10 @@ transform: scale(95%);
   background: #ffffff;
   font-weight: 700;
   transition: ease-in 0.2s;
-  color: #47443e;
-  text-shadow: 1px 1px 1px var(--shadow);
-  font-size: clamp(8px, 12px, 20px);
+  color: #79756e;
+  border: 1px dotted var(--text);
+
+  font-size: clamp(10px, 15px, 20px);
 }
 
 
@@ -142,8 +144,7 @@ transform: scale(95%);
   height: 100%;
   width: 100%;
   border-radius: 0 0 10px 10px;
-  background: var(--btn-hover);
-  color: #ffffff;
+ 
 }
 
 

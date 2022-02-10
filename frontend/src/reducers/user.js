@@ -56,7 +56,7 @@ export const FetchUser = () => {
       }
     };
 
-    fetch(API_URL("secrets"), options)
+    fetch(`https://hotel-backend-1.herokuapp.com/secrets`, options)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
@@ -75,14 +75,13 @@ export const UpdatehUser = () => {
   return (dispatch, getState) => {
     dispatch(ui.actions.setLoading(true));
     const options = {
-      method: "PATCH",
+      method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
 
       body: JSON.stringify({
         name: getState().user.name,
-     
         adress: getState().user.adress,
    
       })
@@ -114,7 +113,7 @@ export const UpdatehCoins = () => {
   return (dispatch, getState) => {
     dispatch(ui.actions.setLoading(true));
     const options = {
-      method: "PATCH",
+      method: "POST",
       headers: {
         "Content-Type": "application/json"
       },

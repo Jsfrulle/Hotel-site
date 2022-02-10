@@ -126,10 +126,10 @@ app.post("/signup", async (req, res) => {
 
 app.get("/secrets", authenticateUser);
 app.get("/secrets", (req, res) => {
-  res.send();
+  res.status(200)
 });
 
-app.post("/signin", async (req, res) => {
+app.patch("/signin", async (req, res) => {
   const { username, password } = req.body;
   try {
     const user = await User.findOne({ username });
@@ -164,14 +164,13 @@ app.patch("/update/:id", async (req, res) => {
     const updates = req.body;
     const options = { new: true };
 
-    const user = await User.findByIdAndUpdate(id, updates, options).save();
+    const user = await User.findByIdAndUpdate(id, updates, options)
    
     if (user) {
       res.status(200).json({
         response: {
       
-          name: user.name,
-          adress:user.adress,
+         user
          
         },
         success: true

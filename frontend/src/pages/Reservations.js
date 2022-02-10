@@ -68,12 +68,12 @@ export const Reservations = () => {
         <article className="ReservationContainer">
           
       
-<div> 
-          <ShowReservationComponent item={afterSearch} />
+
+          <ShowReservationComponent item={afterSearch} className="resCon" />
           
 
-         <button onClick={onClickBack}>Back</button>
-         </div>
+        <button className="reservationBt" onClick={onClickBack}>Back</button> 
+        
         
         </article>
       )}

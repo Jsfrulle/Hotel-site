@@ -7,7 +7,7 @@ export const History = () => {
 
   return (
     <div>
-      <button className="historyBtn" onClick={() => navigate(-1)}> back </button>
+      <button className="historyBtn"  onClick={() => navigate(-1)}> back </button>
     </div>
   );
 };

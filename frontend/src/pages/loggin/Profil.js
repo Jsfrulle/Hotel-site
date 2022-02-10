@@ -32,9 +32,9 @@ export const Profil = () => {
 
   useEffect(() => {
     if (!accessToken) {
-      navigate("/signin");
+     /*  navigate("/signin"); */
     } else {
-      navigate("/profil");
+     setReservation(list)
      
     }
   }, [accessToken, navigate]);
@@ -42,8 +42,8 @@ export const Profil = () => {
   useEffect(() => {
     dispatch(FetchUser());
     dispatch(GetReservations());
-    setReservation(list);
-  }, [dispatch, list]);
+    
+  }, [dispatch]);
 
   useEffect(() => {
     if(deleteIt === true){
@@ -96,8 +96,10 @@ export const Profil = () => {
           minLength={1}
           value={changeCoins}
           onChange={(e) => setChangeCoins(e.target.value)}
+          className="userInput"
+          autocomplete="off"
         />
-        <button
+        <button className="btnUser"
           onClick={
             handelUpdateCoins
             
@@ -113,27 +115,29 @@ export const Profil = () => {
         <input
           id="name"
           type="text"
-          
+          className="userInput"
           minLength={3}
           value={changeName}
           onChange={(e) => setChangeName(e.target.value)}
           placeholder={names}
+          autocomplete="off"
         />
 
         <label> Adress </label>
         <input
           id="adress"
           type="text"
-          
+          className="userInput"
           minLength={3}
           value={changeAdress}
           onChange={(e) => setChangeAdress(e.target.value)}
           placeholder={adress}
+          autocomplete="off"
         />
 
        
     
-      <button onClick={changeName && changeAdress ?  handelUpdate : ''}>{changeName && changeAdress?  'Update user' : 'fill out info'}</button>
+      <button className="btnUser" onClick={changeName && changeAdress ?  handelUpdate : ''}>{changeName && changeAdress?  'Update user' : 'fill out info'}</button>
       </section>
       </section>
       <section className="reservatinContainer">

@@ -30,7 +30,7 @@
   min-width: 70px;
   height: 4vw;
   min-height: 40px;
-  background-color: rgba(255, 255, 255, 0.603);
+  
 }
 
 .inspoFlagHeader {
@@ -42,7 +42,7 @@ font-size: clamp(26px, 3vw, 80px);
  display: flex;
  justify-content: space-around;
  align-items: center;
- color: rgba(255, 255, 255, 0.603);
+ color: var(--light-shadow);
   text-shadow: 1px 1px 1px var(--shadow);
   
 }

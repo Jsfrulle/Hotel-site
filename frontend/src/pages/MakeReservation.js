@@ -49,7 +49,7 @@ const onClick = () => {
 
       <ShowReservationComponent item={reservation} />
 
-        <button onClick={onClick}> confirm</button>
+        <button className="btnUser" onClick={onClick}>confirm</button>
       </section>
 
       

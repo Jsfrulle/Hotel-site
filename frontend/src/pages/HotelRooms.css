@@ -99,6 +99,10 @@
   grid-row: 13;
   z-index: 10;
   background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 @media (min-width: 768px) {

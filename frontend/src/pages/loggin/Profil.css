@@ -7,7 +7,9 @@ width: 100vw;
 
 justify-content: flex-start;
 align-items: center;
-
+color: var(--text);
+text-shadow: 1px 1px 1px var(--light-shadow);
+font-weight: 600;
 }
 .userContent{
   height: 36vh;
@@ -16,6 +18,7 @@ align-items: center;
   grid-template-columns: repeat(12, 1fr);
 grid-template-rows: repeat(12, 1fr);
 margin-top: 5vh;
+
 }
 .userContainer input{
 
@@ -39,6 +42,18 @@ max-width: 300px;
 justify-content: center;
 align-items: center;
 
+
+font-size: clamp(18px, 3vw, 30px);
+grid-template-columns: repeat(1, 1fr);
+border-radius: 10px;
+
+
+color: var( --light-shadow);
+text-shadow: 1px 1px 1px var(--shadow);
+
+
+
+
 }
 .coinsContainer{
 
@@ -50,8 +65,84 @@ align-items: center;
   justify-content: flex-start;
   align-items: center;
  
+ 
 
 }
+
+
+
+
+.userInput{
+  color: var(--text-mid);
+  text-shadow: 1px 1px 2px var(--light-shadowshadow);
+  font-size: 1em;
+  border: none;
+  border-bottom: 2px solid var(--text-light);
+margin-bottom: 10px;
+
+font-weight: 100;
+}
+.userInput::placeholder{
+  
+  
+  font-weight: 100;
+}
+
+.userInput:focus{
+
+  outline: none;
+
+}
+
+.userInput::after {
+  background: var(--secondary);
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transform: scaleX(0);
+}
+
+
+
+
+
+
+
+.btnUser{
+ 
+  padding: 0.5%;
+  margin: 0 0 5% 0;
+  font-size: 0.7rem;
+  width: fit-content;
+  border-radius: 0.1rem;
+  appearance: none;
+  border: 1px dotted var(--text);
+  background: var(--text-light);
+  color: var(--text);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+
+  transition: 0.2s ease-in-out;
+  outline: 0;
+
+
+}
+.btnUser:hover {
+ 
+  transform: scale(95%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .coinsContainer input{
 
   max-width: 100px;
@@ -70,8 +161,9 @@ align-items: center;
 }
 
 .reservatinContainer{
+  margin-top: 6vh;
 width: 100vw;
-height: 55vh;
+height: 40vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -84,7 +176,7 @@ align-items: center;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-height: 40vh;
+height: 30vh;
 width: 100vw;
 }
 
@@ -154,7 +246,7 @@ scrollbar-width: none;   for Firefox */
     justify-content: flex-start;
       align-items: center;
     overflow-y: scroll;
-    height: 63vh;
+    height: 56vh;
     
     
     -ms-overflow-style: none; /* for Internet Explorer, Edge */

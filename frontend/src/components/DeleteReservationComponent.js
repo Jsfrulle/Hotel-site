@@ -24,7 +24,7 @@ export const DeleteReservationComponent = ({item, onClickDelete}) => {
  <p><span className="bold">User:</span> {item.user} </p>
  <p> <span className="bold">Reservationnumber: </span>{item.reservationId }</p>
  <div className='containerBtn'> 
- <button className='btnRes'
+ <button className="btnUser"
                   onClick={onClickDelete}
                   value={item._id}
                 >

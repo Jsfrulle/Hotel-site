@@ -17,6 +17,38 @@
   align-items: center;
   font-size: clamp(16px, 1vw, 20px);
 }
+.resCon{
+margin-bottom: 15px;
+
+}
+
+.reservationBt {
+
+  margin: 2% 0 ;
+  font-size: 0.7rem;
+  width: 100px;
+  height: 30px;
+  border-radius: 0.1rem;
+  appearance: none;
+  border: 1px dotted var(--text);
+  background: var(--text-light);
+  color: var(--text);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+
+  transition: 0.2s ease-in-out;
+  outline: 0;
+
+}
+
+
+.reservationBt:hover {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+ 
+}
 
 .custom-input__input_reservation_page{
   height: 4rem;
