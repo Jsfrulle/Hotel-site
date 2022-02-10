@@ -10,7 +10,7 @@ align-items: center;
 .loadingContent{
 
   height: 40vh;
-  width: 53vw;
+  width: 63vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,22 +18,23 @@ align-items: center;
 
 }
 
-.pulsate {
-  animation: pulse 3s infinite;
+.notContainer{
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
 }
-@keyframes pulse {
-	0% {
-		transform: scale(0.90);
-		
-	}
 
-	70% {
-		transform: scale(1);
-		
-	}
+.notContent{
 
-	100% {
-		transform: scale(0.90);
-		
-	}
+  height: 40vh;
+  width: 63vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
 }

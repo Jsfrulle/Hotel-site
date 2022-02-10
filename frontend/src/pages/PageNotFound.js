@@ -1,10 +1,34 @@
 import React from 'react';
 
+import Lottie from 'react-lottie'
+ import  animationData from '../lotties/404.json'
 export const PageNotFound = () => {
-  return <div>
 
 
-<h1> PAGE NOT FOUND...</h1>
+  const defaultOptionsLoading = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
-  </div>;
+
+  return (
+  
+  <div className="notContainer">
+   
+
+  <div className="notContent">
+  <Lottie
+          options={defaultOptionsLoading}
+         
+          style={{  width:'30vw', height:'56vh', position:"absolute",}}
+          
+        />
+        
+    
+  </div>
+</div>)
 };
