@@ -3,7 +3,7 @@ import { ui } from "reducers/ui";
 import hotelDetails from "./hotelDetails";
 import user from "./user";
 import {  batch } from "react-redux";
-import { BASE } from "Urls/constants";
+
 
 
 const reservationList = createSlice({

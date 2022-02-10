@@ -15,13 +15,12 @@ export const Profil = () => {
   const [changeName, setChangeName] = useState();
   const [changeCoins, setChangeCoins] = useState();
   const [changeAdress, setChangeAdress] = useState();
-  const [changePhone, setChangePhone] = useState();
+  
   
   const accessToken = useSelector((store) => store.user.accessToken);
   const names = useSelector((store) => store.user.name);
   const coins = useSelector((store) => store.user.coins);
   const adress = useSelector((store) => store.user.adress);
-  const phone = useSelector((store) => store.user.phone);
   const [deleteIt, setDeleteIt] = useState(false);
   const list = useSelector((store) => store.reservationList.getReservation);
  /*  const listAfter = useSelector((store) => store.reservationList.listAfterDelete); */
@@ -39,11 +38,11 @@ export const Profil = () => {
     }
   }, [accessToken, navigate]);
 
-  useEffect(() => {
+  useEffect(({list}) => {
     dispatch(FetchUser());
     dispatch(GetReservations());
     setReservation(list);
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if(deleteIt === true){
