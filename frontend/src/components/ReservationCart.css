@@ -8,7 +8,7 @@
   margin: 0px 5px;
   overflow: hidden;
   border-top: 1px   dotted var(--text);
-  
+  background: var(--background);
   color: var(--text);
 
   }
