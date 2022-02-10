@@ -89,9 +89,9 @@ export const Home = () => {
 
           <Pickdate className="DateHome" />
           <button
-            type="submit"
+            
             class="login-card__button_Home"
-            onClick={checkIn >= today && checkOut > checkIn ? {getLocation} : ""}
+            onClick={checkIn >= today && checkOut > checkIn ? getLocation : ""}
           >
             {" "}
             {checkIn >= today && checkOut > checkIn
