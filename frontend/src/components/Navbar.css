@@ -138,7 +138,7 @@ a:navlink:hover{
     width: 30px;
     height: 30px;
     padding: 3px 6px 4px 4px;
-    background-color: var(--text-dark);
+ 
     display: flex;
     justify-content: center;
     align-items: center;

@@ -10,10 +10,30 @@ align-items: center;
 .loadingContent{
 
   height: 40vh;
-  width: 50vw;
+  width: 53vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aquamarine;
+  
 
+}
+
+.pulsate {
+  animation: pulse 3s infinite;
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.90);
+		
+	}
+
+	70% {
+		transform: scale(1);
+		
+	}
+
+	100% {
+		transform: scale(0.90);
+		
+	}
 }
