@@ -79,7 +79,7 @@ export default hotelDetails;
 
 export const FetchHotelLocationId = () => {
   return async (dispatch, getState) => {
-    dispatch(ui.actions.setLoading(true));
+   
 
     if (getState().hotelDetails.locationId === "") {
     } else if (getState().hotelDetails.locationId) {

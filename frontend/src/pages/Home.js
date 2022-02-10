@@ -22,7 +22,7 @@ export const Home = () => {
   const checkIn = useSelector((store) => store.hotelDetails.dateFrom);
   const checkOut = useSelector((store) => store.hotelDetails.dateTo);
   
-  /*   const place = useSelector((store) => store.hotelLocation.place); */
+
 
   let today = moment().format("YYYY-MM-DD");
   let future = moment().add(3, "days").format("YYYY-MM-DD");
@@ -38,17 +38,14 @@ export const Home = () => {
     dispatch(hotelLocation.actions.setPlace(location));
   };
 
-  /*  useEffect(() => {
-    getLocation();
-  }, [place, ]); */
+
 
   const getLocation = () => {
-    dispatch(ui.actions.setLoading(true));
+    
     if (location === "") {
       console.log("argument is missing");
     } else if (location) {
       dispatch(hotelLocation.actions.setPlace(location));
-
       dispatch(ui.actions.setLoading(true));
       dispatch(FetchHotelLocation());
       navigate("/hotels");
@@ -94,7 +91,7 @@ export const Home = () => {
           <button
             type="submit"
             class="login-card__button_Home"
-            onClick={checkIn >= today && checkOut > checkIn ? getLocation : ""}
+            onClick={checkIn >= today && checkOut > checkIn ? {getLocation} : ""}
           >
             {" "}
             {checkIn >= today && checkOut > checkIn
