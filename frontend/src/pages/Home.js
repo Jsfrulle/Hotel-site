@@ -14,7 +14,7 @@ import paris from "images/paris.jpg";
 import moment from "moment";
 import overlay from "../images/overlay.png"
 import background from "../images/backgroundDay.jpg"
-
+import video from "../images/video.mp4"
 
 
 dotenv.config();
@@ -81,7 +81,9 @@ export const Home = () => {
       
        <section className="homeContainer">
       <img className="background" src={background} alt="overlay" />
-        
+      {/* <video className="background"  width="550" height="500" controls autoPlay muted loop type="video/mp4">
+      <source src={video} type="video/mp4"/>
+     </video> */}
      
         
           <main class="login-card_Home">
@@ -130,7 +132,8 @@ export const Home = () => {
         
         </section>
         <section className="overlayContainer"> 
-        <img className="overlay" src={overlay} alt="overlay" />
+        <img className="overlay" /* src={overlay} alt="overlay" */ />
+        
         <section className="inspoText">
         
           {loading ? <Loading /> : <h1>Go Somewhere New</h1>}

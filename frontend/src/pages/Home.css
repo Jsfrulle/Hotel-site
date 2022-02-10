@@ -177,10 +177,10 @@ z-index: -15;
   padding: 1%; 
   border-radius: 1rem;
   position: absolute;
-  top: 45%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #8997859a;
+  background: #b9c7b5ec;
   box-sizing: border-box;
   transition: width 0.2s ease-in-out;
   transform-origin: center center;
@@ -235,7 +235,7 @@ z-index: -15;
     border-radius: 0.5rem;
     appearance: none;
     border: 0;
-    background: #89978591;
+    background: #899785e7;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 500;
@@ -313,19 +313,20 @@ z-index: -15;
 
   position: relative;
 top:10vh;
-z-index: 1;
+z-index: -0;
+
 
 }
 
 .overlay{
 
   width: 100vw;
-  height: 45vh;
+  height: 28vh;
   position:absolute;
   z-index: -10;
- top: 80vh;
- 
-
+ top: 95vh;
+ left: -0%;
+ background-color: #e1ebdeec;
   }
 
 
