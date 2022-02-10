@@ -24,12 +24,9 @@ export default hotelLocation;
 export const FetchHotelLocation = () => {
   return async (dispatch, getState) => {
 
-
-
     if( getState().hotelLocation.place === ''){}
     else if( getState().hotelLocation.place){
 
-    dispatch(ui.actions.setLoading(true));
     const options = {
       method: "GET",
       headers: {
@@ -45,10 +42,10 @@ export const FetchHotelLocation = () => {
       }&locale=en_US`,
       options
     );
-    dispatch(ui.actions.setLoading(true));
+    
     if (response.status === 200) {
       const res = await response.json();
-
+      dispatch(ui.actions.setLoading(true));
       if (res) {
         return (
           dispatch(
