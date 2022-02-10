@@ -70,15 +70,11 @@ export const Reservations = () => {
       
 <div> 
           <ShowReservationComponent item={afterSearch} />
-          <button type="submit" class="login-card__button"onClick={ids ? onClick : ""}>{ids ? 'Check' : ""}</button>
-          <div className="backBtn"> 
-
-
-          <button type="submit" class="login-card__button"onClick={ids ? onClick : ""}>{ids ? 'Check' : ""}</button>
+          
 
          <button onClick={onClickBack}>Back</button>
          </div>
-         </div>
+        
         </article>
       )}
     </>

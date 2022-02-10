@@ -20,7 +20,7 @@ export const DeleteReservationComponent = ({item, onClickDelete}) => {
  <p> <span className="bold">Price: </span>{item.priceOfRoom}/person </p>
  
  </div>
- <p> <span className="bold">Total price:</span>{item.totalPrice} </p>
+ <p> <span className="bold">Total price:</span>{item.totalPrice}/night </p>
  <p><span className="bold">User:</span> {item.user} </p>
  <p> <span className="bold">Reservationnumber: </span>{item.reservationId }</p>
  <div className='containerBtn'> 
