@@ -291,7 +291,7 @@ app.post("/reservation", async (req, res) => {
 app.get("/reservation", async (req, res) => {
   const { username } = req.header("user");
   try {
-    const response = await AllUsermessages.find(username);
+    const response = await AllUsermessages.find({username});
     res.status(201).json({
       response,
       success: true

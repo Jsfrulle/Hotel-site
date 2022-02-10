@@ -18,6 +18,7 @@ export const Profil = () => {
   
   
   const accessToken = useSelector((store) => store.user.accessToken);
+  const username = useSelector((store) => store.user.username);
   const names = useSelector((store) => store.user.name);
   const coins = useSelector((store) => store.user.coins);
   const adress = useSelector((store) => store.user.adress);
@@ -144,7 +145,7 @@ export const Profil = () => {
         {reservation &&
           reservation.map((item) => {
 
-if(item.checkIn >= today ){
+if(item.checkIn >= today && item.user === username ){
 
             return (
             <DeleteReservationComponent item={item} onClickDelete={onClickDelete} />
@@ -160,7 +161,7 @@ if(item.checkIn >= today ){
 {reservation &&
           reservation.map((item) => {
 
-if(item.checkIn < today ){
+if(item.checkIn < today && item.user === username){
 
             return (
               <ShowReservationComponent item={item } />
