@@ -7,13 +7,24 @@
   align-items: center;
   justify-content: space-between;
   z-index: 50;
+  text-decoration: none;
 }
+
+
+
+a:link:hover, a:link:focus, a:visited:hover, a:visited:focus {
+  text-decoration: none;
+
+}
+
+
 
 .logoContainer {
   width: 40px;
   height: 40px;
   padding: 5px 10px 6px 7px;
-  background-color: rgb(69, 97, 100);
+  background-color: var(--light-shadow);
+  box-shadow: 1px 1px 3px var(--shadow);
   display: flex;
   justify-content: center;
   margin: 15px 0 0 10px;
@@ -22,7 +33,7 @@
 }
 
 .logoContainer:hover {
-  background-color: rgb(43, 57, 58);
+  background-color: var(--text)
 }
 
 img {
@@ -38,38 +49,65 @@ ul {
   margin-top: 20px;
   list-style-type: none;
   font-size: clamp(11px, 2vw, 17px);
+  text-decoration: none;
 }
 
 .navLink:link {
-  color: rgb(21, 22, 22);
+  color: var(--text-dark);
   text-decoration: none;
-  background-color: rgb(183, 213, 214);
+  background-color: var(--light-shadow);
+  box-shadow: 1px 1px 3px var(--shadow);
   padding: 5px 10px;
   margin: 0 8px;
   border-radius: 15px;
 }
+Link{
+  text-decoration: none;
 
-.navLink:visited {
-  color: rgb(21, 22, 22);
+}
+:any-link{
+
+  text-decoration: none;
+}
+
+a:navlink:hover{
+
+  text-decoration: none;
+
+}
+
+
+.navLink:focus-visible{
+
+  background-color: var(--text);
+  text-decoration: none;
+}
+
+ .navLink:visited {
+  color: var(--text);
+  text-decoration: none;
 }
 
 /* mouse over link */
 .navLink:hover {
-  color: rgb(200, 220, 223);
-  background-color: rgb(43, 57, 58);
+  color: var(--text-light);
+  background-color: var(--text);
+  text-decoration: none;
 }
 
 /* selected link */
 .navLink:active {
-  color: rgb(77, 67, 67);
+  color: var(--text-dark);
+  text-decoration: none;
 }
 .navLink:focus {
   padding: 5px 10px;
   border-radius: 15px;
   height: 100%;
   width: 100%;
-  color: rgb(243, 243, 243);
-  background-color: rgb(43, 57, 58);
+  color: var(--text-light);
+  background-color: var(--text);
+  text-decoration: none;
 }
 
 @media (max-width: 767px) {
@@ -100,7 +138,7 @@ ul {
     width: 30px;
     height: 30px;
     padding: 3px 6px 4px 4px;
-    background-color: rgb(69, 97, 100);
+    background-color: var(--text-dark);
     display: flex;
     justify-content: center;
     align-items: center;
