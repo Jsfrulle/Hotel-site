@@ -79,7 +79,7 @@ text-shadow: 1px 1px 1px var(--shadow);
   border: none;
   border-bottom: 2px solid var(--text-light);
 margin-bottom: 10px;
-
+background: #ffffff;
 font-weight: 100;
 }
 .userInput::placeholder{
