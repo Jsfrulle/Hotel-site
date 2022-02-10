@@ -132,7 +132,7 @@ export const Home = () => {
         
         </section>
         <section className="overlayContainer"> 
-        <img className="overlay" /* src={overlay} alt="overlay" */ />
+        <div className="overlay"  />
         
         <section className="inspoText">
         
