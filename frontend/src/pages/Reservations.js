@@ -29,7 +29,7 @@ export const Reservations = () => {
   console.log( afterSearch, ids);
 
   return (
-    <>
+    <div className="div">
       {notShow ? (
         <section novalidate="novalidate" >
         <section class="login-in">
@@ -78,7 +78,7 @@ export const Reservations = () => {
         
         </article>
       )}
-    </>
+    </div>
   );
 };
 

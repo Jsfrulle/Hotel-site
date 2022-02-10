@@ -14,6 +14,18 @@
   color: var(--text-light);
 
 }
+.div{
+  margin:  0 0px;
+  padding: 0 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+
+
+}
 
 .ReservationForm {
   width: 100vw;

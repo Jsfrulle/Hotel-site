@@ -1,11 +1,11 @@
 .cartContainer{
   position: relative;
-  width: 100vw;
+  width: 100%;
 
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 0px 5px;
+  margin: 0px ;
   overflow: hidden;
   border-top: 1px   dotted var(--text);
   background: var(--background);
@@ -25,6 +25,7 @@
   padding: 0;
   margin: 0;
   font-size: 8.5px;
+  background: var(--background);
   }
   
   .cartP{
@@ -76,12 +77,7 @@
   
   
   @media (min-width:768px) {
-    .cartContainer{
-      
-    
-      margin: 5px 5px;
-      
-      }
+   
     
     .CartH1{
     
@@ -96,7 +92,7 @@
   
       .cartP{
   
-        margin: 5px 20px 0 0;
+        
         font-size: 14px;
         }
   
