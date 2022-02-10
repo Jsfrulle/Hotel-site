@@ -38,11 +38,11 @@ export const Profil = () => {
     }
   }, [accessToken, navigate]);
 
-  useEffect(({list}) => {
+  useEffect(() => {
     dispatch(FetchUser());
     dispatch(GetReservations());
     setReservation(list);
-  }, [dispatch]);
+  }, [dispatch, list]);
 
   useEffect(() => {
     if(deleteIt === true){
