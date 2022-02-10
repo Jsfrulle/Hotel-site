@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Loading.css'
-
 import Lottie from 'react-lottie'
  import  animationData from '../lotties/loading.json'
 const Loading = () => {
