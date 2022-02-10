@@ -147,7 +147,7 @@ a:link:hover, a:link:focus, a:visited:hover, a:visited:focus {
 }
 .login-card__input:focus  {
   color: var(--text-mid);
-  text-shadow: 1px 1px 1px var(--text-light);
+
 }
 .login-card__button {
   position: absolute;

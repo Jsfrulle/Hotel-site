@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     minlenght: 2,
     maxlenght: 20,
-    required: true
+    
   },
   adress: {
     type: String,
@@ -27,10 +27,7 @@ const userSchema = new mongoose.Schema({
     maxlenght: 20,
    
   },
-  phone: {
-    type: Number,
-    
-  },
+ 
 
   username: {
     type: String,
@@ -126,10 +123,10 @@ app.post("/signup", async (req, res) => {
 
 app.get("/secrets", authenticateUser);
 app.get("/secrets", (req, res) => {
-  res.status(200)
+  res.send()
 });
 
-app.patch("/signin", async (req, res) => {
+app.post("/signin", async (req, res) => {
   const { username, password } = req.body;
   try {
     const user = await User.findOne({ username });
@@ -143,7 +140,7 @@ app.patch("/signin", async (req, res) => {
           accessToken: user.accessToken,
           coins: user.coins,
           adress:user.adress,
-          phone: user.phone,
+          
         },
         success: true
       });

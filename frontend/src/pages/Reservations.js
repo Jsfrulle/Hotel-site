@@ -46,6 +46,7 @@ export const Reservations = () => {
                 value={ids}
                 onChange={(e) => setIds(e.target.value)}
                 class="custom-input__input login-card__input"
+                
                 autocomplete="off"
                 required="required"
                 

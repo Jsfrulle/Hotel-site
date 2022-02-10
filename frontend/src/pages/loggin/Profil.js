@@ -32,12 +32,12 @@ export const Profil = () => {
 
   useEffect(() => {
     if (!accessToken) {
-     /*  navigate("/signin"); */
+       navigate("/signin"); 
     } else {
      setReservation(list)
-     
+     navigate("/profil"); 
     }
-  }, [accessToken, navigate]);
+  }, [accessToken, navigate, list]);
 
   useEffect(() => {
     dispatch(FetchUser());
@@ -92,7 +92,7 @@ export const Profil = () => {
         <input
           id="coins"
           type="number"
-          required
+          
           minLength={1}
           value={changeCoins}
           onChange={(e) => setChangeCoins(e.target.value)}

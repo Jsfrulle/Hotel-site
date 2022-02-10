@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { API_URL } from "Urls/constants";
+
 import { batch } from "react-redux";
 import { ui } from "reducers/ui";
 const user = createSlice({

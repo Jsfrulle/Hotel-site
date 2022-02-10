@@ -6,6 +6,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--text-light);
+}
+
+.login-card{
+
+  color: var(--text-light);
+
 }
 
 .ReservationForm {
