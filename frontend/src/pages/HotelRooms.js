@@ -91,14 +91,24 @@ export const HotelRooms = () => {
         </>
       ) : (
         <section className="roomPageContent">
-          <select className="dropDown_room" onChange={onChange}>
+        
+
+          <section className="FormInputs">
+
+
+          <section className="FormDropDownContent">
+          <label className="FormdropDownLabel">Individuals</label>
+          <select className="FormdropDownItem" onChange={onChange}>
             <option>Lowest price</option>
             <option>Highest price</option>
           </select>
+            </section>
 
-          <section className="FormInputs">
+
+          
+
             <section className="FormDropDownContent">
-              <label className="FormdropDownLabel">individuals</label>
+              <label className="FormdropDownLabel">Individuals</label>
               <IndividualsDropDown />
             </section>
 

@@ -29,7 +29,8 @@ const RoomItem = ({room}) => {
     
    
 
-<section className="roomsItemContent" key={item.name}>
+<div className="roomsItemContent" key={item.name}>
+
           <section className="textContent">
             <h1 className="textinRoom"> {item.name} </h1>
             <section className="textsmall"> 
@@ -69,13 +70,14 @@ const RoomItem = ({room}) => {
                 : "Reservate"} </button>
             </div>
           </div>
-          
-        </section>
-
+        
+        </div>
+        
         );
       })}
 
  </section>
+
 )
   
 };

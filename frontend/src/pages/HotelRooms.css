@@ -2,8 +2,9 @@
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-
-
+  font-weight: 600;
+  color: var(--text);
+  text-shadow: 1px 1px 1px var( --light-shadow);
 }
 
 .roomPageContent {
@@ -23,7 +24,8 @@
 }
 .FormInputs {
   height: 70px;
-  margin-bottom: 20px;
+  width: 100vw;
+  margin-bottom: 30px;
   grid-column: 1/13;
   grid-row: 2;
   display: flex;
@@ -34,6 +36,13 @@
 .roomSubmitBtn {
   height: 0px;
 }
+
+.FormdropDownItem{
+
+  width: 10vw;
+
+}
+
 
 .FormDropDownContent {
 
