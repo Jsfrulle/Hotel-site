@@ -16,7 +16,7 @@ dotenv.config();
 export const Inspiration = () => {
   const city = useSelector((store) => store.insparationReducer.city);
   const flag = useSelector((store) => store.insparationReducer.flag);
-  const [country, setcountry] = useState();
+
   const hotel = useSelector((store) => store.hotelDetails.hotelList);
   
   const isLoading = useSelector((store) => store.ui.loading);
@@ -28,7 +28,7 @@ export const Inspiration = () => {
   useEffect(() => {
     const array = ["BR", "TH", "MV"];
     const Country = array.sort(() => 0.5 - Math.random());
-    setcountry(Country[0]);
+    
     dispatch(insparationReducer.actions.setInsoCountry(Country[0]));
     console.log("hello");
 
