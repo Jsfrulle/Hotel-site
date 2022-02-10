@@ -23,10 +23,10 @@ export default hotelLocation;
 
 export const FetchHotelLocation = () => {
   return async (dispatch, getState) => {
-
+    dispatch(ui.actions.setLoading(true));
     if( getState().hotelLocation.place === ''){}
     else if( getState().hotelLocation.place){
-
+      dispatch(ui.actions.setLoading(true));
     const options = {
       method: "GET",
       headers: {
@@ -45,7 +45,7 @@ export const FetchHotelLocation = () => {
     
     if (response.status === 200) {
       const res = await response.json();
-      dispatch(ui.actions.setLoading(true));
+    
       if (res) {
         return (
           dispatch(
@@ -60,6 +60,7 @@ export const FetchHotelLocation = () => {
       }
     } else {
       console.log("argument is missing");
+      dispatch(ui.actions.setLoading(false));
     }
   };}
 };

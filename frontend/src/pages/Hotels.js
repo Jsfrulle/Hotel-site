@@ -24,7 +24,7 @@ export const Hotels = () => {
   
 
   const rooms = useSelector((store) => store.roomDetail.roomList);
-  console.log(rooms)
+ 
 
 
   const onChange = ({ target }) => {
@@ -43,7 +43,14 @@ export const Hotels = () => {
 
 
   return (
+
+    
+
     <article className="pageTwoConatiner">
+
+
+
+
       <section className="topInfoContainer">
         {" "}
         <h1> {place} </h1>
@@ -63,11 +70,13 @@ export const Hotels = () => {
       </section>
       <section className="RoomChooicePageTwo">
         {isLoading ? 
+          
+          
           <Loading />
+       
          : (
           <section className="hotelContainer">
-             {isLoading ? 
-          <Loading /> : '' }
+            
             <div className="hotelContent">
               {hotel &&
                 hotel.map((item) => {
@@ -83,6 +92,8 @@ export const Hotels = () => {
       <div className="historyContainer">
         <History />
       </div>
+       
     </article>
+    
   );
 };
