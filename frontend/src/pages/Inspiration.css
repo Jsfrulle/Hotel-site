@@ -10,38 +10,44 @@
  
 }
 .inspoHero {
-  grid-row: 1/2;
+  grid-row: 1/3;
   grid-column: 1/12;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+ 
   z-index: 5;
   overflow: hidden;
  
-  background-color: white;
+  
 }
 .flagImg {
-  position: absolute;
+ 
+  transform: rotate(-5deg);
   z-index: -10;
-  width: 100vw;
-  height: 100%;
+  width: 7vw;
+  min-width: 70px;
+  height: 4vw;
+  min-height: 40px;
   background-color: rgba(255, 255, 255, 0.603);
 }
 
 .inspoFlagHeader {
-  color: white;
-  text-shadow: 3px 2px 1px black;
-  font-size: 30px;
+ 
+  text-shadow: 2px 1px 1px black;
+font-size: clamp(26px, 3vw, 80px);
   text-align: center;
+  width: 40vw;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ color: rgba(255, 255, 255, 0.603);
+  text-shadow: 1px 1px 1px var(--shadow);
+  
 }
 
-.inspoFlagHeaderMv {
-  color: rgb(209, 206, 206);
-  text-shadow: 3px 2px 1px black;
-  font-size: 30px;
-}
+
 
 .hotelInspoContainer {
   grid-row: 3/11;
@@ -71,24 +77,10 @@ padding: 0px 0 0px 0;
 
 
 @media (min-width: 768px) {
-  .inspoHero {
-    grid-row: 1/3;
-    grid-column: 1/13;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    overflow: hidden;
-  }
+  
 
-  .inspoFlagHeader {
-    font-size: 50px;
+ 
 
-  }
-
-  .inspoFlagHeaderMv {
-    font-size: 50px;
-  }
 
   .hotelInspoContainer {
     grid-row: 3/11;

@@ -26,14 +26,14 @@ export const Inspiration = () => {
 
 
   useEffect(() => {
-    const array = ["US", "TH", "MV"];
+    const array = ["BR", "TH", "MV"];
     const Country = array.sort(() => 0.5 - Math.random());
     setcountry(Country[0]);
     dispatch(insparationReducer.actions.setInsoCountry(Country[0]));
     console.log("hello");
 
-    if (Country[0] === "US") {
-      dispatch(insparationReducer.actions.setLocationInsparation(1708651));
+    if (Country[0] === "BR") {
+      dispatch(insparationReducer.actions.setLocationInsparation(1693930));
     } else if (Country[0] === "TH") {
       dispatch(insparationReducer.actions.setLocationInsparation(1313946));
     } else {
@@ -60,10 +60,11 @@ export const Inspiration = () => {
        <section className="inspoHero">
         <img src={ flag } alt="flag" className="flagImg" />
         <h1
-          className={country === "MV" ? "inspoFlagHeaderMv" : "inspoFlagHeader"}
+          className="inspoFlagHeader"
         >
           {city}{" "}
         </h1>
+        <img src={ flag } alt="flag" className="flagImg" />
       </section>
       <section className="hotelInspoContainer">
         {isLoading ? (
