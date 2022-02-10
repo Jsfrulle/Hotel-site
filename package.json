@@ -6,8 +6,8 @@
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "dotenv": "^14.1.0",
-    "mongoose": "^6.1.5",
+    "dotenv": "^14.3.2",
+    "mongoose": "^6.2.1",
     "react-lottie": "^1.2.3",
     "reactrangeslider": "^3.0.6",
     "shortid": "^2.2.16"
