@@ -52,6 +52,7 @@ export const Hotels = () => {
 
 
       <section className="topInfoContainer">
+     
         {" "}
         <h1> {place} </h1>
       </section>
@@ -67,17 +68,26 @@ export const Hotels = () => {
           <option value="STAR_RATING_HIGHEST_FIRST">Highest star rating</option>
           <option value="STAR_RATING_LOWEST_FIRST"> Lowest star rating</option>
         </select>
+        
       </section>
+      
+      
       <section className="RoomChooicePageTwo">
-        {isLoading ? 
+      <section className="hotelContainer">
+     
+    
+  
+        
+          
+          
+            <div className="hotelContent">
+            {isLoading ? 
           
           
           <Loading />
        
-         : (
-          <section className="hotelContainer">
-            
-            <div className="hotelContent">
+         : <>
+
               {hotel &&
                 hotel.map((item) => {
                   
@@ -85,13 +95,16 @@ export const Hotels = () => {
                   return (
                    <HotelComponent item={item}  /> 
                   );
-                })}
+                })}  </> }
             </div>
-          </section>)}
+          </section>
       </section>
       <div className="historyContainer">
         <History />
       </div>
+
+   
+
        
     </article>
     

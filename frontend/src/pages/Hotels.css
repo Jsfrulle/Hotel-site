@@ -15,7 +15,7 @@
   grid-row: 2;
   color: var(--light-shadow);
   text-shadow: 1.5px 1px 1px var(--text);
-  background-color: white;
+/*   background-color: white; */
 }
 
 
@@ -30,7 +30,7 @@
   justify-content: center;
   align-content: flex-end;
   height: 90px;
- 
+  background-color: white;
   padding: 0px 10px;
 }
 
