@@ -24,7 +24,7 @@ export const Hotels = () => {
   
 
   const rooms = useSelector((store) => store.roomDetail.roomList);
- 
+  console.log(rooms)
 
 
   const onChange = ({ target }) => {
