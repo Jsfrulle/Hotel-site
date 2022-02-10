@@ -100,12 +100,27 @@ transform: scale(95%);
 
 .sliderBtn {
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.nextBtn{
+  background: transparent;
+  
+border: none;
+font-size: 30px;
+color: var(--shadow);
+text-shadow: 1px 1px 3px var(--text-light);
+font-weight: 700;
+}
+
+
+
+
+
 .roomImg {
   position: relative;
   z-index: -10;

@@ -49,8 +49,8 @@ const RoomItem = ({room}) => {
               autoplay={false}
               renderControls={(next, previous) => [
                 <div className="sliderBtn">
-                  <button onClick={previous}>Previous</button>
-                  <button onClick={next}>Next</button>
+                  <button className="nextBtn" onClick={previous}>{'<<'}</button>
+                  <button className="nextBtn" onClick={next}>{'>>'}</button>
                 </div>
               ]}
             >
