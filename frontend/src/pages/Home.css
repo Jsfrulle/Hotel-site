@@ -2,6 +2,9 @@ article{
 margin: 0 auto;
 padding: 0 auto;
 overflow: hidden;
+display: flex;
+align-items: center;
+text-align: center;
 }
 
 .test{
@@ -24,7 +27,7 @@ overflow: hidden;
  overflow-y:scroll;
   display: grid;
   font-size: clamp(15px, 1vw, 20px);
-
+ 
 
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -60,7 +63,7 @@ z-index: -15;
 
 .formContainerHome{
   width: 100vw;
-  height: 40vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -103,7 +106,7 @@ z-index: -15;
 
 .custom-input__input_Home {
   height: 4rem;
-  width: 100%;
+  width: 50%;
   margin-top: 3%;
   appearance: none;
   border: 0;
@@ -116,6 +119,9 @@ z-index: -15;
   font-weight: 300;
   transform: border-color 0.2s ease-in-out;
   z-index: 15;
+  display: flex;
+  align-items: center;
+  text-align: center;
   
 }
 .custom-input__input_Home:focus ~ .custom-input__border_Home::after {
@@ -165,8 +171,8 @@ z-index: -15;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: fit-content;
-  width: 80vw;
+  height: 50vh;
+  width: 100vw;
   box-shadow: 7px 2px 15px var(--shadow);
   padding: 1%; 
   border-radius: 1rem;
