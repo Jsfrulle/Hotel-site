@@ -134,6 +134,32 @@ font-weight: 100;
 
 
 
+.btnUser1{
+ 
+  padding: 0.5%;
+  margin: 1% 0 5% 0;
+  font-size: 0.7rem;
+  width: fit-content;
+  border-radius: 0.1rem;
+  appearance: none;
+  border: 1px dotted var(--text);
+  background: var(--text-light);
+  color: var(--text);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+
+  transition: 0.2s ease-in-out;
+  outline: 0;
+
+
+}
+.btnUser1:hover {
+ 
+  transform: scale(95%);
+}
+
+
 
 
 
