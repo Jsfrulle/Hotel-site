@@ -28,10 +28,18 @@ console.log( parseInt(coins) - parseInt(total) )
   dispatch(GetReservations());
   dispatch(PostReservations());
   dispatch(UpdatehUser()) 
-  dispatch(user.actions.setCoins(  parseInt(coins) - parseInt(total) ))
+  setMoney ()
   dispatch(hotelDetails.actions.setRoomName(""));
     }
   }, [accessToken, navigate, dispatch]);
+
+
+ const setMoney = () =>{
+
+  dispatch(user.actions.setCoins(  parseInt(coins) - parseInt(total) ))
+
+ }
+
 
 
 const onClick = () => {
