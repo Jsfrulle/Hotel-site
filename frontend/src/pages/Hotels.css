@@ -16,21 +16,24 @@
   color: var(--light-shadow);
   text-shadow: 1.5px 1px 1px var(--text);
    background-color: white; 
+   z-index: 3;
 }
 
 
 /*  History btn and weather */
 
 .historyAndWeather {
-  grid-column: 1/13;
+  grid-column: 5/8;
   grid-row: 3;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: flex-end;
   height: 90px;
-  background-color: white;
+   background-color: white;  
+   z-index: 1;
   padding: 0px 10px;
+ 
 }
 
 
@@ -44,6 +47,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
+ 
 }
 
 /* date container and btn */
@@ -55,6 +59,7 @@
   justify-content: space-around;
   align-items: flex-end;
   padding-bottom: 15px;
+  background-color: white;
 }
 
 
@@ -86,7 +91,7 @@ padding: 0;
 .dropDownContainer{
   grid-column: 1/13;
   grid-row: 3/4;
-
+z-index: 5;
 display: flex;
 align-items: flex-end;
 }
@@ -119,6 +124,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 z-index: 0;
+
 
 }
 
