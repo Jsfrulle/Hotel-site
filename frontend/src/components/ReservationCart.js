@@ -3,6 +3,7 @@ import {  useDispatch, useSelector } from "react-redux";
 import hotelDetails from "reducers/hotelDetails"
 import { useNavigate } from "react-router-dom";
 import "./ReservationCart.css"
+import moment from "moment";
 export const ReservationCart = () => {
 
   const checkIn = useSelector((store) => store.hotelDetails.dateFrom);
@@ -14,9 +15,15 @@ export const ReservationCart = () => {
  const roomDetail = roomss.rooms.filter(item =>item.name === roomName);
   const pri = roomDetail.map(item => item.ratePlans[0].price.unformattedCurrent);
   const coins = useSelector((store) => store.user.coins);
-  const total = (pri[0] * individual)
+
+
+  let a = moment(checkIn);
+  let b = moment(checkOut);
+  const day = b.diff(a, 'days')
+  const priceAndDays = (day * pri[0])
+  const total = (priceAndDays * individual)
  
-console.log(coins, total)
+console.log(day, priceAndDays, coins, total)
 
 
   const dispatch = useDispatch();
@@ -41,7 +48,8 @@ return (
      <p className="cartP">{checkIn} - {checkOut}</p>
      <p className="cartP"> individual: {individual} </p>
      <p className="cartP"> price {pri[0]}$/person </p> 
-     <p className="cartP" onChange={dispatch(hotelDetails.actions.setTotalPrice(pri[0] * individual))}>total <span className="sum">{pri[0] * individual}$/night </span></p>
+     <p className="cartP" onChange={dispatch(hotelDetails.actions.setTotalPrice(total))}>total 
+     <span className="sum">{total}$ </span></p>
      </section>
      </section> 
     
