@@ -28,14 +28,15 @@ console.log( parseInt(coins) - parseInt(total) )
   dispatch(GetReservations());
   dispatch(PostReservations());
   dispatch(UpdatehUser()) 
+  dispatch(user.actions.setCoins(  parseInt(coins) - parseInt(total) ))
+  dispatch(hotelDetails.actions.setRoomName(""));
     }
   }, [accessToken, navigate, dispatch]);
 
 
 const onClick = () => {
-  dispatch(user.actions.setCoins(  parseInt(coins) - parseInt(total) ))
-  dispatch(hotelDetails.actions.setRoomName(""));
-  navigate("/profil");
+  
+  navigate("/");
 }
 
 
@@ -49,7 +50,7 @@ const onClick = () => {
 
       <ShowReservationComponent item={reservation} />
 
-        <button className="btnUser1" onClick={onClick}>confirm</button>
+        <button className="btnUser1" onClick={onClick}>Home</button>
       </section>
 
       
