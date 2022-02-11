@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import hotelDetails from "reducers/hotelDetails";
 import { useNavigate } from "react-router-dom";
+import  user from "../reducers/user";
 import "./ReservationCart.css";
 import moment from "moment";
 export const ReservationCart = () => {
@@ -12,10 +13,13 @@ export const ReservationCart = () => {
   const roomss = useSelector((store) => store.roomDetail.roomList);
   const accessToken = useSelector((store) => store.user.accessToken);
   const roomDetail = roomss.rooms.filter((item) => item.name === roomName);
+  const coins = useSelector((store) => store.user.coins);
+  const totalp = useSelector((store) => store.hotelDetails.totalPrice);
+  const price =  parseInt(coins) - parseInt(totalp)
   const pri = roomDetail.map(
     (item) => item.ratePlans[0].price.unformattedCurrent
   );
-  const coins = useSelector((store) => store.user.coins);
+ 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -29,8 +33,17 @@ export const ReservationCart = () => {
   const total = priceAndDays * individual;
 
 
+const onClick = () =>{
 
-  
+  dispatch(user.actions.setCoins( price )) 
+ navigate("/reservation")
+
+
+}
+
+
+
+
 
   useEffect(() => {
     dispatch(hotelDetails.actions.setPriceOfRoom(pri[0]));
@@ -70,7 +83,7 @@ export const ReservationCart = () => {
             className="cartBtn"
             onClick={
               accessToken
-                ? () => navigate("/reservation")
+                ? onClick
                 : () => navigate("/signin")
             }
           >

@@ -27,24 +27,20 @@ console.log( parseInt(coins) - parseInt(total) )
   
   dispatch(GetReservations());
   dispatch(PostReservations());
-  dispatch(UpdatehUser()) 
+  dispatch(UpdatehUser())
+  
   dispatch(hotelDetails.actions.setRoomName(""));
     }
   }, [accessToken, navigate, dispatch]);
 
 
- useEffect(()=>{
-
-  dispatch(user.actions.setCoins( price ))
-
-
- },[dispatch])
-
+ 
 
 
 const onClick = () => {
-  
+ 
   navigate("/");
+
 }
 
 
