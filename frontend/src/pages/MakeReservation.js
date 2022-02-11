@@ -15,7 +15,7 @@ export const MakeReservation = () => {
   const navigate = useNavigate();
 
   const total = useSelector((store) => store.hotelDetails.totalPrice);
-
+const price =  parseInt(coins) - parseInt(total)
 console.log( parseInt(coins) - parseInt(total) )
 
 
@@ -28,17 +28,17 @@ console.log( parseInt(coins) - parseInt(total) )
   dispatch(GetReservations());
   dispatch(PostReservations());
   dispatch(UpdatehUser()) 
-  setMoney ()
   dispatch(hotelDetails.actions.setRoomName(""));
     }
   }, [accessToken, navigate, dispatch]);
 
 
- const setMoney = () =>{
+ useEffect(()=>{
 
-  dispatch(user.actions.setCoins(  parseInt(coins) - parseInt(total) ))
+  dispatch(user.actions.setCoins( price ))
 
- }
+
+ },[dispatch])
 
 
 
@@ -58,7 +58,7 @@ const onClick = () => {
 
       <ShowReservationComponent item={reservation} />
 
-        <button className="btnUser1" onClick={onClick}>Home</button>
+        <button className="btnUser1" onClick={onClick}>comfirm</button>
       </section>
 
       
