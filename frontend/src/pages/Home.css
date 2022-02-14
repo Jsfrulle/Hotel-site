@@ -1,22 +1,16 @@
-article{
-margin: 0 auto;
-padding: 0 auto;
-overflow: hidden;
-display: flex;
-align-items: center;
-text-align: center;
+article {
+  margin: 0 auto;
+  padding: 0 auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
-.test{
-
+.test {
   height: 100vh;
   width: 100vw;
-
-
 }
-
-
-
 
 .homeContainer {
   height: 100vh;
@@ -24,31 +18,25 @@ text-align: center;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
- overflow-y:scroll;
+  overflow-y: scroll;
   display: grid;
   font-size: clamp(15px, 1vw, 20px);
- 
 
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
-
 }
 .homeContainer::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
-
 }
 
-
-
-.background{
-
-width: 99.9%;
-height: 109vh;
-position: absolute;
-z-index: -15;
-background-color: #7c857ae7;
+.background {
+  width: 99.9%;
+  height: 109vh;
+  position: absolute;
+  z-index: -15;
+  background-color: #7c857ae7;
 }
 
 .video-container {
@@ -56,13 +44,13 @@ background-color: #7c857ae7;
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   overflow: hidden;
 }
 .video-container video {
   /* Make video to at least 100% wide and tall */
-  min-width: 100%; 
-  min-height: 100%; 
+  min-width: 100%;
+  min-height: 100%;
 
   /* Setting width & height to auto prevents the browser from stretching or squishing the video */
   width: auto;
@@ -72,19 +60,10 @@ background-color: #7c857ae7;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-
-
-
-
-
-
-
-
-
-.formContainerHome{
+.formContainerHome {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -92,46 +71,33 @@ background-color: #7c857ae7;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  
+
   text-shadow: 4px 2px 3px black;
   position: absolute;
-  top:25vh;
- 
+  top: 25vh;
 }
 
- .heroText {
+.heroText {
   margin-bottom: 5px;
   padding: 0;
 
   font-size: clamp(23px, 4vw, 180px);
   z-index: 0;
   color: var(--text-light);
- 
+
   text-shadow: 4px 2px 4px rgb(22, 34, 22);
 }
 
-
-
-
-
-  
-  .visible{
-  
-    display:contents;
-  
-  }
-  .hidden{
-  
-   
-    display: none;
-  }
-  
-  
-  
-  
+.visible {
+  display: contents;
+}
+.hidden {
+  display: none;
+}
 
 .custom-input__input_Home {
   height: 4rem;
+  min-height: 20px;
   width: 50%;
   margin-top: 3%;
   appearance: none;
@@ -148,12 +114,10 @@ background-color: #7c857ae7;
   display: flex;
   align-items: center;
   text-align: center;
-  
 }
 .custom-input__input_Home:focus ~ .custom-input__border_Home::after {
   transform: scaleX(1);
   z-index: 15;
-  
 }
 .custom-input_Home .custom-input__border_Home {
   position: relative;
@@ -174,7 +138,8 @@ background-color: #7c857ae7;
   z-index: 15;
 }
 
-.custom-input_Home .custom-input__border_Home::before, .custom-input_Home .custom-input__border_Home::after {
+.custom-input_Home .custom-input__border_Home::before,
+.custom-input_Home .custom-input__border_Home::after {
   content: "";
   position: absolute;
   top: 0;
@@ -192,7 +157,6 @@ background-color: #7c857ae7;
   z-index: 15;
 }
 
-
 .login-card_Home {
   display: flex;
   justify-content: center;
@@ -200,7 +164,7 @@ background-color: #7c857ae7;
   height: 50vh;
   width: 100vw;
   box-shadow: 7px 2px 15px var(--shadow);
-  padding: 10%; 
+  padding: 10%;
   border-radius: 1rem;
   position: absolute;
   top: 43%;
@@ -213,231 +177,149 @@ background-color: #7c857ae7;
   animation: 0.75s in ease-in-out;
   z-index: 10;
 }
-  @media (min-width: 756px) {
-    .login-card_Home {
-      width: 60vw;
-      z-index: 10;
-    }
-  }
- 
-  .login-card__label_Home {
-    display: block;
-    margin: 1rem 0;
-    position: relative;
-    z-index: 15;
-   
-  }
-  
-  .login-card__text_Home {
-    display: block;
-    font-size: 1em;
-    z-index: 15;
-    
-  }
-  .login-card__input_Home {
-    display: block;
-    height: 50%;
-    width: 100%;
-    padding-right: 1rem;
-    padding-bottom: 5px;
-    font-size: 2rem;
-    color: var(--text-light);
-    text-shadow: 2px 2px 2px var(--shadow);
-    z-index: 20;
-    text-align: center;
 
-  }
-  .login-card__input_Home:focus  {
-    color: var(--text);
-  
-    z-index: 20;
-  }
-  .login-card__button_Home {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    padding: 1% 0.5%;
-    font-size: 1.4rem;
-    width: 50%;
-    transform: translate(-50%, 50%);
-    border-radius: 0.5rem;
-    appearance: none;
-    border: 0;
-    background: #7c857ae7;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 500;
-    box-shadow: 0 5px 20px var(--secondary);
-    color: var(--text-light);
-    transition: 0.2s ease-in-out;
-    outline: 0;
+.login-card__label_Home {
+  display: block;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 15;
+}
+
+.login-card__text_Home {
+  display: block;
+  font-size: 1em;
+  z-index: 15;
+}
+.login-card__input_Home {
+  display: block;
+  height: 50%;
+  width: 100%;
+  padding-right: 1rem;
+  padding-bottom: 5px;
+  font-size: 2rem;
+  color: var(--text-light);
+  text-shadow: 2px 2px 2px var(--shadow);
+  z-index: 20;
+  text-align: center;
+}
+.login-card__input_Home:focus {
+  color: var(--text);
+
+  z-index: 20;
+}
+.login-card__button_Home {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 1% 0.5%;
+  font-size: 1.4rem;
+  width: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 0.5rem;
+  appearance: none;
+  border: 0;
+  background: #7c857ae7;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 5px 20px var(--secondary);
+  color: var(--text-light);
+  transition: 0.2s ease-in-out;
+  outline: 0;
+  z-index: 10;
+}
+.login-card__button_Home:hover:not(:active),
+.login-card__button_Home:focus:not(:active) {
+  box-shadow: 0 20px 60px var(--secondary);
+  transform: translate(-50%, 40%);
+  color: var(--text-light);
+  z-index: 10;
+}
+
+.overlayContainer {
+  position: relative;
+  top: 10vh;
+  z-index: -0;
+}
+
+.overlay {
+  width: 100vw;
+  height: 23vh;
+  position: absolute;
+  z-index: -10;
+  top: 100vh;
+  left: -0%;
+  background-color: #848d7f8f;
+}
+
+.inspoBubbleContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 1;
+  position: relative;
+  top: 91vh;
+}
+
+.inspoText {
+  position: relative;
+  top: 94vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(25px, 2vw, 40px);
+  text-shadow: 2px 2px 2px var(--shadow);
+  text-align: center;
+}
+
+.inspoBubble {
+  height: clamp(10px, 20vw, 150px);
+  width: clamp(10px, 20vw, 150px);
+  background-color: rgba(40, 75, 75, 0.637);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: ease-out 0.2s;
+  color: azure;
+  text-shadow: 2px 1px 1px rgb(77, 129, 129);
+}
+
+.inspoBubble:hover {
+  transform: scale(95%);
+}
+
+.textInspo {
+  font-weight: 700;
+  font-size: clamp(10px, 2vw, 20px);
+  background-color: rgb(22, 19, 19);
+  padding: 0 6% 2px 5%;
+}
+.inspoBubbleImg {
+  height: 100%;
+  width: 150%;
+  background-size: cover;
+  position: absolute;
+  background-color: brown;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .login-card_Home {
+    width: 60vw;
     z-index: 10;
   }
-  .login-card__button_Home:hover:not(:active), .login-card__button_Home:focus:not(:active) {
-    box-shadow: 0 20px 60px var(--secondary);
-    transform: translate(-50%, 40%);
-    color: var(--text-light);
+  .login-card_Home {
+    padding: 5%;
     z-index: 10;
   }
-  
-  
-  
-  
-  @media (min-width:768px) {
-  
-  
-    .login-card_Home {
-      
-      padding: 5%; 
-      z-index: 10;
-    }
-  
-    
-  .signup-card__button_Home{
+
+  .signup-card__button_Home {
     z-index: 10;
     bottom: 14%;
     left: 82%;
-    
-
-  
   }
-  
-    
-  }
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.overlayContainer{
-
-  position: relative;
-top:10vh;
-z-index: -0;
-
-
-}
-
-.overlay{
-
-  width: 100vw;
-  height: 23vh;
-  position:absolute;
-  z-index: -10;
- top: 100vh;
- left: -0%;
- background-color: #848d7f8f;
-  }
-
-
-
-
-
-
-.inspoBubbleContainer{
- 
-  
-width: 100%;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-z-index: 1;
-position: relative;
-top:91vh;
-
-}
-
-.inspoText{
-  position: relative;
-top:94vh;
- color:white;
-  display: flex;
-justify-content: center;
-align-items: center;
-font-size: clamp(25px, 2vw, 40px);
-text-align: center;
-
-
-}
-
-
-.inspoBubble{
-
-height: clamp(10px, 20vw, 150px);
-width: clamp(10px,20vw,150px);
-background-color: rgba(40, 75, 75, 0.637);
-border-radius: 50%;
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
-position: relative;
-transition: ease-out 0.2s;
-color: azure;
-text-shadow: 2px 1px 1px rgb(77, 129, 129);
-}
-
-
-.inspoBubble:hover{
-
- transform: scale(95%);
- 
-
-  }
-
-
-.textInspo{
-
-font-weight: 700;
-font-size: clamp(10px, 2vw, 20px);
-background-color: rgb(22, 19, 19);
-padding: 0 6% 2px 5%;
-}
-.inspoBubbleImg{
-height: 100%;
-width: 150%;
-background-size: cover;
-position: absolute;
-background-color: brown;
-z-index: -1;
-}
-@media (min-width:768px) {
- 
-  
-
-
-
-}
-
-
-@media (min-width:1024px) {
-  
 }

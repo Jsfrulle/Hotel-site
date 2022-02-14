@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useSelector, useDispatch } from "react-redux";
 import hotelDetails from "reducers/hotelDetails";
 import Slider from "react-perfect-slider";

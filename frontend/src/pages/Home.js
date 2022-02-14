@@ -21,8 +21,6 @@ export const Home = () => {
   const navigate = useNavigate();
   const checkIn = useSelector((store) => store.hotelDetails.dateFrom);
   const checkOut = useSelector((store) => store.hotelDetails.dateTo);
-  
-
 
   let today = moment().format("YYYY-MM-DD");
   let future = moment().add(3, "days").format("YYYY-MM-DD");
@@ -38,10 +36,7 @@ export const Home = () => {
     dispatch(hotelLocation.actions.setPlace(location));
   };
 
-
-
   const getLocation = () => {
-    
     if (location === "") {
       console.log("argument is missing");
     } else if (location) {
@@ -55,19 +50,11 @@ export const Home = () => {
   return (
     <article>
       <section className="homeContainer">
-      <div class="video-container">
-        <video
-          
-          
-          controls
-          autoPlay
-          muted
-          loop
-          type="video/mp4"
-        >
-          <source src={video} type="video/mp4" />
-        </video>
-</div>
+        <div class="video-container">
+          <video controls autoPlay muted loop type="video/mp4">
+            <source src={video} type="video/mp4" />
+          </video>
+        </div>
         <main class="login-card_Home">
           <label className="heroText">Where do you want to go?</label>
 
@@ -89,7 +76,6 @@ export const Home = () => {
 
           <Pickdate className="DateHome" />
           <button
-            
             class="login-card__button_Home"
             onClick={checkIn >= today && checkOut > checkIn ? getLocation : ""}
           >
@@ -105,7 +91,7 @@ export const Home = () => {
           <div className="overlay" />
 
           <section className="inspoText">
-             <h1>Go Somewhere New</h1>
+            <h1>Go Somewhere New</h1>
           </section>
           <section className="inspoBubbleContainer">
             <button

@@ -18,12 +18,10 @@
   display: none; /* for Chrome, Safari, and Opera */
 }
 
-
 .roomsItemContent {
   background: var(--backgrundComponents);
   width: 98%;
-height: fit-content;
-
+  height: fit-content;
   display: flex;
   flex-direction: column;
   font-size: clamp(8px, 10px, 12px);
@@ -33,21 +31,11 @@ height: fit-content;
   transition: ease-out 0.2s;
   color: var(--text-light);
   text-shadow: 1px 1px 1px var(--shadow);
-
 }
 
-
-.roomsItemContent:hover{
-
-transform: scale(95%);
-
-
+.roomsItemContent:hover {
+  transform: scale(95%);
 }
-
-
-
-
-
 
 .textinRoom {
   padding: 0px 6px;
@@ -65,15 +53,7 @@ transform: scale(95%);
   border-radius: 10px 10px 0 0;
   padding: 0px 6px;
   font-size: clamp(8px, 12px, 20px);
-  
 }
-
-
-
-
-
-
-
 
 .textAdultChildContainer {
   display: flex;
@@ -86,7 +66,6 @@ transform: scale(95%);
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
-  
 }
 
 .ImgSliderContainer {
@@ -95,7 +74,6 @@ transform: scale(95%);
   z-index: 10;
   height: 90%;
   display: flex;
-  
 }
 
 .sliderBtn {
@@ -107,25 +85,20 @@ transform: scale(95%);
   align-items: center;
 }
 
-.nextBtn{
+.nextBtn {
   background: transparent;
-  
-border: none;
-font-size: 30px;
-color: #ffffff;
-text-shadow: 1px 1px 3px var(--text-light);
-font-weight: 700;
+  border: none;
+  font-size: 30px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px var(--text-light);
+  font-weight: 700;
 }
-
-
-
-
 
 .roomImg {
   position: relative;
   z-index: -10;
   width: 100%;
- 
+
   height: 100%;
   border-radius: 0 0 10px 10px;
 }
@@ -134,11 +107,10 @@ font-weight: 700;
   width: 100.1%;
   height: fit-content;
   position: absolute;
-  
   border-radius: 0 0 10px 10px;
   display: flex;
   align-items: flex-end;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .reservationBtn {
@@ -150,18 +122,14 @@ font-weight: 700;
   transition: ease-in 0.2s;
   color: var(--text);
   border: 1px dotted var(--text);
-
   font-size: clamp(10px, 15px, 20px);
 }
-
 
 .reservationBtn:hover {
   height: 100%;
   width: 100%;
   border-radius: 0 0 10px 10px;
- 
 }
-
 
 @media (min-width: 768px) {
   .roomsItemContainer {
@@ -188,23 +156,17 @@ font-weight: 700;
     overflow-y: scroll;
   }
 
-.roomsItemContent{
-
-  width: 45vw;
-  height: 28vw;
-  margin-bottom: 15px;
-  overflow: hidden;
+  .roomsItemContent {
+    width: 45vw;
+    height: 28vw;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
 }
-
-
-
-}
-
 
 @media (min-width: 1024px) {
-.roomsItemContent{
-  width: 30vw;
-  height: 20vw;
-  
+  .roomsItemContent {
+    width: 30vw;
+    height: 20vw;
+  }
 }
- }

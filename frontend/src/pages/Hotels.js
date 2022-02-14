@@ -3,12 +3,9 @@ import { History } from "../components/History";
 import { Weather } from "../components/Weather";
 import { useSelector, useDispatch } from "react-redux";
 import "./Hotels.css";
-import hotelDetails, {FetchHotelLocationId} from "reducers/hotelDetails";
+import hotelDetails, { FetchHotelLocationId } from "reducers/hotelDetails";
 import dotenv from "dotenv";
 import Loading from "components/Loading";
-
-
-
 import { HotelComponent } from "components/HotelComponent";
 dotenv.config();
 
@@ -21,38 +18,22 @@ export const Hotels = () => {
   const hotel = useSelector((store) => store.hotelDetails.hotelList);
   const isLoading = useSelector((store) => store.ui.loading);
   const dispatch = useDispatch();
-  
 
   const rooms = useSelector((store) => store.roomDetail.roomList);
-  console.log(rooms)
-
+  console.log(rooms);
 
   const onChange = ({ target }) => {
     setdropDownSorter(target.value);
-    dispatch(hotelDetails.actions.setDropDown(target.value))
-    
+    dispatch(hotelDetails.actions.setDropDown(target.value));
   };
 
-
   useEffect(() => {
-   dispatch(FetchHotelLocationId())
+    dispatch(FetchHotelLocationId());
   }, [dropDownSorter, getLocationId, checkIn, checkOut, dispatch]);
 
-
-
-
-
   return (
-
-    
-
     <article className="pageTwoConatiner">
-
-
-
-
       <section className="topInfoContainer">
-     
         {" "}
         <h1> {place} </h1>
       </section>
@@ -68,45 +49,27 @@ export const Hotels = () => {
           <option value="STAR_RATING_HIGHEST_FIRST">Highest star rating</option>
           <option value="STAR_RATING_LOWEST_FIRST"> Lowest star rating</option>
         </select>
-        
       </section>
-      
-      
-      <section className="RoomChooicePageTwo">
-      <section className="hotelContainer">
-     
-    
-  
-        
-          
-          
-            <div className="hotelContent">
-            {isLoading ? 
-          
-          
-          <Loading />
-       
-         : <>
 
-              {hotel &&
-                hotel.map((item) => {
-                  
-                  
-                  return (
-                   <HotelComponent item={item}  /> 
-                  );
-                })}  </> }
-            </div>
-          </section>
+      <section className="RoomChooicePageTwo">
+        <section className="hotelContainer">
+          <div className="hotelContent">
+            {isLoading ? (
+              <Loading />
+            ) : (
+              <>
+                {hotel &&
+                  hotel.map((item) => {
+                    return <HotelComponent item={item} />;
+                  })}{" "}
+              </>
+            )}
+          </div>
+        </section>
       </section>
       <div className="historyContainer">
         <History />
       </div>
-
-   
-
-       
     </article>
-    
   );
 };

@@ -16,11 +16,8 @@ dotenv.config();
 export const Inspiration = () => {
   const city = useSelector((store) => store.insparationReducer.city);
   const flag = useSelector((store) => store.insparationReducer.flag);
-
   const hotel = useSelector((store) => store.hotelDetails.hotelList);
-  
   const isLoading = useSelector((store) => store.ui.loading);
-
   const dispatch = useDispatch();
   
 

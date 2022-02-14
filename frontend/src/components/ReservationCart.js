@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import hotelDetails from "reducers/hotelDetails";
 import { useNavigate } from "react-router-dom";
-import  user from "../reducers/user";
+import user from "../reducers/user";
 import "./ReservationCart.css";
 import moment from "moment";
 export const ReservationCart = () => {
@@ -15,16 +15,13 @@ export const ReservationCart = () => {
   const roomDetail = roomss.rooms.filter((item) => item.name === roomName);
   const coins = useSelector((store) => store.user.coins);
   const totalp = useSelector((store) => store.hotelDetails.totalPrice);
-  const price =  parseInt(coins) - parseInt(totalp)
+  const price = parseInt(coins) - parseInt(totalp);
   const pri = roomDetail.map(
     (item) => item.ratePlans[0].price.unformattedCurrent
   );
- 
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-
-
 
   let a = moment(checkIn);
   let b = moment(checkOut);
@@ -32,18 +29,10 @@ export const ReservationCart = () => {
   const priceAndDays = day * pri[0];
   const total = priceAndDays * individual;
 
-
-const onClick = () =>{
-
-  dispatch(user.actions.setCoins( price )) 
- navigate("/reservation")
-
-
-}
-
-
-
-
+  const onClick = () => {
+    dispatch(user.actions.setCoins(price));
+    navigate("/reservation");
+  };
 
   useEffect(() => {
     dispatch(hotelDetails.actions.setPriceOfRoom(pri[0]));
@@ -77,15 +66,12 @@ const onClick = () =>{
         >
           Delete
         </button>
+
         {parseInt(total) < parseInt(coins) ? (
           <button
             type="button"
             className="cartBtn"
-            onClick={
-              accessToken
-                ? onClick
-                : () => navigate("/signin")
-            }
+            onClick={accessToken ? onClick : () => navigate("/signin")}
           >
             {" "}
             {accessToken ? "make reservation" : "login to reservat"}{" "}

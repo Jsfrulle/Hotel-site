@@ -31,6 +31,7 @@ overflow: hidden;
 
 .custom-input__input {
   height: 4rem;
+  min-height: 20px;
   width: 100%;
   margin-top: 3%;
   appearance: none;
@@ -39,7 +40,7 @@ overflow: hidden;
   border-radius: 2px;
   outline: 0;
   font-family: "Roboto", sans-serif;
-  background-color: var(--t);
+  background-color: var(--ligth-shadow);
   font-size: 1.2rem;
   font-weight: 300;
   transform: border-color 0.2s ease-in-out;
@@ -124,7 +125,6 @@ overflow: hidden;
   margin: 1rem 0;
   position: relative;
 
- 
 }
 
 .login-card__text {

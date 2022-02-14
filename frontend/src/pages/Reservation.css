@@ -24,7 +24,6 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(10, 1fr);
 
-
 }
 
 .ReservationForm {
@@ -70,6 +69,7 @@ margin-bottom: 15px;
 
 .custom-input__input_reservation_page{
   height: 4rem;
+  min-height: 20px;
   width: 55%;
   margin-top: 3%;
   appearance: none;

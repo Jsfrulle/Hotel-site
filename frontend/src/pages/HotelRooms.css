@@ -77,7 +77,7 @@
   display: grid;
   
   grid-gap: 15px;
-  align-content: start;
+  align-content: flex-start;
   overflow-y: scroll;
   place-items: center;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */

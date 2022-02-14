@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { PostReservations, GetReservations } from "reducers/reservationList";
-
-import {  UpdatehUser } from "reducers/user";
+import { UpdatehUser } from "reducers/user";
 import hotelDetails from "reducers/hotelDetails";
 import { ShowReservationComponent } from "components/ShowReservationComponent";
 
@@ -15,50 +14,33 @@ export const MakeReservation = () => {
   const navigate = useNavigate();
   const total = useSelector((store) => store.hotelDetails.totalPrice);
 
-console.log( parseInt(coins) - parseInt(total) )
-
+  console.log(parseInt(coins) - parseInt(total));
 
   useEffect(() => {
     if (!accessToken) {
       navigate("/signin");
     } else {
-      
-  
-  dispatch(GetReservations());
-  dispatch(PostReservations());
-  dispatch(UpdatehUser())
-  
-  dispatch(hotelDetails.actions.setRoomName(""));
+      dispatch(GetReservations());
+      dispatch(PostReservations());
+      dispatch(UpdatehUser());
+
+      dispatch(hotelDetails.actions.setRoomName(""));
     }
   }, [accessToken, navigate, dispatch]);
 
-
- 
-
-
-const onClick = () => {
- 
-  navigate("/");
-
-}
-
-
-
+  const onClick = () => {
+    navigate("/");
+  };
 
   return (
     <div>
-      
       <section className="ContainerComfirm">
-       
+        <ShowReservationComponent item={reservation} />
 
-      <ShowReservationComponent item={reservation} />
-
-        <button className="btnUser1" onClick={onClick}>comfirm</button>
+        <button className="btnUser1" onClick={onClick}>
+          comfirm
+        </button>
       </section>
-
-      
-
-
     </div>
   );
 };
