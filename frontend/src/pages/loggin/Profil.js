@@ -146,7 +146,7 @@ export const Profil = () => {
                   return (
                     <>
                       {" "}
-                      <p></p>{" "}
+                      <></>{" "}
                     </>
                   );
                 }
@@ -164,7 +164,7 @@ export const Profil = () => {
                   return (
                     <>
                       {" "}
-                      <p></p>{" "}
+                      <></>{" "}
                     </>
                   );
                 }
