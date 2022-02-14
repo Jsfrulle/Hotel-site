@@ -7,11 +7,6 @@ article {
   text-align: center;
 }
 
-.test {
-  height: 100vh;
-  width: 100vw;
-}
-
 .homeContainer {
   height: 100vh;
   width: 100vw;
@@ -35,8 +30,9 @@ article {
   width: 99.9%;
   height: 109vh;
   position: absolute;
-  z-index: -15;
   background-color: #7c857ae7;
+  display: unset;
+  z-index: -25;
 }
 
 .video-container {
@@ -46,6 +42,7 @@ article {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  display: none;
 }
 .video-container video {
   /* Make video to at least 100% wide and tall */
@@ -322,5 +319,15 @@ article {
     z-index: 10;
     bottom: 14%;
     left: 82%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .background {
+    display: none;
+  }
+
+  .video-container {
+    display: unset;
   }
 }

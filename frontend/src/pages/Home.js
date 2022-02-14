@@ -12,6 +12,7 @@ import tokyo from "images/tokyo.jpg";
 import paris from "images/paris.jpg";
 import moment from "moment";
 import video from "../images/video.mp4";
+import background from "../images/background.jpg"
 
 dotenv.config();
 
@@ -50,7 +51,9 @@ export const Home = () => {
   return (
     <article>
       <section className="homeContainer">
+      <img className="background" src={background} alt="background"/>
         <div class="video-container">
+      
           <video controls autoPlay muted loop type="video/mp4">
             <source src={video} type="video/mp4" />
           </video>
