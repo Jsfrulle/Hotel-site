@@ -38,7 +38,7 @@ max-width: 300px;
   grid-column: 1/13;
  white-space: nowrap;
  display: flex;
-
+padding-top: 50px;
 justify-content: center;
 align-items: center;
 
