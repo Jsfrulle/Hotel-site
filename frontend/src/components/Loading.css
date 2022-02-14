@@ -9,8 +9,8 @@ z-index: 20;
 
 .loadingContent{
 
-  height: 40vh;
-  width: 63vw;
+  height: 50vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
