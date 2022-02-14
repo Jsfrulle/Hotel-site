@@ -23,7 +23,7 @@ const Loading = () => {
       <Lottie
               options={defaultOptionsLoading}
              
-              style={{  width:'30vw', height:'30vw', position:"absolute",}}
+              style={{  width:'40vw', height:'40vw', position:"absolute",}}
               
             />
             
