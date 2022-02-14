@@ -105,6 +105,7 @@
 .reservationBtnContainer {
   top: 0%;
   width: 100.1%;
+  min-height: 20px;
   height: fit-content;
   position: absolute;
   border-radius: 0 0 10px 10px;
