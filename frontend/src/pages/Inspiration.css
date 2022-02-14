@@ -19,7 +19,7 @@
  
   z-index: 5;
   overflow: hidden;
- 
+ background-color: white;
   
 }
 .flagImg {
@@ -50,7 +50,7 @@ font-size: clamp(26px, 3vw, 80px);
 
 
 .hotelInspoContainer {
-  grid-row: 3/11;
+  grid-row: 4/11;
   grid-column: 1/12;
   width: 100vw;
 padding: 0px 0 0px 0;
