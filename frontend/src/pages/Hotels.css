@@ -8,6 +8,14 @@
   
 }
 
+.InfoAndWeatherContainer{
+
+  background-color: white; 
+  grid-column: 1/13;
+  grid-row: 1/2;
+  z-index: 3;
+  
+}
 
 .topInfoContainer{ 
   text-align: center;
@@ -17,6 +25,7 @@
   text-shadow: 1.5px 1px 1px var(--text);
    background-color: white; 
    z-index: 3;
+   margin-top: 50px;
 }
 
 

@@ -33,6 +33,7 @@ export const Hotels = () => {
 
   return (
     <article className="pageTwoConatiner">
+      <section className="InfoAndWeatherContainer"> 
       <section className="topInfoContainer">
         {" "}
         <h1> {place} </h1>
@@ -50,7 +51,7 @@ export const Hotels = () => {
           <option value="STAR_RATING_LOWEST_FIRST"> Lowest star rating</option>
         </select>
       </section>
-
+      </section>
       <section className="RoomChooicePageTwo">
         <section className="hotelContainer">
           <div className="hotelContent">
