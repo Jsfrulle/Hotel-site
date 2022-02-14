@@ -184,10 +184,11 @@ font-weight: 100;
   flex-direction: column;
 justify-content: center;
 align-items: center;
+margin-bottom: 50px;
 }
 
 .reservatinContainer{
-  margin-top: 6vh;
+  margin-top: 15vh;
 width: 100vw;
 height: 40vh;
 display: flex;
@@ -243,6 +244,7 @@ scrollbar-width: none;   for Firefox */
   }
 
   .reservatinContainer{
+    margin-top: 9vh;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -251,6 +253,14 @@ scrollbar-width: none;   for Firefox */
     align-items: center;
     
     }
+
+
+   
+
+
+
+
+
     
     .reservationItems{
       display: flex;

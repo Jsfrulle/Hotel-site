@@ -38,7 +38,7 @@ export const MakeReservation = () => {
         <ShowReservationComponent item={reservation} />
 
         <button className="btnUser1" onClick={onClick}>
-          comfirm
+          Home
         </button>
       </section>
     </div>
