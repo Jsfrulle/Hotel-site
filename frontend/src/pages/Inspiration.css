@@ -52,12 +52,9 @@ font-size: clamp(26px, 3vw, 80px);
 
 
 .hotelInspoContainer {
-  grid-row: 4/11;
+  grid-row: 5/12;
   grid-column: 1/12;
   width: 100vw;
-  height: 120%;
-
-margin-top: 0px;
   display: flex;
   justify-content: center;
   overflow-y: scroll;
