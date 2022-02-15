@@ -324,7 +324,7 @@ article {
 
   .video-container {
     min-width: 100%;
-  min-height: 100%;
+  min-height: 105%;
   width: auto;
   height: auto;
   position: absolute;
