@@ -18,7 +18,7 @@ export const Profil = () => {
   const accessToken = useSelector((store) => store.user.accessToken);
   const username = useSelector((store) => store.user.username);
   const names = useSelector((store) => store.user.name);
-  const [coins , setCoins] = useSelector((store) => store.user.coins);
+  const coins = useSelector((store) => store.user.coins);
   const adress = useSelector((store) => store.user.adress);
   const [deleteIt, setDeleteIt] = useState(false);
   const list = useSelector((store) => store.reservationList.getReservation);
