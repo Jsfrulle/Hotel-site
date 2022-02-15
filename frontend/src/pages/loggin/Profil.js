@@ -69,7 +69,7 @@ export const Profil = () => {
   const handelUpdateCoins = () => {
     const newCoin = parseInt(changeCoins) + parseInt(coins)
     if(newCoin){
-      setCoins(newCoin)
+    
     dispatch(user.actions.setCoins(newCoin))
     dispatch(UpdatehCoins());}
   };
