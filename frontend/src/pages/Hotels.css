@@ -90,7 +90,7 @@
   height: clamp(20px, 8vh, 30px);
   width: 50vw;
   max-width: 70px;
-  font-size: clamp(9px, 5vw, 15px);
+  font-size: clamp(8px, 4.8vw, 15px);
 }
 .historyContainer {
   grid-column: 1/13;
