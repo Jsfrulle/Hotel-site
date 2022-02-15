@@ -30,9 +30,8 @@ article {
   width: 99.9%;
   height: 109vh;
   position: absolute;
-  background-color: #7c857ae7;
   display: unset;
-  z-index: -25;
+  z-index: -20;
 }
 
 .video-container {
@@ -43,7 +42,7 @@ article {
   height: 0%;
   overflow: hidden;
   display: none;
-  z-index: -10;
+  z-index: -27;
   visibility:hidden;
 }
 .video-container video {
