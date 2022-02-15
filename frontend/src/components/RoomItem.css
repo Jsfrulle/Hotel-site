@@ -92,7 +92,7 @@
   color: #ffffff;
   text-shadow: 2px 2px 3px var(--text);
   box-shadow: 4px 3px 5px 2px var(--shadow);
-  font-weight: 700;
+  font-weight: 500;
   display: flex;
   justify-content: center;
 }
