@@ -59,6 +59,7 @@ export const Profil = () => {
     dispatch(user.actions.setName(changeName));
     dispatch(user.actions.setAdress(changeAdress));
     dispatch(UpdatehUser());
+    dispatch(FetchUser());
   };
 
   
@@ -76,6 +77,7 @@ export const Profil = () => {
 
     dispatch(user.actions.setCoins(newCoin))
     dispatch(UpdatehCoins())}
+    dispatch(FetchUser());
   };
 
   let today = moment().format("YYYY-MM-DD");
