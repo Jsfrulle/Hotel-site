@@ -43,6 +43,7 @@ article {
   height: 100%;
   overflow: hidden;
   display: none;
+  z-index: -10;
 }
 .video-container video {
   min-width: 100%;

@@ -53,7 +53,14 @@ export const Home = () => {
       <section className="homeContainer">
         <img className="background" src={background} alt="background" />
         <div class="video-container">
-          <video className="video" controls autoPlay muted loop playsinline type="video/mp4">
+          <video
+            className="video"
+            autoplay="autoplay"
+            muted
+            loop
+            playsinline
+            type="video/mp4"
+          >
             <source src={video} type="video/mp4" />
           </video>
         </div>
