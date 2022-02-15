@@ -17,7 +17,7 @@ export const Profil = () => {
   const [changeAdress, setChangeAdress] = useState();
   const accessToken = useSelector((store) => store.user.accessToken);
   const username = useSelector((store) => store.user.username);
-  const names = useSelector((store) => store.user.name);
+  let names = useSelector((store) => store.user.name);
   const coins = useSelector((store) => store.user.coins);
   const adress = useSelector((store) => store.user.adress);
   const [deleteIt, setDeleteIt] = useState(false);
@@ -58,7 +58,7 @@ export const Profil = () => {
   const handelUpdate = () => {
     dispatch(user.actions.setName(changeName));
     dispatch(user.actions.setAdress(changeAdress));
-
+    names = changeName
     dispatch(UpdatehUser());
   };
 
