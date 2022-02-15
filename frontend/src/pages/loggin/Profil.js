@@ -63,11 +63,14 @@ export const Profil = () => {
     dispatch(UpdatehUser());
   };
 
+  
+ 
+
   const handelUpdateCoins = () => {
-    setChangeCoins(
-      dispatch(user.actions.setCoins(parseInt(changeCoins) + parseInt(coins)))
-    );
-    dispatch(UpdatehCoins());
+    const newCoin = parseInt(changeCoins) + parseInt(coins)
+    if(newCoin){
+    dispatch(user.actions.setCoins(newCoin))
+    dispatch(UpdatehCoins());}
   };
 
   let today = moment().format("YYYY-MM-DD");

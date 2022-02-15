@@ -133,8 +133,7 @@ export const UpdatehCoins = () => {
         if (data.success) {
           batch(() => {
             dispatch(user.actions.setCoins(data.response.coins));
-
-            console.log("OK");
+            console.log("OK", data.response);
             dispatch(user.actions.setError(false));
           });
         } else {
