@@ -158,7 +158,7 @@ article {
   padding: 10%;
   border-radius: 1rem;
   position: absolute;
-  top: 43%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #949b91ec;
@@ -302,14 +302,11 @@ article {
   .login-card_Home {
     width: 60vw;
     z-index: 10;
-  }
-  .login-card_Home {
+    top: 43%;
     padding: 5%;
-    z-index: 10;
-  }
-  .login-card_Home {
     min-height: 350px;
   }
+
 
   .signup-card__button_Home {
     z-index: 10;
