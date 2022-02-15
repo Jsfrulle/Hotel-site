@@ -150,11 +150,17 @@
     width: 5vw;
   
   }
+  
+.roomImg {
+ 
+  min-height: 200px;
+  
+}
 
 
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1224px) {
   .roomsItemContainer {
     height: 100vh;
     width: 100vw;
