@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { UpdatehCoins } from "reducers/user";
 import hotelDetails from "reducers/hotelDetails";
 import { useNavigate } from "react-router-dom";
 import user from "../reducers/user";
@@ -31,6 +32,7 @@ export const ReservationCart = () => {
   const onClick = () => {
     dispatch(user.actions.setCoins(price));
     navigate("/reservation");
+      dispatch(UpdatehCoins());
   };
 
   useEffect(() => {
