@@ -75,7 +75,7 @@ export const UpdatehUser = () => {
   return (dispatch, getState) => {
     dispatch(ui.actions.setLoading(true));
     const options = {
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
@@ -114,7 +114,7 @@ export const UpdatehCoins = () => {
   return (dispatch, getState) => {
     dispatch(ui.actions.setLoading(true));
     const options = {
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },

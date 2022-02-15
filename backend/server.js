@@ -155,7 +155,7 @@ app.post("/signin", async (req, res) => {
   }
 });
 
-app.patch("/update/:id", async (req, res) => {
+app.put("/update/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const updates = req.body;
@@ -182,7 +182,7 @@ app.patch("/update/:id", async (req, res) => {
 });
 
 
-app.patch("/coins/:id", async (req, res) => {
+app.put("/coins/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const updates = req.body;
