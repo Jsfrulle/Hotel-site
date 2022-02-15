@@ -57,7 +57,6 @@ export const Profil = () => {
 
   const handelUpdate = () => {
     dispatch(user.actions.setName(changeName));
-    setChangeCoins("");
     dispatch(user.actions.setAdress(changeAdress));
 
     dispatch(UpdatehUser());
@@ -67,11 +66,17 @@ export const Profil = () => {
  
 
   const handelUpdateCoins = () => {
-    const newCoin = parseInt(changeCoins) + parseInt(coins)
-    if(newCoin){
-    
+
+ if(changeCoins <= 0){}
+ 
+ else if (changeCoins >=1){
+
+    const newCoin =  parseInt(changeCoins) + parseInt(coins)
+    console.log(newCoin)
+
+
     dispatch(user.actions.setCoins(newCoin))
-    dispatch(UpdatehCoins());}
+    dispatch(UpdatehCoins())}
   };
 
   let today = moment().format("YYYY-MM-DD");

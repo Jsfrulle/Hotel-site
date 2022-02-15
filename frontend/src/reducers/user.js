@@ -10,7 +10,7 @@ const user = createSlice({
     name: null,
     accessToken: null,
     error: false,
-    coins: 0,
+    coins: 10,
     adress: null,
     phone: null
   },
@@ -119,9 +119,9 @@ export const UpdatehCoins = () => {
         "Content-Type": "application/json"
       },
 
-      body: {
+      body: JSON.stringify({
         coins: getState().user.coins
-      }
+      })
     };
 
     fetch(
@@ -132,8 +132,8 @@ export const UpdatehCoins = () => {
       .then((data) => {
         if (data.success) {
           batch(() => {
-            dispatch(user.actions.setCoins(data.response.coins));
-            console.log("OK", data.response.coins);
+         
+            console.log("OK", data.response);
             dispatch(user.actions.setError(false));
           });
         } else {
