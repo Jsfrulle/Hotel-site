@@ -58,7 +58,7 @@ export const Home = () => {
             autoplay="autoplay"
             muted
             loop
-            playsinline
+            webkit-playsinline="true" playsinline="true"
             type="video/mp4"
           >
             <source src={video} type="video/mp4" />
