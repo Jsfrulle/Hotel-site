@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import hotelDetails from "reducers/hotelDetails";
 import Slider from "react-perfect-slider";
 import "./RoomItem.css";
+import { FcPrevious, FcNext } from "react-icons/fc";
 const RoomItem = ({ room }) => {
   const individualsCount = useSelector((store) => store.roomDetail.individuals);
   const dispatch = useDispatch();
@@ -33,10 +34,10 @@ const RoomItem = ({ room }) => {
                   renderControls={(next, previous) => [
                     <div className="sliderBtn">
                       <button className="nextBtn" onClick={previous}>
-                        {"<<"}
+                      <FcPrevious />
                       </button>
                       <button className="nextBtn" onClick={next}>
-                        {">>"}
+                      <FcNext />
                       </button>
                     </div>
                   ]}
