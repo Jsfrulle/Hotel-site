@@ -62,22 +62,17 @@ export const Profil = () => {
     dispatch(FetchUser());
   };
 
-  
- 
-
   const handelUpdateCoins = () => {
+    if (changeCoins <= 0) {
+    } else if (changeCoins >= 1) {
+      const newCoin = parseInt(changeCoins) + parseInt(coins);
+      console.log(newCoin);
 
- if(changeCoins <= 0){}
- 
- else if (changeCoins >=1){
-
-    const newCoin =  parseInt(changeCoins) + parseInt(coins)
-    console.log(newCoin)
-
-
-    dispatch(user.actions.setCoins(newCoin))
-    dispatch(UpdatehCoins())}
+      dispatch(user.actions.setCoins(newCoin));
+      dispatch(UpdatehCoins());
+    }
     dispatch(FetchUser());
+    setChangeCoins("");
   };
 
   let today = moment().format("YYYY-MM-DD");
