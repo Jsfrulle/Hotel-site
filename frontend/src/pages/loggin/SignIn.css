@@ -1,33 +1,20 @@
-
-.containerSignIn{
-height: 100vh;
-width: 100vw;
-background-color: var(--background);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-
+.containerSignIn {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-
-.visible{
-
-  display:contents;
-
+.visible {
+  display: contents;
 }
-.hidden{
-
- 
+.hidden {
   display: none;
 }
-
-
-
-
-
-
 
 .custom-input__input {
   height: 4rem;
@@ -44,11 +31,9 @@ overflow: hidden;
   font-size: 1.2rem;
   font-weight: 300;
   transform: border-color 0.2s ease-in-out;
-  
 }
 .custom-input__input:focus ~ .custom-input__border::after {
   transform: scaleX(1);
-  
 }
 .custom-input .custom-input__border {
   position: relative;
@@ -66,7 +51,8 @@ overflow: hidden;
   font-size: 1em;
 }
 
-.custom-input .custom-input__border::before, .custom-input .custom-input__border::after {
+.custom-input .custom-input__border::before,
+.custom-input .custom-input__border::after {
   content: "";
   position: absolute;
   top: 0;
@@ -74,7 +60,7 @@ overflow: hidden;
   width: 100%;
   height: 2px;
   background: var(--text-light);
- 
+
   transition: background 0.2s ease-in-out;
 }
 .custom-input .custom-input__border::after {
@@ -82,7 +68,6 @@ overflow: hidden;
   transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
   transform: scaleX(0);
 }
-
 
 .login-card {
   display: flex;
@@ -92,23 +77,21 @@ overflow: hidden;
   width: 80vw;
   max-width: 680px;
   box-shadow: 7px 2px 15px var(--shadow);
-  padding: 5%; 
+  padding: 5%;
   border-radius: 1rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(  --backgrundComponents);
+  background: var(--backgrundComponents);
   box-sizing: border-box;
   transition: width 0.2s ease-in-out;
   transform-origin: center center;
   animation: 0.75s in ease-in-out;
-  
 }
 @media (min-width: 756px) {
   .login-card {
     width: 60vw;
-    
   }
 }
 .login-card__title {
@@ -124,14 +107,11 @@ overflow: hidden;
   display: block;
   margin: 1rem 0;
   position: relative;
-
 }
 
 .login-card__text {
   display: block;
   font-size: 0.6em;
- 
-  
 }
 .login-card__input {
   display: block;
@@ -140,11 +120,9 @@ overflow: hidden;
   padding-bottom: 5px;
   box-sizing: border-box;
   color: var(--text-light);
-
 }
-.login-card__input:focus  {
+.login-card__input:focus {
   color: var(--text-mid);
-
 }
 .login-card__button {
   position: absolute;
@@ -166,21 +144,20 @@ overflow: hidden;
   transition: 0.2s ease-in-out;
   outline: 0;
 }
-.login-card__button:hover:not(:active), .login-card__button:focus:not(:active) {
+.login-card__button:hover:not(:active),
+.login-card__button:focus:not(:active) {
   box-shadow: 0 20px 60px var(--secondary);
   transform: translate(-50%, 40%);
   color: var(--text-light);
 }
 
 /* the create user btn */
-.radioBtnContainer{
+.radioBtnContainer {
   width: 100%;
   display: flex;
   justify-content: flex-end;
- 
-  }
-.signup-card__button{
- 
+}
+.signup-card__button {
   padding: 0.5%;
   margin: 0 0 5% 0;
   font-size: 0.7rem;
@@ -196,38 +173,22 @@ overflow: hidden;
   box-shadow: 0 1px 5px var(--secondary);
   transition: 0.2s ease-in-out;
   outline: 0;
-
-
 }
 .signup-card__button:hover {
   box-shadow: 0 3px 10px var(--secondary);
   transform: scale(105%);
 }
 
-
-@media (min-width:768px) {
-
-
+@media (min-width: 768px) {
   .login-card {
-    
-    padding: 5%; 
-    
+    padding: 5%;
   }
 
-  
-.signup-card__button{
-  
-  bottom: 14%;
-  left: 82%;
-  
-
-
+  .signup-card__button {
+    bottom: 14%;
+    left: 82%;
+  }
 }
-
-  
-}
-
-
 
 @keyframes in {
   0% {

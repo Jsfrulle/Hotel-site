@@ -7,7 +7,6 @@ const RoomTypDropDown = () => {
 
   return (
     <div>
-      
       <select
         className="FormdropDownItem"
         onChange={(e) =>

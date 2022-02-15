@@ -19,13 +19,11 @@ export const Inspiration = () => {
   const hotel = useSelector((store) => store.hotelDetails.hotelList);
   const isLoading = useSelector((store) => store.ui.loading);
   const dispatch = useDispatch();
-  
-
 
   useEffect(() => {
     const array = ["BR", "TH", "MV"];
     const Country = array.sort(() => 0.5 - Math.random());
-    
+
     dispatch(insparationReducer.actions.setInsoCountry(Country[0]));
     console.log("hello");
 
@@ -46,22 +44,12 @@ export const Inspiration = () => {
     dispatch(FetchInspoCountry());
   }, [dispatch]);
 
-
-
- 
- 
-
-
   return (
     <article className="inspoContainer">
-       <section className="inspoHero">
-        <img src={ flag } alt="flag" className="flagImg" />
-        <h1
-          className="inspoFlagHeader"
-        >
-          {city}{" "}
-        </h1>
-        <img src={ flag } alt="flag" className="flagImg" />
+      <section className="inspoHero">
+        <img src={flag} alt="flag" className="flagImg" />
+        <h1 className="inspoFlagHeader">{city} </h1>
+        <img src={flag} alt="flag" className="flagImg" />
       </section>
       <section className="hotelInspoContainer">
         {isLoading ? (
@@ -70,18 +58,11 @@ export const Inspiration = () => {
           <div className="hotelInspoContent">
             {hotel &&
               hotel.map((item) => {
-                
-
-                return (
-                 <HotelComponent item={item} />
-                );
+                return <HotelComponent item={item} />;
               })}
           </div>
         )}
       </section>
-
-   
-
     </article>
   );
 };

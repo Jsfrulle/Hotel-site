@@ -18,7 +18,6 @@ export const Hotels = () => {
   const hotel = useSelector((store) => store.hotelDetails.hotelList);
   const isLoading = useSelector((store) => store.ui.loading);
   const dispatch = useDispatch();
-
   const rooms = useSelector((store) => store.roomDetail.roomList);
   console.log(rooms);
 
@@ -33,24 +32,29 @@ export const Hotels = () => {
 
   return (
     <article className="pageTwoConatiner">
-      <section className="InfoAndWeatherContainer"> 
-      <section className="topInfoContainer">
-        {" "}
-        <h1> {place} </h1>
-      </section>
+      <section className="InfoAndWeatherContainer">
+        <section className="topInfoContainer">
+          {" "}
+          <h1> {place} </h1>
+        </section>
 
-      <section className="historyAndWeather">
-        <Weather />
-      </section>
-      <section className="dropDownContainer">
-        <select className="dropDown_hotels" onChange={onChange}>
-          <option value="BEST_SELLER">Best seller</option>
-          <option value="PRICE">Lowest price</option>
-          <option value="PRICE_HIGHEST_FIRST">Highest price</option>
-          <option value="STAR_RATING_HIGHEST_FIRST">Highest star rating</option>
-          <option value="STAR_RATING_LOWEST_FIRST"> Lowest star rating</option>
-        </select>
-      </section>
+        <section className="historyAndWeather">
+          <Weather />
+        </section>
+        <section className="dropDownContainer">
+          <select className="dropDown_hotels" onChange={onChange}>
+            <option value="BEST_SELLER">Best seller</option>
+            <option value="PRICE">Lowest price</option>
+            <option value="PRICE_HIGHEST_FIRST">Highest price</option>
+            <option value="STAR_RATING_HIGHEST_FIRST">
+              Highest star rating
+            </option>
+            <option value="STAR_RATING_LOWEST_FIRST">
+              {" "}
+              Lowest star rating
+            </option>
+          </select>
+        </section>
       </section>
       <section className="RoomChooicePageTwo">
         <section className="hotelContainer">

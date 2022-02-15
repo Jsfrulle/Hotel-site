@@ -45,19 +45,15 @@ article {
   display: none;
 }
 .video-container video {
-  /* Make video to at least 100% wide and tall */
   min-width: 100%;
   min-height: 100%;
-
-  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
   width: auto;
   height: auto;
-
-  /* Center the video */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .formContainerHome {
@@ -68,7 +64,6 @@ article {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-
   text-shadow: 4px 2px 3px black;
   position: absolute;
   top: 25vh;
@@ -77,11 +72,9 @@ article {
 .heroText {
   margin-bottom: 5px;
   padding: 0;
-
   font-size: clamp(23px, 4vw, 180px);
   z-index: 0;
   color: var(--text-light);
-
   text-shadow: 4px 2px 4px rgb(22, 34, 22);
 }
 
@@ -159,6 +152,7 @@ article {
   justify-content: center;
   flex-direction: column;
   height: 50vh;
+  min-height: 300px;
   width: 100vw;
   box-shadow: 7px 2px 15px var(--shadow);
   padding: 10%;
@@ -292,7 +286,7 @@ article {
 
 .textInspo {
   font-weight: 700;
-  font-size: clamp(10px, 2vw, 20px);
+  font-size: clamp(12px, 2vw, 20px);
   background-color: rgb(22, 19, 19);
   padding: 0 6% 2px 5%;
   z-index: 10;
@@ -302,7 +296,6 @@ article {
   width: 150%;
   background-size: cover;
   position: absolute;
-  background-color: brown;
   z-index: -1;
 }
 @media (min-width: 768px) {
@@ -313,6 +306,9 @@ article {
   .login-card_Home {
     padding: 5%;
     z-index: 10;
+  }
+  .login-card_Home {
+    min-height: 350px;
   }
 
   .signup-card__button_Home {
@@ -329,5 +325,12 @@ article {
 
   .video-container {
     display: unset;
+  }
+  .video-container video {
+    display: unset;
+  }
+
+  .login-card_Home {
+    min-height: 400px;
   }
 }

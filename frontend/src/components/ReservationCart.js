@@ -19,7 +19,6 @@ export const ReservationCart = () => {
   const pri = roomDetail.map(
     (item) => item.ratePlans[0].price.unformattedCurrent
   );
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

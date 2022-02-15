@@ -10,14 +10,12 @@
   text-decoration: none;
 }
 
-
-
-a:link:hover, a:link:focus, a:visited:hover, a:visited:focus {
+a:link:hover,
+a:link:focus,
+a:visited:hover,
+a:visited:focus {
   text-decoration: none;
-
 }
-
-
 
 .logoContainer {
   width: 40px;
@@ -33,7 +31,7 @@ a:link:hover, a:link:focus, a:visited:hover, a:visited:focus {
 }
 
 .logoContainer:hover {
-  background-color: var(--text)
+  background-color: var(--text);
 }
 
 img {
@@ -61,29 +59,23 @@ ul {
   margin: 0 8px;
   border-radius: 15px;
 }
-Link{
+Link {
   text-decoration: none;
-
 }
-:any-link{
-
+:any-link {
   text-decoration: none;
 }
 
-a:navlink:hover{
-
+a:navlink:hover {
   text-decoration: none;
-
 }
 
-
-.navLink:focus-visible{
-
+.navLink:focus-visible {
   background-color: var(--text);
   text-decoration: none;
 }
 
- .navLink:visited {
+.navLink:visited {
   color: var(--text);
   text-decoration: none;
 }
@@ -111,15 +103,9 @@ a:navlink:hover{
 }
 
 @media (max-width: 767px) {
-
-
   .navbarContainer {
-    
     height: 70px;
-    
   }
-
-
 
   ul {
     margin-top: 15px;
@@ -138,7 +124,7 @@ a:navlink:hover{
     width: 30px;
     height: 30px;
     padding: 3px 6px 4px 4px;
- 
+
     display: flex;
     justify-content: center;
     align-items: center;

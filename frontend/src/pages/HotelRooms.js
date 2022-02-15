@@ -20,7 +20,7 @@ export const HotelRooms = () => {
   const [lowest, setLowest] = useState();
   const [highest, setHighest] = useState();
   const [state, setState] = useState({
-    price: 10000
+    price: 100
   });
 
   useEffect(() => {
@@ -58,7 +58,6 @@ export const HotelRooms = () => {
   }, [priceRange, individualsCount, roomTypes, dispatch, roomDet]);
 
   const onChange = () => {
-    /* drop-down to set the price range */
     setRoom(room.map((val, index, array) => array[array.length - 1 - index]));
   };
 
@@ -91,21 +90,14 @@ export const HotelRooms = () => {
         </>
       ) : (
         <section className="roomPageContent">
-        
-
           <section className="FormInputs">
-
-
-          <section className="FormDropDownContent">
-          <label className="FormdropDownLabel">Low/High price</label>
-          <select className="FormdropDownItem" onChange={onChange}>
-            <option>Lowest price</option>
-            <option>Highest price</option>
-          </select>
+            <section className="FormDropDownContent">
+              <label className="FormdropDownLabel">Low/High price</label>
+              <select className="FormdropDownItem" onChange={onChange}>
+                <option>Lowest price</option>
+                <option>Highest price</option>
+              </select>
             </section>
-
-
-          
 
             <section className="FormDropDownContent">
               <label className="FormdropDownLabel">Individuals</label>

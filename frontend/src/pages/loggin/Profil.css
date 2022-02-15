@@ -1,62 +1,49 @@
+.userContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
 
-.userContainer{
-display: flex;
-flex-direction: column;
-height: 100vh;
-width: 100vw;
-
-justify-content: flex-start;
-align-items: center;
-color: var(--text);
-text-shadow: 1px 1px 1px var(--light-shadow);
-font-weight: 600;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--text);
+  text-shadow: 1px 1px 1px var(--light-shadow);
+  font-weight: 600;
 }
-.userContent{
+.userContent {
   height: 36vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-grid-template-rows: repeat(12, 1fr);
-margin-top: 5vh;
-
+  grid-template-rows: repeat(12, 1fr);
+  margin-top: 5vh;
 }
-.userContainer input{
-
-width: 95%;
-max-width: 300px;
-
+.userContainer input {
+  width: 95%;
+  max-width: 300px;
 }
-.userContainer button{
-
-  
+.userContainer button {
   margin-top: 5px;
-  }
+}
 
-.welcomTex{
+.welcomTex {
   width: 100%;
   grid-row: 2;
   grid-column: 1/13;
- white-space: nowrap;
- display: flex;
-padding-top: 50px;
-justify-content: center;
-align-items: center;
+  white-space: nowrap;
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+  align-items: center;
 
+  font-size: clamp(18px, 3vw, 30px);
+  grid-template-columns: repeat(1, 1fr);
+  border-radius: 10px;
 
-font-size: clamp(18px, 3vw, 30px);
-grid-template-columns: repeat(1, 1fr);
-border-radius: 10px;
-
-
-color: var( --light-shadow);
-text-shadow: 1px 1px 1px var(--shadow);
-
-
-
-
+  color: var(--light-shadow);
+  text-shadow: 1px 1px 1px var(--shadow);
 }
-.coinsContainer{
-
+.coinsContainer {
   grid-row: 3;
   grid-column: 7/13;
   width: 100%;
@@ -64,34 +51,24 @@ text-shadow: 1px 1px 1px var(--shadow);
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
- 
- 
-
 }
 
-
-
-
-.userInput{
+.userInput {
   color: var(--text-mid);
   text-shadow: 1px 1px 2px var(--light-shadowshadow);
   font-size: 1em;
   border: none;
   border-bottom: 2px solid var(--text-light);
-margin-bottom: 10px;
-background: #ffffff;
-font-weight: 100;
+  margin-bottom: 10px;
+  background: #ffffff;
+  font-weight: 100;
 }
-.userInput::placeholder{
-  
-  
+.userInput::placeholder {
   font-weight: 100;
 }
 
-.userInput:focus{
-
+.userInput:focus {
   outline: none;
-
 }
 
 .userInput::after {
@@ -100,14 +77,7 @@ font-weight: 100;
   transform: scaleX(0);
 }
 
-
-
-
-
-
-
-.btnUser{
- 
+.btnUser {
   padding: 0.5%;
   margin: 0 0 5% 0;
   font-size: 0.7rem;
@@ -123,19 +93,12 @@ font-weight: 100;
 
   transition: 0.2s ease-in-out;
   outline: 0;
-
-
 }
 .btnUser:hover {
- 
   transform: scale(95%);
 }
 
-
-
-
-.btnUser1{
- 
+.btnUser1 {
   padding: 0.5%;
   margin: 1% 0 5% 0;
   font-size: 0.7rem;
@@ -151,99 +114,71 @@ font-weight: 100;
 
   transition: 0.2s ease-in-out;
   outline: 0;
-
-
 }
 .btnUser1:hover {
- 
   transform: scale(95%);
 }
 
-
-
-
-
-
-
-
-
-
-
-.coinsContainer input{
-
+.coinsContainer input {
   max-width: 100px;
- 
-
 }
-.userInfoContainer{
-
+.userInfoContainer {
   grid-row: 3;
   grid-column: 1/7;
   width: 100%;
   display: flex;
   flex-direction: column;
-justify-content: center;
-align-items: center;
-margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
-.reservatinContainer{
+.reservatinContainer {
   margin-top: 15vh;
-width: 100vw;
-height: 40vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.reservationItems{
+.reservationItems {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-height: 30vh;
-width: 100vw;
+  height: 30vh;
+  width: 100vw;
 }
 
-.textRes{
-  height:  clamp(8px, 1vw, 12px);
+.textRes {
+  height: clamp(8px, 1vw, 12px);
   margin: 10px auto;
   padding: 0 auto;
 }
 
-
-.reservatinContent{
+.reservatinContent {
   width: 98vw;
   height: 25vh;
   overflow-y: scroll;
   display: grid;
   grid-template-columns: 1;
-place-items: center;
-
-
-
- }
+  place-items: center;
+}
 
 .reservatinContent::-webkit-scrollbar {
-display: none; /* for Chrome, Safari, and Opera */
--ms-overflow-style: none;  /* for Internet Explorer, Edge 
+  display: none; /* for Chrome, Safari, and Opera */
+  -ms-overflow-style: none; /* for Internet Explorer, Edge 
 scrollbar-width: none;   for Firefox */
- }
- 
+}
 
-
-
-
-@media (min-width:768px) {
-
-  .userContent{
+@media (min-width: 768px) {
+  .userContent {
     height: 26vh;
-  
   }
 
-  .reservatinContainer{
+  .reservatinContainer {
     margin-top: 9vh;
     width: 100vw;
     height: 100vh;
@@ -251,57 +186,36 @@ scrollbar-width: none;   for Firefox */
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    
-    }
+  }
 
-
-   
-
-
-
-
-
-    
-    .reservationItems{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
+  .reservationItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height: 100%;
     width: 80vw;
-    }
-    
-   
+  }
 
-
-    
-    .reservatinContent{
-      width: 50vw;
-      display: flex;
-      flex-direction: column;
+  .reservatinContent {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-      align-items: center;
+    align-items: center;
     overflow-y: scroll;
     height: 56vh;
-    
-    
+
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none;  /* for Firefox */
-    
-     }
-    
-    .reservatinContent::-webkit-scrollbar {
+    scrollbar-width: none; /* for Firefox */
+  }
+
+  .reservatinContent::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
-    -ms-overflow-style: none;  /* for Internet Explorer, Edge 
+    -ms-overflow-style: none; /* for Internet Explorer, Edge 
     scrollbar-width: none;   for Firefox */
-     }
-     
-    
-
-
+  }
 }
 
-
-@media (min-width:1024px) {
-  
+@media (min-width: 1024px) {
 }

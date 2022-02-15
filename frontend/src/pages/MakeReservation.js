@@ -9,13 +9,9 @@ import { ShowReservationComponent } from "components/ShowReservationComponent";
 export const MakeReservation = () => {
   const accessToken = useSelector((store) => store.user.accessToken);
   const reservation = useSelector((store) => store.reservationList.reservation);
-  const coins = useSelector((store) => store.user.coins);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const total = useSelector((store) => store.hotelDetails.totalPrice);
-
-  console.log(parseInt(coins) - parseInt(total));
-
+ 
   useEffect(() => {
     if (!accessToken) {
       navigate("/signin");

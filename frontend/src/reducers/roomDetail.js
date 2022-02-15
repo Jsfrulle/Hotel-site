@@ -11,7 +11,7 @@ const roomDetail = createSlice({
     roomType: "none",
     priceRange: null,
     roomList: [],
-    roomDetails:[],
+    roomDetails: []
   },
 
   reducers: {
@@ -31,8 +31,7 @@ const roomDetail = createSlice({
     },
     setRoomDetails: (store, action) => {
       store.roomDetails = action.payload;
-    },
-
+    }
   }
 });
 
@@ -74,9 +73,10 @@ export const FetchHotelRooms = () => {
             )
           );
 
-          
           dispatch(
-            roomDetail.actions.setRoomDetails(response.data.body.roomsAndRates.rooms)
+            roomDetail.actions.setRoomDetails(
+              response.data.body.roomsAndRates.rooms
+            )
           );
           console.log(response.data.body.propertyDescription.name);
         })

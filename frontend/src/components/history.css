@@ -1,22 +1,18 @@
-.historyBtn{
-
+.historyBtn {
   height: clamp(20px, 10vh, 30px);
-width: 20vw;
-max-width: 150px;
-margin: 10px;
-border: 1px dotted var(--text);
-background: var(--text-light);
-color: var(--text);
-text-transform: uppercase;
-cursor: pointer;
-font-weight: 500;
+  width: 20vw;
+  max-width: 150px;
+  margin: 10px;
+  border: 1px dotted var(--text);
+  background: var(--text-light);
+  color: var(--text);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
 
-transition: 0.2s ease-in-out;
-outline: 0;
-
-
+  transition: 0.2s ease-in-out;
+  outline: 0;
 }
 .historyBtn:hover {
-
-transform: scale(95%);
+  transform: scale(95%);
 }

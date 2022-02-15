@@ -15,7 +15,6 @@ export const Profil = () => {
   const [changeName, setChangeName] = useState();
   const [changeCoins, setChangeCoins] = useState();
   const [changeAdress, setChangeAdress] = useState();
-
   const accessToken = useSelector((store) => store.user.accessToken);
   const username = useSelector((store) => store.user.username);
   const names = useSelector((store) => store.user.name);
@@ -23,7 +22,6 @@ export const Profil = () => {
   const adress = useSelector((store) => store.user.adress);
   const [deleteIt, setDeleteIt] = useState(false);
   const list = useSelector((store) => store.reservationList.getReservation);
-  /*  const listAfter = useSelector((store) => store.reservationList.listAfterDelete); */
   const [reservation, setReservation] = useState();
 
   const dispatch = useDispatch();

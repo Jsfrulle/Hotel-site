@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import "./Weather.css";
-
-
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -27,18 +25,20 @@ export const Weather = () => {
 
         .catch((err) => {
           console.error(err);
-          setWeather([])
+          setWeather([]);
         });
     } else {
-      setWeather([])
+      setWeather([]);
     }
   }, [location]);
 
   return (
     <div className="weatherContainer">
-      {weather === []  ? '' : <p className="weatherContent">todays weather and 4 days forward</p>}
-       
-      
+      {weather === [] ? (
+        ""
+      ) : (
+        <p className="weatherContent">todays weather and 4 days forward</p>
+      )}
 
       <div className="weatherDisplay">
         {weather &&
@@ -46,7 +46,8 @@ export const Weather = () => {
             <div key={item.dt} className="weatherContent">
               <p> {item.weather[0].main} </p>
               <img
-                src={`http://openweathermap.org/img/w/${item.weather[0].icon}.png`} alt='weather-icon'
+                src={`http://openweathermap.org/img/w/${item.weather[0].icon}.png`}
+                alt="weather-icon"
               />
             </div>
           ))}

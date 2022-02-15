@@ -12,7 +12,7 @@ import tokyo from "images/tokyo.jpg";
 import paris from "images/paris.jpg";
 import moment from "moment";
 import video from "../images/video.mp4";
-import background from "../images/background.jpg"
+import background from "../images/background.jpg";
 
 dotenv.config();
 
@@ -51,16 +51,14 @@ export const Home = () => {
   return (
     <article>
       <section className="homeContainer">
-      <img className="background" src={background} alt="background"/>
+        <img className="background" src={background} alt="background" />
         <div class="video-container">
-      
-          <video controls autoPlay muted loop type="video/mp4">
+          <video className="video" controls autoPlay muted loop type="video/mp4">
             <source src={video} type="video/mp4" />
           </video>
         </div>
         <main class="login-card_Home">
           <label className="heroText">Where do you want to go?</label>
-
           <label class="custom-input_Home login-card__label_Home">
             <input
               class="custom-input__input_Home login-card__input_Home"
@@ -88,11 +86,9 @@ export const Home = () => {
               : "not valid date"}
           </button>
         </main>
-
         <section className="formContainerHome"></section>
         <section className="overlayContainer">
           <div className="overlay" />
-
           <section className="inspoText">
             <h1>Go Somewhere New</h1>
           </section>

@@ -4,7 +4,6 @@
   margin: 0 10px;
   color: var(--shadow);
   font-size: clamp(8px, 1vw, 12px);
-  
 }
 
 .weatherContainer {
@@ -14,20 +13,15 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
-margin-right: 0px;
-
-
+  margin-right: 0px;
 }
 .HeaderWeather {
   font-size: clamp(12px, 1vw, 19px);
   height: 10px;
   visibility: visible;
- 
 }
-.hidden{
-
-visibility: none;
-
+.hidden {
+  visibility: none;
 }
 
 .weatherDisplay {
@@ -36,20 +30,14 @@ visibility: none;
   align-content: center;
   justify-content: center;
   text-align: center;
-  
 }
 
-
-
 @media (min-width: 1024px) {
-
-
   .weatherContainer {
-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-  
-  }  
+  }
 }

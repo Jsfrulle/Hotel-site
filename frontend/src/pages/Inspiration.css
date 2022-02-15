@@ -1,5 +1,5 @@
 .inspoContainer {
-  margin:  0 0px;
+  margin: 0 0px;
   padding: 0px 0;
   height: 100vh;
   width: 100vw;
@@ -7,7 +7,6 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(10, 1fr);
- 
 }
 .inspoHero {
   grid-row: 2;
@@ -18,38 +17,31 @@
   justify-content: center;
   align-items: center;
   padding-top: 0px;
- margin-bottom: 5px;
+  margin-bottom: 5px;
   z-index: 5;
   overflow: hidden;
- background-color: white;
-  
+  background-color: white;
 }
 .flagImg {
- 
   transform: rotate(-5deg);
   z-index: -10;
   width: 7vw;
   min-width: 70px;
   height: 4vw;
   min-height: 40px;
-  
 }
 
 .inspoFlagHeader {
- 
   text-shadow: 2px 1px 1px black;
-font-size: clamp(26px, 3vw, 80px);
+  font-size: clamp(26px, 3vw, 80px);
   text-align: center;
   width: 40vw;
- display: flex;
- justify-content: space-around;
- align-items: center;
- color: var(--light-shadow);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--light-shadow);
   text-shadow: 1px 1px 1px var(--shadow);
-  
 }
-
-
 
 .hotelInspoContainer {
   grid-row: 4/12;
@@ -71,18 +63,10 @@ font-size: clamp(26px, 3vw, 80px);
   grid-template-rows: repeat(12, 1fr);
   grid-gap: 10px;
   height: 70vh;
-
   place-items: center;
 }
 
-
-
 @media (min-width: 768px) {
-  
-
- 
-
-
   .hotelInspoContainer {
     grid-row: 3/12;
     grid-column: 1/12;
@@ -94,7 +78,7 @@ font-size: clamp(26px, 3vw, 80px);
 
   .hotelInspoContent {
     width: 99vw;
-height: 100vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -104,13 +88,11 @@ height: 100vh;
 }
 
 @media (min-width: 1024px) {
-  
   .hotelInspoContent {
     width: 99vw;
-height: 90vh;
+    height: 90vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
   }
-  
 }

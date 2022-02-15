@@ -2,22 +2,20 @@ import { createSlice } from "@reduxjs/toolkit";
 import { ui } from "reducers/ui";
 import hotelDetails from "./hotelDetails";
 import user from "./user";
-import {  batch } from "react-redux";
-
-
+import { batch } from "react-redux";
 
 const reservationList = createSlice({
   name: "reservationList",
   initialState: {
-    error: '',
+    error: "",
     reservation: [],
     getReservation: [],
-    listAfterDelete:[],
-    searchReservation:[],
+    listAfterDelete: [],
+    searchReservation: [],
     ids: "",
-    deleteId:"",
-    reservationId:'',
-    notShow:true,
+    deleteId: "",
+    reservationId: "",
+    notShow: true
   },
 
   reducers: {
@@ -31,7 +29,7 @@ const reservationList = createSlice({
       store.listAfterDelete = action.payload;
     },
 
-    setSearchReservation:(store, action) => {
+    setSearchReservation: (store, action) => {
       store.searchReservation = action.payload;
     },
 
@@ -48,19 +46,15 @@ const reservationList = createSlice({
     setError: (store, action) => {
       store.error = action.payload;
     },
- setNotShow : (store, action) => {
-  store.notShow = action.payload;
-},
-
-
+    setNotShow: (store, action) => {
+      store.notShow = action.payload;
+    }
   }
 });
 
 export default reservationList;
 
-
 /* POST A RESERVATION */
-
 
 export const PostReservations = () => {
   return async (dispatch, getState) => {
@@ -99,9 +93,6 @@ export const PostReservations = () => {
   };
 };
 
-
-
-
 /* ALL RESERVATIONs DONE BY USER */
 
 export const GetReservations = () => {
@@ -117,9 +108,7 @@ export const GetReservations = () => {
     fetch(`https://hotel-backend-1.herokuapp.com/reservation`, options)
       .then((res) => res.json())
       .then((data) => {
-       
-          dispatch(reservationList.actions.setGetReservation(data.response));
-         
+        dispatch(reservationList.actions.setGetReservation(data.response));
       })
       .finally(() => dispatch(ui.actions.setLoading(false)));
   };
@@ -131,40 +120,43 @@ export const SearchReservations = () => {
   return (dispatch, getState) => {
     dispatch(ui.actions.setLoading(true));
 
-      const options = {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json"
-        },
-      
+    const options = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
     };
-    
-    
-    fetch(`https://hotel-backend-1.herokuapp.com/find/${getState().reservationList.reservationId}` , options)
+
+    fetch(
+      `https://hotel-backend-1.herokuapp.com/find/${
+        getState().reservationList.reservationId
+      }`,
+      options
+    )
       .then((res) => res.json())
-      .then((data) =>{
+      .then((data) => {
         if (data.success) {
           batch(() => {
-            
-            dispatch(reservationList.actions.setSearchReservation(data.response));
-            dispatch(reservationList.actions.setError(false))
-            dispatch(reservationList.actions.setNotShow(false))
-            console.log('work')}
-            
-           ) 
+            dispatch(
+              reservationList.actions.setSearchReservation(data.response)
+            );
+            dispatch(reservationList.actions.setError(false));
+            dispatch(reservationList.actions.setNotShow(false));
+            console.log("work");
+          });
         } else {
           batch(() => {
-            dispatch(reservationList.actions.setError(true))
-            dispatch(reservationList.actions.setNotShow(true))
+            dispatch(reservationList.actions.setError(true));
+            dispatch(reservationList.actions.setNotShow(true));
             dispatch(reservationList.actions.setSearchReservation([]));
-            console.log('not')
+            console.log("not");
           });
-        } })
-      .finally(() => dispatch(ui.actions.setLoading(false) ))
-  
-} }
-    
-  
+        }
+      })
+      .finally(() => dispatch(ui.actions.setLoading(false)));
+  };
+};
+
 /* DELETE A RESERVATION */
 
 export const DeleteReservations = () => {
@@ -175,30 +167,29 @@ export const DeleteReservations = () => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
-      },
-
-      
+      }
     };
-    
-    
-    
-    fetch(`https://hotel-backend-1.herokuapp.com/reservation/${getState().reservationList.deleteId}` , options)
+
+    fetch(
+      `https://hotel-backend-1.herokuapp.com/reservation/${
+        getState().reservationList.deleteId
+      }`,
+      options
+    )
       .then((res) => res.json())
-      .then((data) =>{
+      .then((data) => {
         if (data.success) {
           batch(() => {
-            
-            console.log('work')
+            console.log("work");
             dispatch(user.actions.setError(false));
           });
         } else {
           batch(() => {
             dispatch(user.actions.setError(true));
-            console.log('not')
+            console.log("not");
           });
-        } })
-      .finally(() => dispatch(ui.actions.setLoading(false)))
-  
-} }
-
-     
+        }
+      })
+      .finally(() => dispatch(ui.actions.setLoading(false)));
+  };
+};

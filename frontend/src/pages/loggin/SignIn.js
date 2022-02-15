@@ -26,8 +26,6 @@ export const SignIn = () => {
     if (accessToken) {
       navigate("/profil");
     }
-
-    
   }, [accessToken, navigate]);
 
   const onFormSubmit = (event) => {
@@ -65,9 +63,6 @@ export const SignIn = () => {
           });
         }
       });
-
-
-      
   };
 
   return (
@@ -89,7 +84,7 @@ export const SignIn = () => {
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Email"
               />
-          
+
               <div class="custom-input__border"></div>
             </label>
             <label class="custom-input login-card__label">
@@ -122,7 +117,8 @@ export const SignIn = () => {
             </div>
 
             <section className="radioBtnContainer">
-              <button class="signup-card__button"
+              <button
+                class="signup-card__button"
                 id="signup"
                 type="button"
                 onClick={
