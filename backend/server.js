@@ -166,9 +166,8 @@ app.put("/update/:id", async (req, res) => {
     if (user) {
       res.status(200).json({
         response: {
-      
-          name: user.name,
-          adress:user.adress,
+          user
+
          
         },
         success: true
