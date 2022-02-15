@@ -98,7 +98,7 @@ export const UpdatehUser = () => {
 
             dispatch(user.actions.setAdress(data.response.adress));
 
-            console.log("OK");
+           
             dispatch(user.actions.setError(false));
           });
         } else {
@@ -119,9 +119,9 @@ export const UpdatehCoins = () => {
         "Content-Type": "application/json"
       },
 
-      body: JSON.stringify({
+      body: {
         coins: getState().user.coins
-      })
+      }
     };
 
     fetch(
@@ -133,7 +133,7 @@ export const UpdatehCoins = () => {
         if (data.success) {
           batch(() => {
             dispatch(user.actions.setCoins(data.response.coins));
-            console.log("OK", data.response);
+            console.log("OK", data.response.coins);
             dispatch(user.actions.setError(false));
           });
         } else {
