@@ -58,7 +58,6 @@ export const Profil = () => {
   const handelUpdate = () => {
     dispatch(user.actions.setName(changeName));
     dispatch(user.actions.setAdress(changeAdress));
-    names = changeName
     dispatch(UpdatehUser());
   };
 

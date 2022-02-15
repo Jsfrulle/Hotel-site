@@ -167,7 +167,8 @@ app.put("/update/:id", async (req, res) => {
       res.status(200).json({
         response: {
       
-         user
+          name: user.name,
+          adress:user.adress,
          
         },
         success: true
@@ -195,6 +196,7 @@ app.put("/coins/:id", async (req, res) => {
         response: {
       
          user
+         
           
        
         },
