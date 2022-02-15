@@ -87,14 +87,13 @@
 .nextBtn {
   background: transparent;
   border: none;
-  width: 8vw;
+  width: 9vw;
   font-size: 30px;
   color: #ffffff;
   text-shadow: 2px 2px 3px var(--text);
   box-shadow: 4px 3px 5px 2px var(--shadow);
   font-weight: 700;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
