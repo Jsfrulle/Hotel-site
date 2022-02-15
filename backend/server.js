@@ -188,14 +188,14 @@ app.put("/coins/:id", async (req, res) => {
     const updates = req.body;
     const options = { new: true };
 
-    const user = await User.findByIdAndUpdate(id, updates, options).save();
+    const coins = await User.findByIdAndUpdate(id, updates, options)
    
-    if (user) {
+    if (coins) {
       res.status(200).json({
         response: {
       
          
-          coins: user.coins,
+          coins
        
         },
         success: true
