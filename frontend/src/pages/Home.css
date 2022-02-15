@@ -44,6 +44,7 @@ article {
   overflow: hidden;
   display: none;
   z-index: -10;
+  visibility:hidden;
 }
 .video-container video {
   min-width: 0%;
@@ -55,6 +56,7 @@ article {
   left: 0%;
   transform: translate(-0%, -0%);
   display: none;
+  visibility:hidden;
 }
 
 .formContainerHome {
@@ -331,6 +333,7 @@ article {
   left: 50%;
   transform: translate(-50%, -50%);
     display: unset;
+    visibility:visible;
   }
   .video-container video {
     min-width: 100%;
@@ -342,9 +345,14 @@ article {
     left: 50%;
     transform: translate(-50%, -50%);
     display: unset;
+    visibility:visible;
   }
 
   .login-card_Home {
     min-height: 400px;
   }
+}
+@media (-webkit-video-playable-inline) {
+   
+ video { display: initial; }
 }
