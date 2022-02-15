@@ -94,10 +94,7 @@ export const UpdatehUser = () => {
       .then((data) => {
         if (data.success) {
           batch(() => {
-            dispatch(user.actions.setName(data.response.name));
-
-            dispatch(user.actions.setAdress(data.response.adress));
-
+            
            
             dispatch(user.actions.setError(false));
           });
