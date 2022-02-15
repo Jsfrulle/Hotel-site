@@ -87,6 +87,7 @@
 .nextBtn {
   background: transparent;
   border: none;
+  width: 10vw;
   font-size: 30px;
   color: #ffffff;
   text-shadow: 2px 2px 3px var(--text);
@@ -141,6 +142,14 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
   }
+
+  .nextBtn {
+  
+    width: 5vw;
+  
+  }
+
+
 }
 
 @media (min-width: 1024px) {
@@ -159,17 +168,11 @@
   }
 
   .roomsItemContent {
-    width: 45vw;
-    height: 28vw;
-    margin-bottom: 15px;
-    overflow: hidden;
-  }
-}
-
-@media (min-width: 1024px) {
-  .roomsItemContent {
     width: 30vw;
     height: 20vw;
+    
+    margin-bottom: 15px;
+    overflow: hidden;
   }
   
 .roomImg {
@@ -177,4 +180,13 @@
   min-height: 300px;
   
 }
+
+.nextBtn {
+  
+  width: 4vw;
+
 }
+
+}
+
+
