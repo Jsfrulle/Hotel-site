@@ -313,7 +313,7 @@ res.status(201).json({
 })} 
 
 else {
-  res.status(401).json({ response: "Please, log in", success: false });
+  res.status(401).json({ response: "no reservation found", success: false });
 }
  }
     
@@ -332,8 +332,14 @@ else {
 
 try {
   const response = await AllUsermessages.findByIdAndDelete(id)
+  if(response){
   res.status(200).json({
-    response: {response} })
+    response: {response} })}
+    else{
+      res.status(401).json({ response: "nothing to delete", success: false });
+
+
+    }
 
 } catch (error) {
   console.log(error.message)
