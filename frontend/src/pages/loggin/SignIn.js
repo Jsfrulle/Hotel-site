@@ -9,12 +9,9 @@ export const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-
   const [mode, setMode] = useState("signin");
-
   const accessToken = useSelector((store) => store.user.accessToken);
   const error = useSelector((store) => store.user.error);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -80,7 +77,7 @@ export const SignIn = () => {
                 autocomplete="off"
                 required="required"
                 type="email"
-                value={username}
+                value={username.toLocaleLowerCase()}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Email"
               />
