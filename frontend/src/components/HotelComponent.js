@@ -5,8 +5,7 @@ import { FetchHotelRooms } from "reducers/roomDetail";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import hotelDetails from "reducers/hotelDetails";
-import dotenv from "dotenv";
-dotenv.config();
+
 
 export const HotelComponent = ({ item }) => {
   const dispatch = useDispatch();

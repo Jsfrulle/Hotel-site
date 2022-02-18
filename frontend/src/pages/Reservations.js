@@ -26,7 +26,6 @@ export const Reservations = () => {
     dispatch(reservationList.actions.setNotShow(true));
   };
 
-  console.log(afterSearch, ids);
 
   return (
     <div className="div">

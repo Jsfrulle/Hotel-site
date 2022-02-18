@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import { ui } from "reducers/ui";
 import dotenv from "dotenv";
 import reservationList from "reducers/reservationList";
-
 dotenv.config();
 
 const hotelDetails = createSlice({

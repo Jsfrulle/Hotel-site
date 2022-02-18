@@ -60,10 +60,10 @@ export const FetchUser = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          dispatch(user.actions.setError(null));
+          dispatch(user.actions.setError(false));
         } else {
           dispatch(user.actions.setError(data.response));
-          dispatch(ui.actions.setLoading(false));
+          dispatch(ui.actions.setLoading(true));
         }
       });
   };

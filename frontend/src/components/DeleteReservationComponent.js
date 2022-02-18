@@ -1,5 +1,7 @@
 import React from "react";
 import "./ShowReservationComponent.css";
+
+
 export const DeleteReservationComponent = ({ item, onClickDelete }) => {
   return (
     <div value={item._id} key={item._id} className="reservarionContainer">

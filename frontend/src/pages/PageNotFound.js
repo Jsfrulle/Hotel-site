@@ -16,7 +16,7 @@ export const PageNotFound = () => {
       <div className="notContent">
         <Lottie
           options={defaultOptionsLoading}
-          style={{ width: "30vw", height: "56vh", position: "absolute" }}
+          style={{ width: "50vh", height: "50vh", position: "absolute" }}
         />
       </div>
     </div>

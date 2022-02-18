@@ -4,10 +4,9 @@ import { Weather } from "../components/Weather";
 import { useSelector, useDispatch } from "react-redux";
 import "./Hotels.css";
 import hotelDetails, { FetchHotelLocationId } from "reducers/hotelDetails";
-import dotenv from "dotenv";
 import Loading from "components/Loading";
 import { HotelComponent } from "components/HotelComponent";
-dotenv.config();
+
 
 export const Hotels = () => {
   const [dropDownSorter, setdropDownSorter] = useState();

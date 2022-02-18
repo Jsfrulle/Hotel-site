@@ -6,7 +6,6 @@ import { Pickdate } from "../components/Date";
 import hotelLocation, { FetchHotelLocation } from "../reducers/hotelLocation";
 import hotelDetails from "reducers/hotelDetails";
 import { ui } from "reducers/ui";
-import dotenv from "dotenv";
 import stockholm from "images/stockholm.jpg";
 import tokyo from "images/tokyo.jpg";
 import paris from "images/paris.jpg";
@@ -14,7 +13,7 @@ import moment from "moment";
 import video from "../images/video.mp4";
 import background from "../images/background.jpg";
 
-dotenv.config();
+
 
 export const Home = () => {
   const [location, setLocation] = useState();
@@ -22,7 +21,6 @@ export const Home = () => {
   const navigate = useNavigate();
   const checkIn = useSelector((store) => store.hotelDetails.dateFrom);
   const checkOut = useSelector((store) => store.hotelDetails.dateTo);
-
   let today = moment().format("YYYY-MM-DD");
   let future = moment().add(3, "days").format("YYYY-MM-DD");
 

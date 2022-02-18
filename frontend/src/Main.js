@@ -8,7 +8,6 @@ import { Inspiration } from "./pages/Inspiration";
 import { Reservations } from "./pages/Reservations";
 import { Profil } from "./pages/loggin/Profil";
 import { SignIn } from "./pages/loggin/SignIn";
-import { ForgottPassword } from "./pages/loggin/ForgottPassword";
 import { Home } from "pages/Home";
 import { Hotels } from "pages/Hotels";
 import { PageNotFound } from "pages/PageNotFound";
@@ -26,7 +25,6 @@ export const Main = () => {
           <Route exact path="/Reservations" element={<Reservations />}></Route>
           <Route exact path="/Profil" element={<Profil />}></Route>
           <Route exact path="/signin" element={<SignIn />}></Route>
-          <Route exact path="/password" element={<ForgottPassword />}></Route>
           <Route exact path="/hotels" element={<Hotels />}></Route>
           <Route exact path="/rooms" element={<HotelRooms />}></Route>
           <Route

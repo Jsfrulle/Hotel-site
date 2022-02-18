@@ -19,7 +19,6 @@ export const MakeReservation = () => {
       dispatch(GetReservations());
       dispatch(PostReservations());
       dispatch(UpdatehUser());
-
       dispatch(hotelDetails.actions.setRoomName(""));
     }
   }, [accessToken, navigate, dispatch]);
@@ -32,7 +31,6 @@ export const MakeReservation = () => {
     <div>
       <section className="ContainerComfirm">
         <ShowReservationComponent item={reservation} />
-
         <button className="btnUser1" onClick={onClick}>
           Home
         </button>

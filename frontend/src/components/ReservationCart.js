@@ -23,6 +23,9 @@ export const ReservationCart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+
+  /* take out the total price for a reservation (first take out amount off days, then days * price/person(= "priceAndDays") 
+  and last priceAndDays * individual(s)  ) */
   let a = moment(checkIn);
   let b = moment(checkOut);
   const day = b.diff(a, "days");

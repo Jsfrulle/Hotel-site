@@ -7,7 +7,6 @@ import user from "../reducers/user";
 
 export const Navbar = () => {
   const dispatch = useDispatch();
-
   const accessToken = useSelector((store) => store.user.accessToken);
 
   const onClick = (event) => {

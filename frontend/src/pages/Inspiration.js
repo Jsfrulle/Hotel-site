@@ -8,10 +8,8 @@ import insparationReducer, {
 import moment from "moment";
 import Loading from "components/Loading";
 import "./Inspiration.css";
-import dotenv from "dotenv";
 import { HotelComponent } from "components/HotelComponent";
 
-dotenv.config();
 
 export const Inspiration = () => {
   const city = useSelector((store) => store.insparationReducer.city);
@@ -39,7 +37,6 @@ export const Inspiration = () => {
     let future = moment().add(3, "days").format("YYYY-MM-DD");
     dispatch(hotelDetails.actions.setDateFrom(today));
     dispatch(hotelDetails.actions.setDateTo(future));
-
     dispatch(FetchInsparation());
     dispatch(FetchInspoCountry());
   }, [dispatch]);
