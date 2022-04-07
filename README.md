@@ -1,7 +1,4 @@
-# Project Auth
 
-## The problem
 
 ## View it live
-Frontend: 
-Backend API: 
+https://hotel-site-by-jess.netlify.app
